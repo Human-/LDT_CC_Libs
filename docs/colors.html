@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li>colors</li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="debug.html">debug</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="package.html">package</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>colors</code></h1>
+    RedPower Bundled Cable Color API
+ The Colors API allows you to utilize Bundled Cables from the RedPower mod, and
+ colors on Advanced Computers and Advanced Monitors.
+   <br/>For the non-American English version just replace 'color' with 'colour' and it
+ will use the other API, colours - which is exactly the same, except in non-American
+ English (e.g. gray is spelt grey and lightGray is spelt lightGrey). 
+ See http://computercraft.info/wiki/Colors_%28API%29 for more info
+			<h2><a id="#(colors)">Type <code>colors</code></a></h2>
+				<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="colors.html##(colors).combine">colors.combine(...)</a></td>
+		<td class="summary"> Combines a set of colors (or sets of colors) into a larger set.</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="colors.html##(colors).subtract">colors.subtract(colors, ...)</a></td>
+		<td class="summary"> Removes one or more colors (or sets of colors) from an initial set.</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="colors.html##(colors).test">colors.test(colors, color)</a></td>
+		<td class="summary"> Tests whether a given color (or set of colors) is contained within a set (first arguement).</td>
+		</tr>
+	</table>
+
+			<h2>Type <code>colors</code></h2>
+				<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(colors).combine" >
+<strong>colors.combine(...)</strong>
+</a>
+</dt>
+<dd>
+	 Combines a set of colors (or sets of colors) into a larger set.
+		<h3>Parameter</h3>
+		<ul>
+				<li><code><em>
+				...  </em></code>: the color(s) to use. An element of the table colors can also be provided.
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				<p>
+				<em>#number:</em>
+				the set of combined colors
+				</p>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(colors).subtract" >
+<strong>colors.subtract(colors, ...)</strong>
+</a>
+</dt>
+<dd>
+	 Removes one or more colors (or sets of colors) from an initial set.
+		<h3>Parameters</h3>
+		<ul>
+				<li><code><em>
+						#number
+				colors  </em></code>: the set of colors to remove from.
+				</li>
+				<li><code><em>
+				...  </em></code>: color(s) to remove from the set. An element of the table <code>"colors"</code> can also be provided.
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				<p>
+				<em>#number:</em>
+				the set of colors with specified ones removed.
+				</p>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(colors).test" >
+<strong>colors.test(colors, color)</strong>
+</a>
+</dt>
+<dd>
+	 Tests whether a given color (or set of colors) is contained within a set (first arguement).
+		<h3>Parameters</h3>
+		<ul>
+				<li><code><em>
+						#number
+				colors  </em></code>: the set of colors to test with
+				</li>
+				<li><code><em>
+						#number
+				color  </em></code>: the color to check for
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				<p>
+				<em>#boolean:</em>
+				whether the color is contained in the set
+				</p>
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>
