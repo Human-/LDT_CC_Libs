@@ -5,6 +5,21 @@
 -- @module global
 
 ------------------------------------------------------------------------------
+-- This library provides extra functions for file system manipulation.
+-- This is a global variable which hold the preloaded @{fs} module.
+-- @field[parent = #global] fs#fs fs preloaded module
+
+------------------------------------------------------------------------------
+-- This library provides functions for RedPower Bundled Cable Colour manipulation.
+-- This is a global variable which hold the preloaded @{colours} module.
+-- @field[parent = #global] colours#colours colours preloaded module
+
+------------------------------------------------------------------------------
+-- This library provides functions for RedPower Bundled Cable Color manipulation.
+-- This is a global variable which hold the preloaded @{colors} module.
+-- @field[parent = #global] colors#colors colors preloaded module
+
+------------------------------------------------------------------------------
 -- This library provides generic functions for coroutine manipulation.
 -- This is a global variable which hold the preloaded @{coroutine} module.
 -- @field[parent = #global] coroutine#coroutine coroutine preloaded module
