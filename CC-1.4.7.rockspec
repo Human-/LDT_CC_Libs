@@ -1,5 +1,5 @@
-package = "lua"
-version = "5.1"
+package = "CC"
+version = "1.4.7"
 flags = { ee = true }
 description = {
    summary = "ComputerCraft Execution Environment",
