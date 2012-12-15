@@ -1,46 +1,82 @@
 -------------------------------------------------------------------------------
--- The FS API allows you to mess around with the filesystem.
---
--- Path Names
+-- The FileSystem API allows you to mess around with the, you guessed it, file system.
+-- All of these functions except for fs.combine refer solely to absolute paths.
+-- This means that the current working directory, as set by the cd command or the shell.setDir function, is ignored. Each path name consists of a list of nonempty path components separated by forward slashes, and those path components are taken one by one with the first being contained in the root directory of the computer.
+-- If you need to deal with paths provided by the user that may be absolute or may be relative to the current working directory, use shell.resolve.
+-- Unlike most real-world operating systems, ComputerCraft's absolute path name system does not need to be started with a forward slash ( / ). Making the directory "a/b/c" is the same as making "/a/b/c". Leaving the slashes is just a matter of preference to the coder.
 -- @module fs 
 
 -------------------------------------------------------------------------------
--- Returns a list of all the files contained in a directory, in table format.
--- @function [parent=#io] list
--- @param #path path Path of the directory that should be listed.
+-- Lists the directories and files in the given directory.
+-- @function [parent=#fs] list
+-- @param #string path Path of the directory that should be listed.
 -- @return #table the default input file handle.
 
 -------------------------------------------------------------------------------
--- Equivalent to `file:flush` over the default output file.
--- @function [parent=#io] flush
+-- Checks if a path refers to an existing file or directory.
+-- @function [parent=#fs] exists
+-- @param #string path The path of the file or directory that should be checked.
+-- @return #boolean True if the file exists, or false if not.
 
 -------------------------------------------------------------------------------
--- When called with a file name, it opens the named file (in text mode),
--- and sets its handle as the default input file. When called with a file
--- handle, it simply sets this file handle as the default input file. When
--- called without parameters, it returns the current default input file.
--- 
--- In case of errors this function raises the error, instead of returning an
--- error code.
--- @function [parent=#io] input
--- @param file a filename or a file handle which will used as default input. (optional)
--- @return #file the default input file handle.
+-- Checks if a path refers to an existing directory.
+-- @function [parent=#fs] isDir
+-- @param #string path The path of the file or directory that should be checked.
+-- @return #boolean True if it is a directory, or false if not.
 
 -------------------------------------------------------------------------------
--- Opens the given file name in read mode and returns an iterator function
--- that, each time it is called, returns a new line from the file. Therefore,
--- the construction 
--- 
---     for line in io.lines(filename) do *body* end
--- will iterate over all lines of the file. When the iterator function detects
--- the end of file, it returns nil (to finish the loop) and automatically
--- closes the file.
--- 
--- The call `io.lines()` (with no file name) is equivalent to
--- `io.input():lines()`; that is, it iterates over the lines of the default
--- input file. In this case it does not close the file when the loop ends.
--- @function [parent=#io] lines
--- @param a filename or a file handle. (default value is `io.input()`)
+-- Checks if a path is read-only (i.e. cannot be modified).
+-- @function [parent=#fs] isReadOnly
+-- @param #string path The path of the file or directory that should be checked.
+-- @return #boolean False if path can be written to, or true if not.
+
+-------------------------------------------------------------------------------
+-- Returns the last path component (forward-slash-separated) component of a path (the path doesn't need to exist).
+-- @function [parent=#fs] getName
+-- @param #string path The path that should be parsed.
+-- @return #string The last path component of the path, or the string "root" if the path refers to the root directory.
+
+-------------------------------------------------------------------------------
+-- Gets the type of storage medium holding a file or directory, or nil if the path does not exist.
+-- @function [parent=#fs] getDrive
+-- @param #string path The path of the file or directory that should be checked.
+-- @return #string The type of storage medium holding the path, as of ComputerCraft 1.3 either "rom" or "hdd".
+
+-------------------------------------------------------------------------------
+-- Gets the size of a file.
+-- @function [parent=#fs] getSize
+-- @param #string path The path of the file that should be checked.
+-- @return #number The size of the file in bytes.
+
+-------------------------------------------------------------------------------
+-- Creates a directory.
+-- It fails if the location already exists as a file, it silently does nothing if the location or a parent already exists as a directory and it recursively creates directories if a parent is also missing.
+-- @function [parent=#fs] makeDir
+-- @param #string path The path of the directory that should be created.
+
+-------------------------------------------------------------------------------
+-- Moves a file or directory to a new location. The parent of the new location must be a directory, toPath must include the target filename and cannot be only a directory to move the file into, and toPath itself must not already exist.
+-- @function [parent=#fs] move
+-- @param #string fromPath The location of the file or directory.
+-- @param #string toPath The path the file or directory should be moved to.
+
+-------------------------------------------------------------------------------
+-- Copy a file or directory from one location to another. The parent of the new location must be a directory, toPath must include the target filename and cannot be only a directory to move the file into, and toPath itself must not already exist.
+-- @function [parent=#fs] copy
+-- @param #string fromPath location of the file or directory.
+-- @param #string toPath path the file or directory should be copied to.
+
+-------------------------------------------------------------------------------
+-- Deletes a file or directory. A nonexistent target is ignored, a directory will be deleted along with all its contents.
+-- @function [parent=#fs] delete
+-- @param #string path path of the directory that should be deleted.
+
+-------------------------------------------------------------------------------
+-- Combines two paths. The new path consists of all the components of localPath inside all the components of basePath. Neither path needs to exist, this function only manipulates strings and does not touch the filesystem.
+-- @function [parent=#fs] combine
+-- @param #string basePath base path.
+-- @param #string localPath path that will be appended to the base path.
+-- @return #string the combined path.
 
 -------------------------------------------------------------------------------
 -- This function opens a file, in the mode specified in the string `mode`. It
@@ -50,167 +86,41 @@
 --  * _"r"_: read mode (the default);
 --  * _"w"_: write mode;
 --  * _"a"_: append mode;
---  * _"r+"_: update mode, all previous data is preserved;
---  * _"w+"_: update mode, all previous data is erased;
---  * _"a+"_: append update mode, previous data is preserved, writing is only
---   allowed at the end of file.
 --   
--- The `mode` string can also have a '`b`' at the end, which is needed in
--- some systems to open the file in binary mode. This string is exactly what
--- is used in the standard C function `fopen`.
--- @function [parent=#io] open
--- @param #string filename path to the file. 
+-- The `mode` string can also have a "b" at the end, which will open the file in binary mode. 
+-- @function [parent=#fs] open
+-- @param #string path path to the file.
 -- @param #string mode used to specify the open mode.
 -- @return #file a file handle.
 
 -------------------------------------------------------------------------------
--- Similar to `io.input`, but operates over the default output file.
--- @function [parent=#io] output
--- @param file a filename or a file handle which will used as default output. (optional)
--- @return #file the default ouput file handle.
-
--------------------------------------------------------------------------------
--- Starts program `prog` in a separated process and returns a file handle
--- that you can use to read data from this program (if `mode` is `"r"`,
--- the default) or to write data to this program (if `mode` is `"w"`).
--- 
--- This function is system dependent and is not available on all platforms.
--- @function [parent=#io] popen
--- @param #string prog the program to start.
--- @param #string mode used to specify the open mode.
--- @return #file a file handle used to read from or write to the program `prog`.
-
--------------------------------------------------------------------------------
--- Equivalent to `io.input():read`.
--- @function [parent=#io] read
--- @param format
-
--------------------------------------------------------------------------------
--- io.stderr: Standard error.
--- @field [parent=#io] #file stderr
-
--------------------------------------------------------------------------------
--- io.stdin: Standard in.
--- @field [parent=#io] #file stdin
-
--------------------------------------------------------------------------------
--- io.stdout: Standard out.
--- @field [parent=#io] #file stdout
-
--------------------------------------------------------------------------------
--- Returns a handle for a temporary file. This file is opened in update
--- mode and it is automatically removed when the program ends.
--- @function [parent=#io] tmpfile
--- @return #file a file handle for a temporary file.
-
--------------------------------------------------------------------------------
--- Checks whether `obj` is a valid file handle. Returns the string `"file"`
--- if `obj` is an open file handle, `"closed file"` if `obj` is a closed file
--- handle, or nil if `obj` is not a file handle.
--- @function [parent=#io] type
--- @param obj
-
--------------------------------------------------------------------------------
--- Equivalent to `io.output():write`.
--- @function [parent=#io] write
--- @param ...
-
--------------------------------------------------------------------------------
--- A file handle.
--- @type #file
- 
--------------------------------------------------------------------------------
--- Closes `file`. Note that files are automatically closed when their
--- handles are garbage collected, but that takes an unpredictable amount of
--- time to happen.
+-- Closes the file handle, after which it can no longer be used.
 -- @function [parent=#file] close
--- @param self
 
 -------------------------------------------------------------------------------
--- Saves any written data to `file`.
--- @function [parent=#file] flush
--- @param self
+-- Reads the next line from the file.
+-- Note: only available in mode "r"
+-- @function [parent=#file] readLine
+-- @return #string the next line read from the file, with the end-of-line character stripped; or #nil if there are no more lines in the file.
 
 -------------------------------------------------------------------------------
--- Returns an iterator function that, each time it is called, returns a
--- new line from the file. Therefore, the construction
--- 
---     for line in file:lines() do *body* end
--- will iterate over all lines of the file. (Unlike `io.lines`, this function
--- does not close the file when the loop ends.)
--- @function [parent=#file] lines
--- @param self
-
--------------------------------------------------------------------------------
--- Reads the file `file`, according to the given formats, which specify
--- what to read. For each format, the function returns a string (or a number)
--- with the characters read, or nil if it cannot read data with the specified
--- format. When called without formats, it uses a default format that reads
--- the entire next line (see below).
--- The available formats are
--- 
---   * _"*n"_: reads a number; this is the only format that returns a number
---   instead of a string.
---   * _"*a"_: reads the whole file, starting at the current position. On end of
---   file, it returns the empty string.
---   * _"*l"_: reads the next line (skipping the end of line), returning nil on
---   end of file. This is the default format.
---   * _number_: reads a string with up to this number of characters, returning
---   nil on end of file. If number is zero, it reads nothing and returns an
---   empty string, or nil on end of file.
+-- Reads the remaining text or a single byte from the file.
+-- Note only available in mode "r" or "rb"
 -- @function [parent=#file] read
--- @param self
--- @param format _"*n"_, _"*a"_, _"*l"_ or a number.
--- @return A string (or a number) with the characters read, or nil if it cannot read data with the specified format.
- 
--------------------------------------------------------------------------------
--- Sets and gets the file position. It is measured from the beginning of the
--- file, to the position given by `offset` plus a base specified by the string
--- `whence`, as follows:
--- 
---  * `"set"`: base is position 0 (beginning of the file);
---  * `"cur"`: base is current position;
---  * `"end"`: base is end of file;
---  
--- In case of success, function `seek` returns the final file position,
--- measured in bytes from the beginning of the file. If this function fails,
--- it returns nil, plus a string describing the error.
--- The default value for `whence` is `"cur"`, and for `offset` is 0. Therefore,
--- the call `file:seek()` returns the current file position, without changing
--- it; the call `file:seek("set")` sets the position to the beginning of the
--- file (and returns 0); and the call `file:seek("end")` sets the position
--- to the end of the file, and returns its size.
--- @function [parent=#file] seek
--- @param self
--- @param #string whence  `"set"`, `"cur"` or `"end"` (default value is `"cur"`)
--- @param #number offset offset of end position. (default value is 0)
--- @return #number the final file position in bytes, if it succeed.
--- @return #nil, #string an error message, if it failed.
+-- @return #string the entire rest of the file, with the end-of-line character on the very last line (if present) stripped (if mode is "r").
+-- @return #number the byte read from the file, or nil if there are no more bytes. (if mode is "rb")
 
 -------------------------------------------------------------------------------
--- Sets the buffering mode for an output file. There are three available
--- modes:
---
---  * `"no"` : no buffering; the result of any output operation appears immediately.
---  * `"full"` : full buffering; output operation is performed only when the
---   buffer is full (or when you explicitly `flush` the file (see `io.flush`)).
---  * `"line"` : line buffering; output is buffered until a newline is output or
---   there is any input from some special files (such as a terminal device).
---   
--- For the last two cases, `size` specifies the size of the buffer, in
--- bytes. The default is an appropriate size.
--- @function [parent=#file] setvbuf
--- @param self
--- @param #string mode the buffering mode : `"no"`, `"full"` or `"line"`.
--- @param #number size the size of the buffer.(default value is an appropriate size)
-
-
--------------------------------------------------------------------------------
--- Writes the value of each of its arguments to the `file`. The arguments
--- must be strings or numbers. To write other values, use `tostring` or
--- `string.format` before `write`.
+-- Writes a single byte or a string of characters exactly as they appear in the string data to the file.
+-- Note: only available in mode "w", "a", "wb" or "ab"
 -- @function [parent=#file] write
--- @param self
--- @param ... must be strings or a numbers.
+-- @param #string data string that is written to the file (if mode is "r") or `data` : byte that is written to the file (if mode is "rb").
+
+-------------------------------------------------------------------------------
+-- Writes a string of characters to the file, then appends an end-of-line character
+-- Note: only available in mode "w" or "a"
+-- @function [parent=#file] writeLine
+-- @param #string data string that is written to the file.
+
 
 return nil

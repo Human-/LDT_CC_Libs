@@ -4,7 +4,7 @@
 -- colors on Advanced Computers and Advanced Monitors.
 -- For the non-American English version just replace 'color' with 'colour' and it
 -- will use the other API, colours - which is exactly the same, except in non-American
--- English (e.g. gray is spelt grey and lightGray is spelt lightGrey). 
+-- English (e.g. gray is spelled grey and lightGray is spelled lightGrey). 
 -- See http://computercraft.info/wiki/Colors_%28API%29 for more info
 -- @module colors
 

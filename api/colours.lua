@@ -2,10 +2,10 @@
 -- RedPower Bundled Cable Colour API
 -- The Colours API allows you to utilize Bundled Cables from the RedPower mod, and
 -- colours on Advanced Computers and Advanced Monitors.
--- For the non-American English version just replace 'colour' with 'colour' and it
--- will use the other API, colours - which is exactly the same, except in non-American
--- English (e.g. gray is spelt grey and lightGray is spelt lightGrey). 
--- See http://computercraft.info/wiki/Colours_%28API%29 for more info
+-- For the non-American English version just replace 'colour' with 'color' and it
+-- will use the other API, colors - which is exactly the same, except in American
+-- English (e.g. grey is spelled gray and lightGrey is spelled lightGray). 
+-- See http://computercraft.info/wiki/Colors_%28API%29 for more info
 -- @module colours
 
 -------------------------------------------------------------------------------

@@ -20,15 +20,14 @@
 					<li><a href="colors.html">colors</a></li>
 					<li><a href="colours.html">colours</a></li>
 					<li><a href="coroutine.html">coroutine</a></li>
-					<li><a href="debug.html">debug</a></li>
 					<li><a href="fs.html">fs</a></li>
 					<li>global</li>
 					<li><a href="io.html">io</a></li>
 					<li><a href="math.html">math</a></li>
 					<li><a href="os.html">os</a></li>
-					<li><a href="package.html">package</a></li>
 					<li><a href="string.html">string</a></li>
 					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
 		</ul>
 	</div>
 	<div id="content">
@@ -54,10 +53,6 @@
  <strong>nil</strong> or <strong>false</strong>); otherwise, returns all its arguments.</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#collectgarbage">collectgarbage(opt, arg)</a></a></td>
-		<td class="summary"> This function is a generic interface to the garbage collector.</td>
-		</tr>
-		<tr>
 		<td class="name" nowrap="nowrap"><a href="global.html#colors">colors</a></a></td>
 		<td class="summary"> This library provides functions for RedPower Bundled Cable Color manipulation.</td>
 		</tr>
@@ -68,10 +63,6 @@
 		<tr>
 		<td class="name" nowrap="nowrap"><a href="global.html#coroutine">coroutine</a></a></td>
 		<td class="summary"> This library provides generic functions for coroutine manipulation.</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#debug">debug</a></a></td>
-		<td class="summary"> The Debug Library.</td>
 		</tr>
 		<tr>
 		<td class="name" nowrap="nowrap"><a href="global.html#dofile">dofile(filename)</a></a></td>
@@ -128,10 +119,6 @@
 		<td class="summary"> Operating System Facilities.</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#package">package</a></a></td>
-		<td class="summary"> The package library provides basic facilities for loading and building modules in Lua.</td>
-		</tr>
-		<tr>
 		<td class="name" nowrap="nowrap"><a href="global.html#pairs">pairs(t)</a></a></td>
 		<td class="summary"> Use to iterate over a table.</td>
 		</tr>
@@ -183,6 +170,10 @@
 		<tr>
 		<td class="name" nowrap="nowrap"><a href="global.html#table">table</a></a></td>
 		<td class="summary"> This library provides generic functions for table manipulation.</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="global.html#term">term</a></a></td>
+		<td class="summary"> This library provides functions to interact with the terminal.</td>
 		</tr>
 		<tr>
 		<td class="name" nowrap="nowrap"><a href="global.html#tonumber">tonumber(e, base)</a></a></td>
@@ -262,44 +253,6 @@
 </dl>
 		<dl class="function">
 <dt>
-<a id="collectgarbage" >
-<strong>collectgarbage(opt, arg)</strong>
-</a>
-</dt>
-<dd>
-	 This function is a generic interface to the garbage collector.
-	<br/>
-<p>It performs different functions according to its first argument, <code>opt</code>:</p>
-
-<ul>
-    <li><strong>"stop":</strong> stops the garbage collector.</li>
-    <li><strong>"restart":</strong> restarts the garbage collector.</li>
-    <li><strong>"collect":</strong> performs a full garbage-collection cycle.</li>
-    <li><strong>"count":</strong> returns the total memory in use by Lua (in Kbytes).</li>
-    <li><strong>"step":</strong> performs a garbage-collection step. The step "size" is controlled
-       by <code>arg</code> (larger values mean more steps) in a non-specified way. If you
-       want to control the step size you must experimentally tune the value of
-      <code>arg</code>. Returns true if the step finished a collection cycle.</li>
-    <li><strong>"setpause":</strong> sets <code>arg</code> as the new value for the <em>pause</em> of the collector.
-       Returns the previous value for <em>pause</em>.</li>
-    <li><strong>"setstepmul":</strong> sets <code>arg</code> as the new value for the <em>step multiplier</em>
-       of the collector. Returns the previous value for <em>step</em>.</li>
-</ul>
-
-		<h3>Parameters</h3>
-		<ul>
-				<li><code><em>
-						#string
-				opt  </em></code>: the command to send.
-				</li>
-				<li><code><em>
-				arg  </em></code>: the argument of the command. (optional)
-				</li>
-		</ul>
-</dd>
-</dl>
-		<dl class="function">
-<dt>
 		<em><a href="colors.html##(colors)">colors#colors</a></em>
 <a id="colors" >
 <strong>colors</strong>
@@ -307,7 +260,7 @@
 </dt>
 <dd>
 	 This library provides functions for RedPower Bundled Cable Color manipulation.
-	<br/>This is a global variable which hold the preloaded <a href="colors.html">colors</a> module.
+	<br/>This is a global variable which holds the preloaded <a href="colors.html">colors</a> module.
 </dd>
 </dl>
 		<dl class="function">
@@ -319,7 +272,7 @@
 </dt>
 <dd>
 	 This library provides functions for RedPower Bundled Cable Colour manipulation.
-	<br/>This is a global variable which hold the preloaded <a href="colours.html">colours</a> module.
+	<br/>This is a global variable which holds the preloaded <a href="colours.html">colours</a> module.
 </dd>
 </dl>
 		<dl class="function">
@@ -331,19 +284,7 @@
 </dt>
 <dd>
 	 This library provides generic functions for coroutine manipulation.
-	<br/>This is a global variable which hold the preloaded <a href="coroutine.html">coroutine</a> module.
-</dd>
-</dl>
-		<dl class="function">
-<dt>
-		<em><a href="debug.html##(debug)">debug#debug</a></em>
-<a id="debug" >
-<strong>debug</strong>
-</a>
-</dt>
-<dd>
-	 The Debug Library.
-	<br/>This is a  global variable which hold the preloaded <a href="debug.html">debug</a> module.
+	<br/>This is a global variable which holds the preloaded <a href="coroutine.html">coroutine</a> module.
 </dd>
 </dl>
 		<dl class="function">
@@ -409,7 +350,7 @@
 </dt>
 <dd>
 	 This library provides extra functions for file system manipulation.
-	<br/>This is a global variable which hold the preloaded <a href="fs.html">fs</a> module.
+	<br/>This is a global variable which holds the preloaded <a href="fs.html">fs</a> module.
 </dd>
 </dl>
 		<dl class="function">
@@ -466,7 +407,7 @@
 </dt>
 <dd>
 	 The I/O library provides function for file manipulation.
-	<br/>This is a global variable which hold the preloaded <a href="io.html">io</a> module.
+	<br/>This is a global variable which holds the preloaded <a href="io.html">io</a> module.
 </dd>
 </dl>
 		<dl class="function">
@@ -576,7 +517,7 @@
 </dt>
 <dd>
 	 This library is an interface to the standard C math library.
-	<br/>This is a global variable which hold the preloaded <a href="math.html">math</a> module.
+	<br/>This is a global variable which holds the preloaded <a href="math.html">math</a> module.
 </dd>
 </dl>
 		<dl class="function">
@@ -626,19 +567,7 @@
 </dt>
 <dd>
 	 Operating System Facilities.
-	<br/>This is a global variable which hold the preloaded <a href="os.html">os</a> module.
-</dd>
-</dl>
-		<dl class="function">
-<dt>
-		<em><a href="package.html##(package)">package#package</a></em>
-<a id="package" >
-<strong>package</strong>
-</a>
-</dt>
-<dd>
-	 The package library provides basic facilities for loading and building modules in Lua.
-	<br/>This is a global variable which hold the preloaded <a href="package.html">package</a> module.
+	<br/>This is a global variable which holds the preloaded <a href="os.html">os</a> module.
 </dd>
 </dl>
 		<dl class="function">
@@ -951,7 +880,7 @@
 </dt>
 <dd>
 	 This library provides generic functions for string manipulation.
-	<br/>This is a global variable which hold the preloaded <a href="string.html">string</a> module.
+	<br/>This is a global variable which holds the preloaded <a href="string.html">string</a> module.
 </dd>
 </dl>
 		<dl class="function">
@@ -963,7 +892,19 @@
 </dt>
 <dd>
 	 This library provides generic functions for table manipulation.
-	<br/>This is a global variable which hold the preloaded <a href="table.html">table</a> module.
+	<br/>This is a global variable which holds the preloaded <a href="table.html">table</a> module.
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="term.html##(term)">term#term</a></em>
+<a id="term" >
+<strong>term</strong>
+</a>
+</dt>
+<dd>
+	 This library provides functions to interact with the terminal.
+	<br/>This is a global variable which holds the preloaded <a href="term.html">term</a> module.
 </dd>
 </dl>
 		<dl class="function">

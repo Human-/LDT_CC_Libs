@@ -6,58 +6,61 @@
 
 ------------------------------------------------------------------------------
 -- This library provides extra functions for file system manipulation.
--- This is a global variable which hold the preloaded @{fs} module.
+-- This is a global variable which holds the preloaded @{fs} module.
 -- @field[parent = #global] fs#fs fs preloaded module
 
 ------------------------------------------------------------------------------
 -- This library provides functions for RedPower Bundled Cable Colour manipulation.
--- This is a global variable which hold the preloaded @{colours} module.
+-- This is a global variable which holds the preloaded @{colours} module.
 -- @field[parent = #global] colours#colours colours preloaded module
 
 ------------------------------------------------------------------------------
 -- This library provides functions for RedPower Bundled Cable Color manipulation.
--- This is a global variable which hold the preloaded @{colors} module.
+-- This is a global variable which holds the preloaded @{colors} module.
 -- @field[parent = #global] colors#colors colors preloaded module
 
 ------------------------------------------------------------------------------
+-- This library provides functions to interact with the terminal.
+-- This is a global variable which holds the preloaded @{term} module.
+-- @field[parent = #global] term#term term preloaded module
+
+------------------------------------------------------------------------------- 
+-- A wrapped peripheral.
+-- @type[parent = #global] device
+
+------------------------------------------------------------------------------- 
+-- A file handle.
+-- @type[parent = #global] file
+
+------------------------------------------------------------------------------
 -- This library provides generic functions for coroutine manipulation.
--- This is a global variable which hold the preloaded @{coroutine} module.
+-- This is a global variable which holds the preloaded @{coroutine} module.
 -- @field[parent = #global] coroutine#coroutine coroutine preloaded module
 
 ------------------------------------------------------------------------------
--- The package library provides basic facilities for loading and building modules in Lua.
--- This is a global variable which hold the preloaded @{package} module.
--- @field[parent = #global] package#package package preloaded module
-
-------------------------------------------------------------------------------
 -- This library provides generic functions for string manipulation.
--- This is a global variable which hold the preloaded @{string} module.
+-- This is a global variable which holds the preloaded @{string} module.
 -- @field[parent = #global] string#string string preloaded module
 
 ------------------------------------------------------------------------------
 -- This library provides generic functions for table manipulation.
--- This is a global variable which hold the preloaded @{table} module.
+-- This is a global variable which holds the preloaded @{table} module.
 -- @field[parent = #global] table#table table preloaded module
 
 ------------------------------------------------------------------------------
 -- This library is an interface to the standard C math library.
--- This is a global variable which hold the preloaded @{math} module.
+-- This is a global variable which holds the preloaded @{math} module.
 -- @field[parent = #global] math#math math preloaded module
 
 ------------------------------------------------------------------------------
 -- The I/O library provides function for file manipulation.
--- This is a global variable which hold the preloaded @{io} module.
+-- This is a global variable which holds the preloaded @{io} module.
 -- @field[parent = #global] io#io io preloaded module
 
 ------------------------------------------------------------------------------
 -- Operating System Facilities.
--- This is a global variable which hold the preloaded @{os} module.
+-- This is a global variable which holds the preloaded @{os} module.
 -- @field[parent = #global] os#os os preloaded module
-
-------------------------------------------------------------------------------
--- The Debug Library.
--- This is a  global variable which hold the preloaded @{debug} module.
--- @field[parent = #global] debug#debug debug preloaded module
 
 -------------------------------------------------------------------------------
 -- Issues an error when the value of its argument `v` is false (i.e.,
@@ -67,26 +70,6 @@
 -- @param v if this argument is false an error is issued.
 -- @param #string message an error message. defaults value is *"assertion failed"*.
 -- @return All its arguments.
-
--------------------------------------------------------------------------------
--- This function is a generic interface to the garbage collector.
--- It performs different functions according to its first argument, `opt`:
---
---   * **"stop":** stops the garbage collector.
---   * **"restart":** restarts the garbage collector.
---   * **"collect":** performs a full garbage-collection cycle.
---   * **"count":** returns the total memory in use by Lua (in Kbytes).
---   * **"step":** performs a garbage-collection step. The step "size" is controlled
---       by `arg` (larger values mean more steps) in a non-specified way. If you
---       want to control the step size you must experimentally tune the value of
---      `arg`. Returns true if the step finished a collection cycle.
---   * **"setpause":** sets `arg` as the new value for the *pause* of the collector.
---       Returns the previous value for *pause*.
---   * **"setstepmul":** sets `arg` as the new value for the *step multiplier*
---       of the collector. Returns the previous value for *step*.
--- @function [parent=#global] collectgarbage
--- @param #string opt the command to send.
--- @param arg the argument of the command. (optional)
 
 -------------------------------------------------------------------------------
 -- Opens the named file and executes its contents as a Lua chunk. When
