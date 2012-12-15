@@ -2,7 +2,7 @@ package = "CC"
 version = "1.4.7"
 flags = { ee = true }
 description = {
-   summary = "ComputerCraft Execution Environment",
+   summary = "ComputerCraft Execution Environment for LDT",
    detailed = [[ ComputerCraft 1.4.7 APIs
 We're currently working on getting the built in APIs documented.
 ]],
