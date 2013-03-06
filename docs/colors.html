@@ -17,46 +17,217 @@
 				<a href="index.html">index</a>
 			</li></ul>
 		<ul>
+					<li><a href="bit.html">bit</a></li>
 					<li>colors</li>
 					<li><a href="colours.html">colours</a></li>
 					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
 					<li><a href="fs.html">fs</a></li>
 					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
 					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
 					<li><a href="math.html">math</a></li>
 					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
 					<li><a href="string.html">string</a></li>
 					<li><a href="table.html">table</a></li>
 					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
 		</ul>
 	</div>
 	<div id="content">
    <h1>Module <code>colors</code></h1>
-    RedPower Bundled Cable Color API
- The Colors API allows you to utilize Bundled Cables from the RedPower mod, and
- colors on Advanced Computers and Advanced Monitors.
-   <br/>For the non-American English version just replace 'color' with 'colour' and it
- will use the other API, colours - which is exactly the same, except in non-American
- English (e.g. gray is spelled grey and lightGray is spelled lightGrey). 
- See http://computercraft.info/wiki/Colors_%28API%29 for more info
-			<h2><a id="#(colors)">Type <code>colors</code></a></h2>
-				<table class="function_list">
+   
+<h2>RedPower Bundled Cable Color API</h2>
+<p>The <a href="http://computercraft.info/wiki/Colors_%28API%29">colors API</a> allows you
+to utilize Bundled Cables from the RedPower mod, and colors on Advanced
+Computers and Advanced Monitors.</p>
+
+   
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>For the non-American English version just replace 'color' with 'colour' and it
+        will use the other API, <a href="colours.html">colours</a> - which is exactly the same, except in non-American
+        English (e.g. gray is spelled grey and lightGray is spelled lightGrey).</li>
+        <li>Since the <a href="##(colors)">#colors</a> are just integers, the standard addition (+) and
+        subtraction (-) operators may be used on <a href="##(colors)">#colors</a> instead of <a href="##(colors).combine">colors.combine</a>
+        and <a href="##(colors).subtract">colors.subtract</a>.</li>
+        <li>Furthermore, the <a href="bit.html">Bit (API)</a> may be used on sets of <a href="##(colors)">#colors</a>.</li>
+    </ol>
+</blockquote>
+
+	<h2><a id="#(colors)" >Type <code>colors</code></a></h2>
+		<table class="function_list">
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="colors.html##(colors).combine">colors.combine(...)</a></td>
-		<td class="summary"> Combines a set of colors (or sets of colors) into a larger set.</td>
+		<td class="name" nowrap="nowrap"><a href="##(colors).black">colors.black</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="colors.html##(colors).subtract">colors.subtract(colors, ...)</a></td>
-		<td class="summary"> Removes one or more colors (or sets of colors) from an initial set.</td>
+		<td class="name" nowrap="nowrap"><a href="##(colors).blue">colors.blue</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="colors.html##(colors).test">colors.test(colors, color)</a></td>
-		<td class="summary"> Tests whether a given color (or set of colors) is contained within a set (first arguement).</td>
+		<td class="name" nowrap="nowrap"><a href="##(colors).brown">colors.brown</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).combine">colors.combine(...)</a></td>
+		<td class="summary">
+<p>Combines a set of colors (or sets of colors) into a larger set.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).cyan">colors.cyan</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).gray">colors.gray</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).green">colors.green</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).lightBlue">colors.lightBlue</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).lightGray">colors.lightGray</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).lime">colors.lime</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).magenta">colors.magenta</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).orange">colors.orange</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).pink">colors.pink</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).purple">colors.purple</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).red">colors.red</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).subtract">colors.subtract(colors, ...)</a></td>
+		<td class="summary">
+<p>Removes one or more colors (or sets of colors) from an initial set.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).test">colors.test(colors, color)</a></td>
+		<td class="summary">
+<p>Tests whether a given color (or set of colors) is contained within a set (first arguement).</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).white">colors.white</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(colors).yellow">colors.yellow</a></td>
+		<td class="summary">
+<p>Constant to color code mapping.</p>
+</td>
 		</tr>
 	</table>
 
-			<h2>Type <code>colors</code></h2>
-				<h3>Field(s)</h3>
+	<h2><a id="#(colors)" >Type <code>colors</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).black" >
+<strong>colors.black</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).blue" >
+<strong>colors.blue</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).brown" >
+<strong>colors.brown</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
 		<dl class="function">
 <dt>
 <a id="#(colors).combine" >
@@ -64,18 +235,167 @@
 </a>
 </dt>
 <dd>
-	 Combines a set of colors (or sets of colors) into a larger set.
+	
+<p>Combines a set of colors (or sets of colors) into a larger set.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-				...  </em></code>: the color(s) to use. An element of the table colors can also be provided.
+				<li>
+				
+<p><code><em> ... </em></code>: 
+the color(s) to use. An element of the table colors can also be provided.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#number:</em>
-				the set of combined colors
-				</p>
+				
+<p><em><a href="##(color)">#color</a>:</em>
+the set of combined colors</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).cyan" >
+<strong>colors.cyan</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).gray" >
+<strong>colors.gray</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).green" >
+<strong>colors.green</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).lightBlue" >
+<strong>colors.lightBlue</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).lightGray" >
+<strong>colors.lightGray</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).lime" >
+<strong>colors.lime</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).magenta" >
+<strong>colors.magenta</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).orange" >
+<strong>colors.orange</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).pink" >
+<strong>colors.pink</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).purple" >
+<strong>colors.purple</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).red" >
+<strong>colors.red</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -85,22 +405,30 @@
 </a>
 </dt>
 <dd>
-	 Removes one or more colors (or sets of colors) from an initial set.
+	
+<p>Removes one or more colors (or sets of colors) from an initial set.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#number
-				colors  </em></code>: the set of colors to remove from.
+				<li>
+				
+<p><code><em><a href="##(color)">#color</a> colors </em></code>: 
+the set of colors to remove from.</p>
+
 				</li>
-				<li><code><em>
-				...  </em></code>: color(s) to remove from the set. An element of the table <code>"colors"</code> can also be provided.
+				<li>
+				
+<p><code><em> ... </em></code>: 
+color(s) to remove from the set. An element of the table <code>"colors"</code> can also be provided.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#number:</em>
-				the set of colors with specified ones removed.
-				</p>
+				
+<p><em><a href="##(color)">#color</a>:</em>
+the set of colors with specified ones removed.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -110,25 +438,91 @@
 </a>
 </dt>
 <dd>
-	 Tests whether a given color (or set of colors) is contained within a set (first arguement).
+	
+<p>Tests whether a given color (or set of colors) is contained within a set (first arguement).</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#number
-				colors  </em></code>: the set of colors to test with
+				<li>
+				
+<p><code><em><a href="##(color)">#color</a> colors </em></code>: 
+the set of colors to test with</p>
+
 				</li>
-				<li><code><em>
-						#number
-				color  </em></code>: the color to check for
+				<li>
+				
+<p><code><em><a href="##(color)">#color</a> color </em></code>: 
+the color to check for</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#boolean:</em>
-				whether the color is contained in the set
-				</p>
+				
+<p><em>#boolean:</em>
+whether the color is contained in the set</p>
+
+
 </dd>
 </dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).white" >
+<strong>colors.white</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(color)">#color</a></em>
+<a id="#(colors).yellow" >
+<strong>colors.yellow</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to color code mapping.</p>
+
+</dd>
+</dl>
+
+			<h2><a id="#(color)" >Type <code>color</code></a></h2>
+				
+<p>A bitmask of colors.</p>
+
+	
+<p>Implemented as a <a href="##(number)">#number</a>.</p>
+<blockquote>
+    
+    <h3>Notes:</h3>
+    <blockquote>
+        
+        <ol>
+            <li>white = 1</li>
+            <li>orange = 2</li>
+            <li>magenta = 4</li>
+            <li>lightBlue = 8</li>
+            <li>yellow = 16</li>
+            <li>lime = 32</li>
+            <li>pink = 64</li>
+            <li>gray = 128</li>
+            <li>lightGray = 256</li>
+            <li>cyan = 512</li>
+            <li>purple = 1024</li>
+            <li>blue = 2048</li>
+            <li>brown = 4096</li>
+            <li>green = 8192</li>
+            <li>red = 16384</li>
+            <li>black = 32768</li>
+        </ol>
+    </blockquote>
+</blockquote>
+
 
 </div>
 

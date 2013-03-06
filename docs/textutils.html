@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="bit.html">bit</a></li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li>textutils</li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>textutils</code></h1>
+   
+<h2>Textutils API</h2>
+<p>The <a href="http://computercraft.info/wiki/Textutils_%28API%29">textutils API</a> is a collection of string utility functions.</p>
+
+	<h2><a id="#(textutils)" >Type <code>textutils</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(textutils).formatTime">textutils.formatTime(time, TwentyFourHour)</a></td>
+		<td class="summary">
+<p>Converts <a href="os.html##(time)">os#time</a> to a human readable <code>string</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(textutils).pagedPrint">textutils.pagedPrint(text, confirmation_lines)</a></td>
+		<td class="summary">
+<p>Prints a <code>string</code> onto the screen, but waits for confirmation before
+scrolling down.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(textutils).pagedTabulate">textutils.pagedTabulate(...)</a></td>
+		<td class="summary">
+<p>TODO: Needs a description.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(textutils).serialize">textutils.serialize(t)</a></td>
+		<td class="summary">
+<p>Returns a <code>string</code> representation of the <code>table</code> <code>t</code> that can be saved
+or sent over <a href="rednet.html"><code>rednet</code></a>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(textutils).slowPrint">textutils.slowPrint(text, rate)</a></td>
+		<td class="summary">
+<p>Slowly prints a <code>string</code> to the screen.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(textutils).slowWrite">textutils.slowWrite(text, rate)</a></td>
+		<td class="summary">
+<p>Slowly writes a <code>string</code> to the screen.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(textutils).tabulate">textutils.tabulate(...)</a></td>
+		<td class="summary">
+<p>Prints <code>tables</code> in an ordered form.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(textutils).unserialize">textutils.unserialize(s)</a></td>
+		<td class="summary">
+<p>Returns a <code>table</code> reassembled from the <code>string</code> <code>s</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(textutils).urlEncode">textutils.urlEncode(url)</a></td>
+		<td class="summary">
+<p>Replaces certain characters in a <code>string</code> to make it safe for use on the internet.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(textutils)" >Type <code>textutils</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(textutils).formatTime" >
+<strong>textutils.formatTime(time, TwentyFourHour)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Converts <a href="os.html##(time)">os#time</a> to a human readable <code>string</code>.</p>
+
+	
+<h3>Example results:</h3>
+<blockquote>
+    
+    <ol>
+        <li><code>5:30 PM</code> if <code>TwentyFourHour</code> is <code>false</code>.</li>
+        <li><code>17:30</code> if <code>TwentyFourHour</code> is <code>true</code>.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="os.html##(time)">os#time</a> time </em></code>: 
+<code>time</code> to be formatted.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#boolean TwentyFourHour </em></code>: 
+if <code>true</code>, <code>time</code> will be formatted in 24 hour format instead of 12 hour.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+the human readable <code>string</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(textutils).pagedPrint" >
+<strong>textutils.pagedPrint(text, confirmation_lines)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Prints a <code>string</code> onto the screen, but waits for confirmation before
+scrolling down.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string text </em></code>: 
+<code>string</code> to be printed.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#string confirmation_lines </em></code>: 
+<code>string</code> prompt to be displayed when awaiting confirmation.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+<code>string</code> printed on the screen.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(textutils).pagedTabulate" >
+<strong>textutils.pagedTabulate(...)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>TODO: Needs a description.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em> ... </em></code>: 
+list of <code>tables</code> to be printed.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+<code>string</code> printed on the screen.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(textutils).serialize" >
+<strong>textutils.serialize(t)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns a <code>string</code> representation of the <code>table</code> <code>t</code> that can be saved
+or sent over <a href="rednet.html"><code>rednet</code></a>.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Nested structures are supported, but <code>tables</code> with circular graphs will
+        be detected and raise an error.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#table t </em></code>: 
+<code>table</code> to be serialized into a <code>string</code>.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+serialized <code>string</code> form of <code>table</code> t.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(textutils).slowPrint" >
+<strong>textutils.slowPrint(text, rate)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Slowly prints a <code>string</code> to the screen.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Unlike slowWrite, it prints a newline at the end of the <code>string</code>.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string text </em></code>: 
+<code>string</code> to be displayed.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number rate </em></code>: 
+rate at which the <code>string</code> will be displayed.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+<code>string</code> printed on the screen.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(textutils).slowWrite" >
+<strong>textutils.slowWrite(text, rate)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Slowly writes a <code>string</code> to the screen.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Unlike slowPrint, it does not add a newline to the end of the <code>string</code>.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string text </em></code>: 
+<code>string</code> to be written.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number rate </em></code>: 
+rate at which the <code>string</code> will be written.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+<code>string</code> written on the screen.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(textutils).tabulate" >
+<strong>textutils.tabulate(...)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Prints <code>tables</code> in an ordered form.</p>
+
+	
+<p>Each <code>table</code>'s row and column width is auto-adjusted.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em> ... </em></code>: 
+list of <code>tables</code> to be printed.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+<code>string</code> printed on the screen.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(textutils).unserialize" >
+<strong>textutils.unserialize(s)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns a <code>table</code> reassembled from the <code>string</code> <code>s</code>.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>The representation used by <a href="textutils.html"><code>textutils</code></a> actually 
+        creates Lua-friendly syntax, so that <a href="global.html#loadstring"><code>loadstring()</code></a> will also work
+        to unserialize.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string s </em></code>: 
+serialized <code>string</code> form of a <code>table</code>.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#table:</em>
+<code>table</code> reconstructed from <code>string</code> <code>s</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(textutils).urlEncode" >
+<strong>textutils.urlEncode(url)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Replaces certain characters in a <code>string</code> to make it safe for use on the internet.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>This is a <code>string</code> function and will even replace characters that are
+        allowed in URLs.</li>
+        <li>Use this only for <code>string</code>'s to be inserted in an URL, not the
+        URL itself.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string url </em></code>: 
+url <code>string</code> to be safely encoded for transmission.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+A <code>string</code> safe for use on the internet.</p>
+
+
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

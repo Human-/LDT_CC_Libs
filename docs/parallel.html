@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="bit.html">bit</a></li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li>parallel</li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>parallel</code></h1>
+   
+<h2>Parallel API</h2>
+<p>The <a href="http://computercraft.info/wiki/Parallel_%28API%29">parallel API</a> is an 
+API that allows you to multitask. </p>
+
+	<h2><a id="#(parallel)" >Type <code>parallel</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(parallel).waitForAll">parallel.waitForAll(...)</a></td>
+		<td class="summary">
+<p>Runs all the functions at the same time, and stops when all of them have returned.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(parallel).waitForAny">parallel.waitForAny(...)</a></td>
+		<td class="summary">
+<p>Runs all the <code>functions</code> at the same time, and stops when any of them returns.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(parallel)" >Type <code>parallel</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(parallel).waitForAll" >
+<strong>parallel.waitForAll(...)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Runs all the functions at the same time, and stops when all of them have returned.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em> ... </em></code>: 
+list of <code>functions</code> to run in parallel.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+A number indicating which <code>function</code> completed based on argument order.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(parallel).waitForAny" >
+<strong>parallel.waitForAny(...)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Runs all the <code>functions</code> at the same time, and stops when any of them returns.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em> ... </em></code>: 
+list of <code>functions</code> to run in parallel.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+A number indicating which <code>function</code> completed based on argument order.</p>
+
+
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

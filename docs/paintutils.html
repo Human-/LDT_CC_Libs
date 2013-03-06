@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="bit.html">bit</a></li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li>paintutils</li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>paintutils</code></h1>
+   
+<h2>Paintutils API</h2>
+<p>The <a href="http://computercraft.info/wiki/Paintutils_%28API%29">paintutils API</a> 
+allows for loading and drawing images.</p>
+
+   
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>paintutils is <strong>only</strong> available for Advanced Computers and Advanced Monitors.</li>
+    </ol>
+</blockquote>
+
+	<h2><a id="#(paintutils)" >Type <code>paintutils</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(paintutils).drawImage">paintutils.drawImage(image, x, y)</a></td>
+		<td class="summary">
+<p>Draws an <code>image</code> at (<code>x</code>, <code>y</code>) where <code>image</code> is an <code>image</code> object.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(paintutils).drawLine">paintutils.drawLine(startX, startY, endX, endY, color)</a></td>
+		<td class="summary">
+<p>Draws a line from (<code>startX</code>, <code>startY</code>) to (<code>endX</code>, <code>endY</code>) in the <a href="colors.html"><code>color</code></a>/<a href="colours.html"><code>colour</code></a> specified.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(paintutils).drawPixel">paintutils.drawPixel(x, y, color)</a></td>
+		<td class="summary">
+<p>Draws a pixel at (<code>x</code>, <code>y</code>) in the <a href="colors.html"><code>color</code></a>/<a href="colours.html"><code>colour</code></a> specified.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(paintutils).loadImage">paintutils.loadImage(path)</a></td>
+		<td class="summary">
+<p>Returns an <code>image</code> object.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(paintutils)" >Type <code>paintutils</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(paintutils).drawImage" >
+<strong>paintutils.drawImage(image, x, y)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Draws an <code>image</code> at (<code>x</code>, <code>y</code>) where <code>image</code> is an <code>image</code> object.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(image)">#image</a> image </em></code>: 
+<code>image</code> to be drawn.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number x </em></code>: 
+<code>x</code> coord to draw <code>image</code> at.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number y </em></code>: 
+<code>y</code> coord to draw <code>image</code> at.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on success, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(paintutils).drawLine" >
+<strong>paintutils.drawLine(startX, startY, endX, endY, color)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Draws a line from (<code>startX</code>, <code>startY</code>) to (<code>endX</code>, <code>endY</code>) in the <a href="colors.html"><code>color</code></a>/<a href="colours.html"><code>colour</code></a> specified.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number startX </em></code>: 
+<code>x</code> coord to begin drawing the line.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number startY </em></code>: 
+<code>y</code> coord to begin drawing the line.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number endX </em></code>: 
+<code>x</code> coord to stop drawing the line.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number endY </em></code>: 
+<code>y</code> coord to stop drawing the line.</p>
+
+				</li>
+				<li>
+				
+<p><code><em><a href="colors.html##(color)">colors#color</a> color </em></code>: 
+<a href="colors.html"><code>colors</code></a>/<a href="colours.html"><code>colours</code></a> of the line.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on success, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(paintutils).drawPixel" >
+<strong>paintutils.drawPixel(x, y, color)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Draws a pixel at (<code>x</code>, <code>y</code>) in the <a href="colors.html"><code>color</code></a>/<a href="colours.html"><code>colour</code></a> specified.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: 
+<code>x</code> coord to draw pixel at.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number y </em></code>: 
+<code>y</code> coord to draw pixel at.</p>
+
+				</li>
+				<li>
+				
+<p><code><em><a href="colors.html##(color)">colors#color</a> color </em></code>: 
+<a href="colors.html"><code>colors</code></a>/<a href="colours.html"><code>colours</code></a> of the pixel.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on success, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(paintutils).loadImage" >
+<strong>paintutils.loadImage(path)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns an <code>image</code> object.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="fs.html##(path)">fs#path</a> path </em></code>: 
+file path to the image.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="##(image)">#image</a>:</em>
+<code>image</code> object.</p>
+
+
+</dd>
+</dl>
+
+			<h2><a id="#(image)" >Type <code>image</code></a></h2>
+			
+</div>
+
+</div>
+</body>
+</html>

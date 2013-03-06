@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="bit.html">bit</a></li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li>redstone</li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>redstone</code></h1>
+   
+<h2>Redstone API</h2>
+<p>The <a href="http://computercraft.info/wiki/Redstone_%28API%29">redstone API</a> contains
+methods to control attached RedPower cables/bundled cables and regular redstone.</p>
+
+   
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>The <a href="rs.html">rs module</a> is an alias of <a href="redstone.html">redstone</a>.</li>
+    </ol>
+</blockquote>
+
+	<h2><a id="#(redstone)" >Type <code>redstone</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(redstone).getBundledInput">redstone.getBundledInput(side)</a></td>
+		<td class="summary">
+<p>Returns the state of a redpower wire inside a bundle connected to <code>side</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(redstone).getBundledOutput">redstone.getBundledOutput(side)</a></td>
+		<td class="summary">
+<p>Returns the set of redpower wires inside a bundle on <code>side</code> that are being 
+driven high by the local console.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(redstone).getInput">redstone.getInput(side)</a></td>
+		<td class="summary">
+<p>Returns the current redstone input signal state on <code>side</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(redstone).getOutput">redstone.getOutput(side)</a></td>
+		<td class="summary">
+<p>Returns the current redstone output signal on <code>side</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(redstone).getSides">redstone.getSides()</a></td>
+		<td class="summary">
+<p>Returns an array of possible <code>sides</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(redstone).setBundledOutput">redstone.setBundledOutput(side, colors)</a></td>
+		<td class="summary">
+<p>Powers one or multiple colored signals in a redpower bundled wire connected to
+<code>side</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(redstone).setOutput">redstone.setOutput(side, state)</a></td>
+		<td class="summary">
+<p>Set or reset a redstone signal on <code>side</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(redstone).testBundledInput">redstone.testBundledInput(side, color)</a></td>
+		<td class="summary">
+<p>Returns <code>true</code> or <code>false</code> whether or not a colored signal is active in a redpower
+bundled wire connected to <code>side</code>.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(redstone)" >Type <code>redstone</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(redstone).getBundledInput" >
+<strong>redstone.getBundledInput(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the state of a redpower wire inside a bundle connected to <code>side</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="colors.html##(color)">colors#color</a>:</em>
+The <a href="colors.html"><code>colors</code></a>/<a href="colours.html"><code>colours</code></a> that the computer is getting redstone power from on the given <code>side</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(redstone).getBundledOutput" >
+<strong>redstone.getBundledOutput(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the set of redpower wires inside a bundle on <code>side</code> that are being 
+driven high by the local console.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Not those that are driven high by another device on the bundle but</li>
+    </ol>
+</blockquote>
+<pre><code> not driven high by the local console.
+</code></pre>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="colors.html##(color)">colors#color</a>:</em>
+The <a href="colors.html"><code>colors</code></a>/<a href="colours.html"><code>colours</code></a> that the computer is sending redstone power to on the given <code>side</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(redstone).getInput" >
+<strong>redstone.getInput(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the current redstone input signal state on <code>side</code>.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>This function will throw an error if you give it an invalid side. </li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the computer is getting redstone power from the given side; otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(redstone).getOutput" >
+<strong>redstone.getOutput(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the current redstone output signal on <code>side</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the computer is sending redstone power from the given side; otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(redstone).getSides" >
+<strong>redstone.getSides()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns an array of possible <code>sides</code>.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#table:</em>
+list of all valid <code>sides</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(redstone).setBundledOutput" >
+<strong>redstone.setBundledOutput(side, colors)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Powers one or multiple colored signals in a redpower bundled wire connected to
+<code>side</code>.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>In order to power multiple signals, add the <a href="colors.html"><code>color</code></a>/<a href="colours.html"><code>colour</code></a> values of the <a href="colors.html"><code>colors</code></a>/<a href="colours.html"><code>colours</code></a> you want to activate.</li>
+        <li>To turn off a signal, subtract that <a href="colors.html"><code>color</code></a>/<a href="colours.html"><code>colour</code></a> from getBundledOutput's return (if present) and use that number for the integer.</li>
+        <li>To turn off all of the values, use 0 for the integer.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+				<li>
+				
+<p><code><em><a href="colors.html##(color)">colors#color</a> colors </em></code>: 
+The <a href="colors.html"><code>colors</code></a>/<a href="colours.html"><code>colours</code></a> to power.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(redstone).setOutput" >
+<strong>redstone.setOutput(side, state)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Set or reset a redstone signal on <code>side</code>.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>This function will throw an error if you give it an invalid <code>side</code>. </li>
+    </ol>
+</blockquote>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#boolean state </em></code>: 
+<code>true</code> powers the <code>side</code>; <code>false</code> depowers the `side.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(redstone).testBundledInput" >
+<strong>redstone.testBundledInput(side, color)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns <code>true</code> or <code>false</code> whether or not a colored signal is active in a redpower
+bundled wire connected to <code>side</code>.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+				<li>
+				
+<p><code><em><a href="colors.html##(color)">colors#color</a> color </em></code>: 
+The <a href="colors.html"><code>color</code></a>/<a href="colours.html"><code>colour</code></a> to check.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the computer is getting redstone power from the given <code>side</code> from the provided <a href="colors.html"><code>color</code></a>/<a href="colours.html"><code>colour</code></a>; otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

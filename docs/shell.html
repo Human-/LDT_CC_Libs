@@ -1,0 +1,508 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="bit.html">bit</a></li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li>shell</li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>shell</code></h1>
+   
+<h2>Shell API</h2>
+<p>The <a href="http://computercraft.info/wiki/Help_%28API%29">shell API</a> allows limited 
+manipulation of the running shell.</p>
+
+	<h2><a id="#(shell)" >Type <code>shell</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(shell).aliases">shell.aliases()</a></td>
+		<td class="summary">
+<p>Returns a <code>table</code> of all set aliases.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(shell).clearAlias">shell.clearAlias(alias)</a></td>
+		<td class="summary">
+<p>Removes an alias to a program.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(shell).dir">shell.dir()</a></td>
+		<td class="summary">
+<p>Returns the <code>path</code> to the active directory.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(shell).exit">shell.exit()</a></td>
+		<td class="summary">
+<p>Exits the current program (or shell if no program is open).</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(shell).getRunningProgram">shell.getRunningProgram()</a></td>
+		<td class="summary">
+<p>Returns the <code>path</code> of the currently running shell or program.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(shell).path">shell.path()</a></td>
+		<td class="summary">
+<p>Returns a <code>string</code> containing multiple <code>paths</code> separated by colons.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(shell).programs">shell.programs(IncludeHidden)</a></td>
+		<td class="summary">
+<p>Returns a sorted <code>table</code> of all programs found along <a href="##(shell).path">shell.path</a>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(shell).resolve">shell.resolve(localpath)</a></td>
+		<td class="summary">
+<p>Resolves a <code>string</code> path relative to <a href="##(shell).dir">shell.dir</a> to an absolute <code>path</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(shell).resolveProgram">shell.resolveProgram(name)</a></td>
+		<td class="summary">
+<p>Resolves the absolute path to the program whose name you provided.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(shell).run">shell.run(either, ...)</a></td>
+		<td class="summary">
+<p>Runs the specified program with the specified arguments</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(shell).setAlias">shell.setAlias(alias, command)</a></td>
+		<td class="summary">
+<p>Sets an alias for a given program.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(shell).setDir">shell.setDir(path)</a></td>
+		<td class="summary">
+<p>Sets the active directory to the given <code>path</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(shell).setPath">shell.setPath(path)</a></td>
+		<td class="summary">
+<p>Sets the <code>paths</code> used to locate programs when no absolute <code>path</code> is stated.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(shell)" >Type <code>shell</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(shell).aliases" >
+<strong>shell.aliases()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns a <code>table</code> of all set aliases.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#table:</em>
+<code>table</code> of all aliases currently in use.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(shell).clearAlias" >
+<strong>shell.clearAlias(alias)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Removes an alias to a program.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string alias </em></code>: 
+previously set alias to remove.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(shell).dir" >
+<strong>shell.dir()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the <code>path</code> to the active directory.</p>
+
+		<h3>Return value</h3>
+				
+<p><em><a href="fs.html##(path)">fs#path</a>:</em>
+<code>path</code> of the active directory.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(shell).exit" >
+<strong>shell.exit()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Exits the current program (or shell if no program is open).</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+<code>string</code> displayed on the screen.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(shell).getRunningProgram" >
+<strong>shell.getRunningProgram()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the <code>path</code> of the currently running shell or program.</p>
+
+		<h3>Return value</h3>
+				
+<p><em><a href="fs.html##(path)">fs#path</a>:</em>
+<code>path</code> of the currently running shell or program.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(shell).path" >
+<strong>shell.path()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns a <code>string</code> containing multiple <code>paths</code> separated by colons.</p>
+
+	
+<p>It is used to locate programs when no absolute <code>path</code> is stated.</p>
+<h3>Examples:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Running <code>id</code> looks for the <code>id</code> program under each <code>path</code> returned by
+        this <code>function</code> (by default, <code>./id</code> then <code>/rom/programs/id</code>).</li>
+        <li>Running <code>/rom/programs/id</code> on the other hand only checks the location
+        specified.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+<code>:</code> separated list of <code>paths</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(shell).programs" >
+<strong>shell.programs(IncludeHidden)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns a sorted <code>table</code> of all programs found along <a href="##(shell).path">shell.path</a>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#boolean IncludeHidden </em></code>: 
+if <code>false</code>, hidden programs remain hidden.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#table:</em>
+<code>table</code> of all programs available to run.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(shell).resolve" >
+<strong>shell.resolve(localpath)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Resolves a <code>string</code> path relative to <a href="##(shell).dir">shell.dir</a> to an absolute <code>path</code>.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Does nothing if the <code>path</code> is already absolute.</li>
+        <li>Uses <a href="fs.html##(fs).combine">fs#fs.combine</a> internally.</li>
+        <li>Does not verify if the <code>path</code> actually exists (or is even valid).</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string localpath </em></code>: 
+<code>string</code> or <code>path</code> to convert to a <code>path</code>.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="fs.html##(path)">fs#path</a>:</em>
+an absolute <code>path</code> to a given file system resource.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(shell).resolveProgram" >
+<strong>shell.resolveProgram(name)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Resolves the absolute path to the program whose name you provided.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Accounts for any aliases set.</li>
+        <li>Looks along the <a href="##(shell).path">shell.path</a> as needed.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string name </em></code>: 
+filename or alias of the requested program.</p>
+
+				</li>
+		</ul>
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em><a href="fs.html##(path)">fs#path</a>:</em>
+<code>path</code> to the requested program.</p>
+
+				</li>
+				<li>
+				
+<p><em>#nil:</em>
+<code>nil</code> if the program <code>path</code> could not be located.</p>
+
+
+				</li>
+			</ol>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(shell).run" >
+<strong>shell.run(either, ...)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Runs the specified program with the specified arguments</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string either </em></code>: 
+the name or <code>path</code> of the program to be run</p>
+
+				</li>
+				<li>
+				
+<p><code><em> ... </em></code>: 
+arguments for the program to be run.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>false</code> on error, otherwise <code>true</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(shell).setAlias" >
+<strong>shell.setAlias(alias, command)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets an alias for a given program.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Allows access to a program via multiple names.</li>
+        <li>Default aliases include: <code>mv</code> for <code>move</code>, <code>dir</code> for <code>list</code>, 
+        <code>ls</code> for <code>list</code>, <code>cp</code> for <code>copy</code>, and <code>rm</code> for <code>delete</code>.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string alias </em></code>: 
+<code>string</code> to add as an alias.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#string command </em></code>: 
+program that is being aliased.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(shell).setDir" >
+<strong>shell.setDir(path)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the active directory to the given <code>path</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="fs.html##(path)">fs#path</a> path </em></code>: 
+<code>path</code> to use as the active directory.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(shell).setPath" >
+<strong>shell.setPath(path)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the <code>paths</code> used to locate programs when no absolute <code>path</code> is stated.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>May contain multiple <code>paths</code> separated by a <code>:</code>.</li>
+        <li>Default value: <code>".:/rom/programs"</code></li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string path </em></code>: 
+<code>:</code> separated list of <code>paths</code>.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

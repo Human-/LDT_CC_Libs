@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="bit.html">bit</a></li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li>http</li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>http</code></h1>
+   
+<h2>HTTP API</h2>
+<p>The <a href="http://computercraft.info/wiki/HTTP_%28API%29">http API</a> allows 
+interfacing with websites and downloading from them.</p>
+
+   
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>The HTTP API <strong>must</strong> be enabled in ComputerCraft.cfg before
+        being used. To enable it open /config/ComputerCraft.cfg and 
+        change enableAPI<em>http=false to enableAPI</em>http=true.</li>
+    </ol>
+</blockquote>
+
+	<h2><a id="#(http)" >Type <code>http</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(http).get">http.get(url)</a></td>
+		<td class="summary">
+<p>Sends a HTTP GET request to a website.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(http).post">http.post(url, postData)</a></td>
+		<td class="summary">
+<p>Sends a HTTP POST request to a website.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(http).request">http.request(url, ...)</a></td>
+		<td class="summary">
+<p>Sends a HTTP request to the website.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(http)" >Type <code>http</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(http).get" >
+<strong>http.get(url)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sends a HTTP GET request to a website.</p>
+
+	
+<p>Returns a <code>table</code> similar to that returned by an <a href="fs.html##(fs).open">fs#fs.open</a>() call, used to handle
+the response of the server on success or <code>nil</code> on failure.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string url </em></code>: 
+the url to query.</p>
+
+				</li>
+		</ul>
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em>#table:</em>
+the page source of the requested resource.</p>
+
+				</li>
+				<li>
+				
+<p><em>#nil:</em>
+<code>nil</code> on failure.</p>
+
+
+				</li>
+			</ol>
+			<h3>Usage:</h3>
+		<pre class="example"><code>local sExample = http.get("http://example.com/") --Get contents of page
+write(sExample.readAll()) --Read and print contents of page
+sExample.close() --Just in case</code></pre>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(http).post" >
+<strong>http.post(url, postData)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sends a HTTP POST request to a website.</p>
+
+	
+<p>Return the response of the server or <code>nil</code> on failure.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string url </em></code>: 
+the url to query.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#string postData </em></code>: 
+any POST data required by the website.</p>
+
+				</li>
+		</ul>
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em>#table:</em>
+the server response.</p>
+
+				</li>
+				<li>
+				
+<p><em>#nil:</em>
+<code>nil</code> on failure.</p>
+
+
+				</li>
+			</ol>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(http).request" >
+<strong>http.request(url, ...)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sends a HTTP request to the website.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Returns event "http_success" on success.</li>
+        <li>Returns event "http_failure" on failure.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string url </em></code>: 
+the url to query.</p>
+
+				</li>
+				<li>
+				
+<p><code><em> ... </em></code>: 
+postData any data required by the website.</p>
+
+
+				</li>
+		</ul>
+			<h3>Usage:</h3>
+		<pre class="example"><code>http.request("http://pastebin.com/raw.php?i=Tk19jv43")
+local requesting = true
+while requesting do
+   local event, url, sourceText = os.pullEvent()
+   if event == "http_success" then
+      local respondedText = sourceText.readAll()
+      print(respondedText)
+      requesting = false
+   elseif event == "http_failure" then
+      print("Server didn't respond.")
+      requesting = false
+   end
+end</code></pre>
+
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

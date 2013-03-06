@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="bit.html">bit</a></li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li>rednet</li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>rednet</code></h1>
+   
+<h2>Rednet API</h2>
+<p>The <a href="http://computercraft.info/wiki/Rednet_%28API%29">rednet API</a> allows
+Computers to communicate between themselves without using Redstone Wires.</p>
+
+   
+<p>In order to send and receive data, a Modem is required.</p>
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>The data is received immediately after sending it, but only by Computers
+        within a certain range. That range depends on the altitude of the sending
+        Computer increasing with higher altitudes to a max of <code>384</code>.</li>
+    </ol>
+</blockquote>
+
+	<h2><a id="#(rednet)" >Type <code>rednet</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(rednet).CHANNEL_BROADCAST">rednet.CHANNEL_BROADCAST</a></td>
+		<td class="summary">
+<p>Used by Wireless Modems to restrict the receiving Modems.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(rednet).broadcast">rednet.broadcast(message)</a></td>
+		<td class="summary">
+<p>Sends the <code>string</code> to ALL connected and open Computers in range.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(rednet).close">rednet.close(side)</a></td>
+		<td class="summary">
+<p>Tells the Computer that the <code>side</code> can no longer be used for networking.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(rednet).isOpen">rednet.isOpen(side)</a></td>
+		<td class="summary">
+<p>Returns <code>true</code> if the Wireless Modem on <code>side</code> is open or <code>nil</code> if not.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(rednet).open">rednet.open(side)</a></td>
+		<td class="summary">
+<p>Tells the Computer that the <code>side</code> can be used for networking.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(rednet).receive">rednet.receive(timeoutSeconds)</a></td>
+		<td class="summary">
+<p>Waits until it either receives a <code>rednet</code> message or the timeout has passed.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(rednet).run">rednet.run()</a></td>
+		<td class="summary">
+<p>Internal.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(rednet).send">rednet.send(receiverID, message, WaitUntilPortOpen)</a></td>
+		<td class="summary">
+<p>Sends a <code>string</code> to a specific Computer or Turtle using the opened sides.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(rednet)" >Type <code>rednet</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+		<em>#number</em>
+<a id="#(rednet).CHANNEL_BROADCAST" >
+<strong>rednet.CHANNEL_BROADCAST</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Used by Wireless Modems to restrict the receiving Modems.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(rednet).broadcast" >
+<strong>rednet.broadcast(message)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sends the <code>string</code> to ALL connected and open Computers in range.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string message </em></code>: 
+<code>string</code> to be sent.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if a message has been sent, <code>false</code> if not. <code>true</code> does not guarantee that the any computer was reachable!</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(rednet).close" >
+<strong>rednet.close(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Tells the Computer that the <code>side</code> can no longer be used for networking.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(rednet).isOpen" >
+<strong>rednet.isOpen(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns <code>true</code> if the Wireless Modem on <code>side</code> is open or <code>nil</code> if not.</p>
+
+	
+<p>Returns <code>1</code> always (?).</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the Wireless Modem is open, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(rednet).open" >
+<strong>rednet.open(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Tells the Computer that the <code>side</code> can be used for networking.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(rednet).receive" >
+<strong>rednet.receive(timeoutSeconds)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Waits until it either receives a <code>rednet</code> message or the timeout has passed.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Leave args empty to wait for a message forever.</li>
+        <li>senderID and message are set to <code>nil</code> if a timeout occurs.</li>
+        <li>To get the <code>computerID</code> from a computer see <a href="os.html##(computerID)">os#computerID</a> or the id program.</li>
+        <li>You must be calling this <code>function</code> at the moment a message is sent, or
+        you will miss it. If you need to watch for messages while doing something
+        else at the same time, see <a href="parallel.html##(waitForAny)">parallel#waitForAny</a>.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="os.html##(time)">os#time</a> timeoutSeconds </em></code>: 
+Seconds to wait for a message. If timeoutSeconds is <code>nil</code>, waits forever.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="os.html##(computerID)">os#computerID</a>, #string, #number:</em>
+senderID, message, distance-to-sender (or <code>nil</code> if using redpower bundled cable instead of a modem)</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(rednet).run" >
+<strong>rednet.run()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Internal.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Used to emit <code>rednet</code> message events. Ran by the bios.</li>
+    </ol>
+</blockquote>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(rednet).send" >
+<strong>rednet.send(receiverID, message, WaitUntilPortOpen)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sends a <code>string</code> to a specific Computer or Turtle using the opened sides.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>To get the <code>computerID</code> from a Computer see <a href="os.html##(computerID)">os#computerID</a> or the id program.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="os.html##(computerID)">os#computerID</a> receiverID </em></code>: 
+<code>computerID</code> of the Computer or Turtle to be communicated with.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#string message </em></code>: 
+<code>string</code> to be sent to the Computer or Turtle matched by receiverID.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#boolean WaitUntilPortOpen </em></code>: 
+Setting WaitUntilPortOpen to <code>true</code> can help when the server is not receiving a response from the responding client.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if a <code>string</code> has been sent, <code>false</code> if not. <code>true</code> does not guarantee that the destination was reachable!</p>
+
+
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

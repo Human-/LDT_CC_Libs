@@ -1,10 +1,8 @@
 -------------------------------------------------------------------------------
--- Mathematical Functions.
--- This library is an interface to the standard C math library.
--- It provides all its functions inside the table math.
+-- ##Mathmatics API
+-- The [math API](http://www.lua.org/manual/5.1/manual.html#5.6) is an interface
+-- to the standard C math library.
 -- @module math
-
-
 
 -------------------------------------------------------------------------------
 -- Returns the absolute value of `x`.
@@ -32,8 +30,8 @@
 
 -------------------------------------------------------------------------------
 -- Returns the arc tangent of `y/x` (in radians), but uses the signs
--- of both parameters to find the quadrant of the result. (It also handles
--- correctly the case of `x` being zero.)
+-- of both parameters to find the quadrant of the result. (It also correctly 
+-- handles the case of `x` being zero.)
 -- @function [parent=#math] atan2
 -- @param #number y
 -- @param #number x
@@ -84,7 +82,7 @@
 -- @return #number
 
 -------------------------------------------------------------------------------
--- Returns `m` and `e` such that *x = m2^e*, `e` is an integer and the
+-- Returns `m` and `e` such that *`x = m2^e`*, `e` is an integer and the
 -- absolute value of `m` is in the range *[0.5, 1)* (or zero when `x` is zero).
 -- @function [parent=#math] frexp
 -- @param #number x
@@ -96,7 +94,7 @@
 -- @field [parent=#math] #number huge
 
 -------------------------------------------------------------------------------
--- Returns *m2^e* (`e` should be an integer).
+-- Returns *`m2^e`* (`e` should be an integer).
 -- @function [parent=#math] ldexp
 -- @param #number m
 -- @param #number e
@@ -134,11 +132,11 @@
 -- @return #number
 
 -------------------------------------------------------------------------------
--- The value of *pi*.
+-- The value of *`pi`*.
 -- @field [parent=#math] #number pi
 
 -------------------------------------------------------------------------------
--- Returns *x^y*. (You can also use the expression `x^y` to compute this
+-- Returns *`x^y`*. (You can also use the expression `x^y` to compute this
 -- value.)
 -- @function [parent=#math] pow
 -- @param #number x
@@ -157,10 +155,10 @@
 -- statistical properties.)
 -- 
 -- When called without arguments, returns a uniform pseudo-random real
--- number in the range *[0,1)*. When called with an integer number `m`,
--- `math.random` returns a uniform pseudo-random integer in the range *[1,
--- m]*. When called with two integer numbers `m` and `n`, `math.random`
--- returns a uniform pseudo-random integer in the range *[m, n]*.
+-- number in the range *`[0,1)`*. When called with an integer number `m`,
+-- `math.random` returns a uniform pseudo-random integer in the range *`[1,m]`*.
+-- When called with two integer numbers `m` and `n`, `math.random`
+-- returns a uniform pseudo-random integer in the range *`[m, n]`*.
 -- @function [parent=#math] random
 -- @param #number m
 -- @param #number n

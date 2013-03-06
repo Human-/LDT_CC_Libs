@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="bit.html">bit</a></li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li>disk</li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>disk</code></h1>
+   
+<h2>Disk API</h2>
+<p>The <a href="http://computercraft.info/wiki/Disk_%28API%29">disk API</a> allows you to 
+interact with Disk Drives.</p>
+
+	<h2><a id="#(disk)" >Type <code>disk</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(disk).eject">disk.eject(side)</a></td>
+		<td class="summary">
+<p>Ejects the Disk on <code>side</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(disk).getAudioTitle">disk.getAudioTitle(side)</a></td>
+		<td class="summary">
+<p>Returns the audio title used by the Disk on <code>side</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(disk).getID">disk.getID(side)</a></td>
+		<td class="summary">
+<p>Gets <code>diskID</code> used by the Disk on <code>side</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(disk).getLabel">disk.getLabel(side)</a></td>
+		<td class="summary">
+<p>Gets the <code>string</code> label used by the Disk on <code>side</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(disk).getMountPath">disk.getMountPath(side)</a></td>
+		<td class="summary">
+<p>Returns the directory <code>path</code> on which the Disk on <code>side</code> has been mounted.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(disk).hasAudio">disk.hasAudio(side)</a></td>
+		<td class="summary">
+<p>Checks whether the Disk on <code>side</code> is a Music Disk, as opposed to a Floppy Disk.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(disk).hasData">disk.hasData(side)</a></td>
+		<td class="summary">
+<p>Checks whether the Disk on a given <code>side</code> is a Floppy Disk, as opposed to a Music Disk.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(disk).isPresent">disk.isPresent(side)</a></td>
+		<td class="summary">
+<p>Checks the given <code>side</code> for a Disk.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(disk).playAudio">disk.playAudio(side)</a></td>
+		<td class="summary">
+<p>Plays the audio contained in the Disk on <code>side</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(disk).setLabel">disk.setLabel(side, label)</a></td>
+		<td class="summary">
+<p>Sets the <code>string</code> label used by the Disk on <code>side</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(disk).stopAudio">disk.stopAudio(side)</a></td>
+		<td class="summary">
+<p>Stops the audio playing from the Disk on <code>side</code> (if any).</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(disk)" >Type <code>disk</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(disk).eject" >
+<strong>disk.eject(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Ejects the Disk on <code>side</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(disk).getAudioTitle" >
+<strong>disk.getAudioTitle(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the audio title used by the Disk on <code>side</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+the title used by the Disk.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(disk).getID" >
+<strong>disk.getID(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Gets <code>diskID</code> used by the Disk on <code>side</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="##(diskID)">#diskID</a>:</em>
+the <code>diskID</code> of the Disk.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(disk).getLabel" >
+<strong>disk.getLabel(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Gets the <code>string</code> label used by the Disk on <code>side</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+the <code>string</code> label used by the Disk.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(disk).getMountPath" >
+<strong>disk.getMountPath(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the directory <code>path</code> on which the Disk on <code>side</code> has been mounted.</p>
+
+	
+<h3>Example:</h3>
+<blockquote>
+    
+    <ol>
+        <li>/disk</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="fs.html##(path)">fs#path</a>:</em>
+<code>path</code> of the mounted Disk.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(disk).hasAudio" >
+<strong>disk.hasAudio(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Checks whether the Disk on <code>side</code> is a Music Disk, as opposed to a Floppy Disk.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the Disk has saved audio, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(disk).hasData" >
+<strong>disk.hasData(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Checks whether the Disk on a given <code>side</code> is a Floppy Disk, as opposed to a Music Disk.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the disk has saved data, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(disk).isPresent" >
+<strong>disk.isPresent(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Checks the given <code>side</code> for a Disk.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if there is a Disk, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(disk).playAudio" >
+<strong>disk.playAudio(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Plays the audio contained in the Disk on <code>side</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(disk).setLabel" >
+<strong>disk.setLabel(side, label)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the <code>string</code> label used by the Disk on <code>side</code>.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#string label </em></code>: 
+the <code>string</code> label to be used.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(disk).stopAudio" >
+<strong>disk.stopAudio(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Stops the audio playing from the Disk on <code>side</code> (if any).</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="peripheral.html##(side)">peripheral#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+
+			<h2><a id="#(diskID)" >Type <code>diskID</code></a></h2>
+				
+<p>The unique ID of a Disk.</p>
+
+	
+<p>Implemented as a <a href="##(number)">#number</a>.</p>
+
+
+</div>
+
+</div>
+</body>
+</html>

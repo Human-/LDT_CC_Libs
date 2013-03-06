@@ -17,91 +17,137 @@
 				<a href="index.html">index</a>
 			</li></ul>
 		<ul>
+					<li><a href="bit.html">bit</a></li>
 					<li><a href="colors.html">colors</a></li>
 					<li><a href="colours.html">colours</a></li>
 					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
 					<li><a href="fs.html">fs</a></li>
 					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
 					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
 					<li><a href="math.html">math</a></li>
 					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
 					<li><a href="string.html">string</a></li>
 					<li><a href="table.html">table</a></li>
 					<li>term</li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
 		</ul>
 	</div>
 	<div id="content">
    <h1>Module <code>term</code></h1>
-    The Terminal API provides functions for writing text to the terminal and monitors, and drawing ASCII graphics.
-   <br/>Color/Colour setting functions are only available on advanced computers and monitors.
-			<h2><a id="#(term)">Type <code>term</code></a></h2>
-				<table class="function_list">
+   
+<h2>Terminal API</h2>
+<p>The <a href="http://computercraft.info/wiki/Term_%28API%29">term API</a> provides
+functions for writing text to the terminal and monitors, and drawing ASCII
+graphics.</p>
+
+   
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li><a href="colors.html">Color</a>/<a href="colours.html">Colour</a> setting functions are only available on advanced computers
+        and monitors.</li>
+    </ol>
+</blockquote>
+
+	<h2><a id="#(term)" >Type <code>term</code></a></h2>
+		<table class="function_list">
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).clear">term.clear()</a></td>
-		<td class="summary"> Clears the entire screen
- </td>
+		<td class="name" nowrap="nowrap"><a href="##(term).clear">term.clear()</a></td>
+		<td class="summary">
+<p>Clears the entire screen.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).clearLine">term.clearLine()</a></td>
-		<td class="summary"> Clears the line the cursor is on
- </td>
+		<td class="name" nowrap="nowrap"><a href="##(term).clearLine">term.clearLine()</a></td>
+		<td class="summary">
+<p>Clears the line the cursor is on.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).getCursorBlink">term.getCursorBlink(bool)</a></td>
-		<td class="summary"> Disables the blinking or turns it on.</td>
+		<td class="name" nowrap="nowrap"><a href="##(term).getCursorPos">term.getCursorPos()</a></td>
+		<td class="summary">
+<p>Returns two arguments containing the <code>x</code> and the <code>y</code> position of the cursor.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).getCursorPos">term.getCursorPos()</a></td>
-		<td class="summary"> Returns two arguments containing the x and the y position of the cursor.</td>
+		<td class="name" nowrap="nowrap"><a href="##(term).getSize">term.getSize()</a></td>
+		<td class="summary">
+<p>Returns the <code>width</code> and <code>height</code> of the terminal window.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).getSize">term.getSize()</a></td>
-		<td class="summary"> Returns two arguments containing the x and the y values stating the size of the screen.</td>
+		<td class="name" nowrap="nowrap"><a href="##(term).isColor">term.isColor()</a></td>
+		<td class="summary">
+<p>Returns if the computer supports color.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).isColor">term.isColor()</a></td>
-		<td class="summary"> Returns if the computer supports color.</td>
+		<td class="name" nowrap="nowrap"><a href="##(term).isColour">term.isColour()</a></td>
+		<td class="summary">
+<p>Returns if the computer supports colour.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).isColour">term.isColour()</a></td>
-		<td class="summary"> Returns if the computer supports colour.</td>
+		<td class="name" nowrap="nowrap"><a href="##(term).native">term.native</a></td>
+		<td class="summary">
+<p>Internal.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).redirect">term.redirect(target)</a></td>
-		<td class="summary"> Redirects terminal output to a monitor or other redirect target.</td>
+		<td class="name" nowrap="nowrap"><a href="##(term).redirect">term.redirect(target)</a></td>
+		<td class="summary">
+<p>Redirects terminal output to a monitor or other redirect target.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).restore">term.restore()</a></td>
-		<td class="summary"> Restores terminal output to the previous target.</td>
+		<td class="name" nowrap="nowrap"><a href="##(term).restore">term.restore()</a></td>
+		<td class="summary">
+<p>Restores terminal output to the previous target.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).scroll">term.scroll(n)</a></td>
-		<td class="summary"> Scrolls the terminal n lines.</td>
+		<td class="name" nowrap="nowrap"><a href="##(term).scroll">term.scroll(n)</a></td>
+		<td class="summary">
+<p>Scrolls the terminal <code>n</code> lines.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).setBackgroundColor">term.setBackgroundColor(color)</a></td>
-		<td class="summary"> Sets the background-color of the terminal.</td>
+		<td class="name" nowrap="nowrap"><a href="##(term).setCursorBlink">term.setCursorBlink(state)</a></td>
+		<td class="summary">
+<p>Sets whether the cursor is blinking or not.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).setBackgroundColour">term.setBackgroundColour(colour)</a></td>
-		<td class="summary"> Sets the background-colour of the terminal.</td>
+		<td class="name" nowrap="nowrap"><a href="##(term).setCursorPos">term.setCursorPos(x, y)</a></td>
+		<td class="summary">
+<p>Sets the location of the cursor on screen.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).setTextColor">term.setTextColor(color)</a></td>
-		<td class="summary"> Sets the text-color of the terminal.</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).setTextColour">term.setTextColour(colour)</a></td>
-		<td class="summary"> Sets the text-colour of the terminal.</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="term.html##(term).write">term.write(text)</a></td>
-		<td class="summary"> Writes text to the screen.</td>
+		<td class="name" nowrap="nowrap"><a href="##(term).write">term.write(text)</a></td>
+		<td class="summary">
+<p>Writes a <code>string</code> to the screen.</p>
+</td>
 		</tr>
 	</table>
 
-			<h2>Type <code>term</code></h2>
-				<h3>Field(s)</h3>
+	<h2><a id="#(term)" >Type <code>term</code></a></h2>
+		<h3>Field(s)</h3>
 		<dl class="function">
 <dt>
 <a id="#(term).clear" >
@@ -109,8 +155,9 @@
 </a>
 </dt>
 <dd>
-	 Clears the entire screen
- 
+	
+<p>Clears the entire screen.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -120,25 +167,9 @@
 </a>
 </dt>
 <dd>
-	 Clears the line the cursor is on
- 
-</dd>
-</dl>
-		<dl class="function">
-<dt>
-<a id="#(term).getCursorBlink" >
-<strong>term.getCursorBlink(bool)</strong>
-</a>
-</dt>
-<dd>
-	 Disables the blinking or turns it on.
-		<h3>Parameter</h3>
-		<ul>
-				<li><code><em>
-						#boolean
-				bool  </em></code>: True if the cursor shall be enabled
-				</li>
-		</ul>
+	
+<p>Clears the line the cursor is on.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -148,18 +179,15 @@
 </a>
 </dt>
 <dd>
-	 Returns two arguments containing the x and the y position of the cursor.
-		<h3>Return values</h3>
-			<ol>
-				<li>
-					<em>#number:</em>
-				The x coordinate of the Cursor
-				</li>
-				<li>
-					<em>#number:</em>
-				The y coordinate of the Cursor
-				</li>
-			</ol>
+	
+<p>Returns two arguments containing the <code>x</code> and the <code>y</code> position of the cursor.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#number, #number:</em>
+The <code>x</code>,<code>y</code> coordinates of the cursor.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -169,19 +197,25 @@
 </a>
 </dt>
 <dd>
-	 Returns two arguments containing the x and the y values stating the size of the screen.
-	<br/>(Good for if you're making something to be compatible with both Turtles and Computers).
-		<h3>Return values</h3>
-			<ol>
-				<li>
-					<em>#number:</em>
-				Width of the terminal
-				</li>
-				<li>
-					<em>#number:</em>
-				Height of the terminal
-				</li>
-			</ol>
+	
+<p>Returns the <code>width</code> and <code>height</code> of the terminal window.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Good for if you're making something to be compatible with both Turtles
+        and Computers.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#number, #number:</em>
+<code>width</code> and <code>height</code> of the terminal.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -191,13 +225,24 @@
 </a>
 </dt>
 <dd>
-	 Returns if the computer supports color.
-	<br/>(Used to determine whether or not an Advanced Computer is being used).
+	
+<p>Returns if the computer supports color.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Used to determine whether or not an Advanced Computer is being used.</li>
+    </ol>
+</blockquote>
+
 		<h3>Return value</h3>
-				<p>
-				<em>#boolean:</em>
-				True if the Computer is Advanced
-				</p>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the Computer is Advanced.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -207,13 +252,46 @@
 </a>
 </dt>
 <dd>
-	 Returns if the computer supports colour.
-	<br/>(Used to determine whether or not an Advanced Computer is being used).
+	
+<p>Returns if the computer supports colour.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Used to determine whether or not an Advanced Computer is being used.</li>
+    </ol>
+</blockquote>
+
 		<h3>Return value</h3>
-				<p>
-				<em>#boolean:</em>
-				True if the Computer is Advanced
-				</p>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the Computer is Advanced.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em>#table</em>
+<a id="#(term).native" >
+<strong>term.native</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Internal.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Copy of the original terminal environment for use with term.restore()</li>
+    </ol>
+</blockquote>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -223,13 +301,26 @@
 </a>
 </dt>
 <dd>
-	 Redirects terminal output to a monitor or other redirect target.
-	<br/>(Use peripheral.wrap to acquire a monitor "object").
+	
+<p>Redirects terminal output to a monitor or other redirect target.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Use <a href="peripheral.html##(peripheral).wrap"><code>peripheral.wrap</code></a> to acquire a monitor "object".</li>
+    </ol>
+</blockquote>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						<a href="global.html##(device)">global#device</a>
-				target  </em></code>: The wrapped peripheral (ie. monitor)
+				<li>
+				
+<p><code><em>#table target </em></code>: 
+The wrapped peripheral (ie. <code>monitor</code>).</p>
+
+
 				</li>
 		</ul>
 </dd>
@@ -241,7 +332,9 @@
 </a>
 </dt>
 <dd>
-	 Restores terminal output to the previous target.
+	
+<p>Restores terminal output to the previous target.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -251,84 +344,67 @@
 </a>
 </dt>
 <dd>
-	 Scrolls the terminal n lines.
+	
+<p>Scrolls the terminal <code>n</code> lines.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#number
-				n  </em></code>: Lines to scoll
+				<li>
+				
+<p><code><em>#number n </em></code>: 
+Lines to scroll.</p>
+
+
 				</li>
 		</ul>
 </dd>
 </dl>
 		<dl class="function">
 <dt>
-<a id="#(term).setBackgroundColor" >
-<strong>term.setBackgroundColor(color)</strong>
+<a id="#(term).setCursorBlink" >
+<strong>term.setCursorBlink(state)</strong>
 </a>
 </dt>
 <dd>
-	 Sets the background-color of the terminal.
-	<br/>Available only to Advanced Computers and Advanced Monitors.
+	
+<p>Sets whether the cursor is blinking or not.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#number
-				color  </em></code>: the color to use
+				<li>
+				
+<p><code><em>#boolean state </em></code>: 
+<code>true</code> to enable cursor blinking, <code>false</code> to disable.</p>
+
+
 				</li>
 		</ul>
 </dd>
 </dl>
 		<dl class="function">
 <dt>
-<a id="#(term).setBackgroundColour" >
-<strong>term.setBackgroundColour(colour)</strong>
+<a id="#(term).setCursorPos" >
+<strong>term.setCursorPos(x, y)</strong>
 </a>
 </dt>
 <dd>
-	 Sets the background-colour of the terminal.
-	<br/>Available only to Advanced Computers and Advanced Monitors.
-		<h3>Parameter</h3>
+	
+<p>Sets the location of the cursor on screen.</p>
+
+		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#number
-				colour  </em></code>: the colour to use
+				<li>
+				
+<p><code><em>#number x </em></code>: 
+the new <code>x</code> coordinate of the cursor.</p>
+
 				</li>
-		</ul>
-</dd>
-</dl>
-		<dl class="function">
-<dt>
-<a id="#(term).setTextColor" >
-<strong>term.setTextColor(color)</strong>
-</a>
-</dt>
-<dd>
-	 Sets the text-color of the terminal.
-	<br/>Available only to Advanced Computers and Advanced Monitors.
-		<h3>Parameter</h3>
-		<ul>
-				<li><code><em>
-						#number
-				color  </em></code>: The color to use
-				</li>
-		</ul>
-</dd>
-</dl>
-		<dl class="function">
-<dt>
-<a id="#(term).setTextColour" >
-<strong>term.setTextColour(colour)</strong>
-</a>
-</dt>
-<dd>
-	 Sets the text-colour of the terminal.
-	<br/>Available only to Advanced Computers and Advanced Monitors.
-		<h3>Parameter</h3>
-		<ul>
-				<li><code><em>
-						#number
-				colour  </em></code>: The colour to use
+				<li>
+				
+<p><code><em>#number y </em></code>: 
+the new <code>y</code> coordinate of the cursor.</p>
+
+
 				</li>
 		</ul>
 </dd>
@@ -340,19 +416,24 @@
 </a>
 </dt>
 <dd>
-	 Writes text to the screen.
+	
+<p>Writes a <code>string</code> to the screen.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#string
-				text  </em></code>: The text to write
+				<li>
+				
+<p><code><em>#string text </em></code>: 
+The <code>string</code> to be written.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#string:</em>
-				Text written on the screen
-				</p>
+				
+<p><em>#string:</em>
+<code>string</code> written on the screen.</p>
+
+
 </dd>
 </dl>
 
