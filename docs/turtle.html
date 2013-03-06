@@ -1,0 +1,1355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="bit.html">bit</a></li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li>turtle</li>
+					<li><a href="vector.html">vector</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>turtle</code></h1>
+   
+<h2>Turtle API</h2>
+<p>The <a href="http://computercraft.info/wiki/Turtle_%28API%29">turtle API</a> is used to work with your Turtles.</p>
+
+   
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>It is only available on Turtles (i.e. <a href="os.html##(os).version">os#os.version</a>() returns a string starting with <code>"TurtleOS"</code>).</li>
+    </ol>
+</blockquote>
+
+	<h2><a id="#(turtle)" >Type <code>turtle</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).attack">turtle.attack()</a></td>
+		<td class="summary">
+<p>Attempts to attack in front of the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).attackDown">turtle.attackDown()</a></td>
+		<td class="summary">
+<p>Attempts to attack below of the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).attackUp">turtle.attackUp()</a></td>
+		<td class="summary">
+<p>Attempts to attack above of the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).back">turtle.back()</a></td>
+		<td class="summary">
+<p>Attempts to move the Turtle backwards.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).compare">turtle.compare()</a></td>
+		<td class="summary">
+<p>Detects if the block in front of the Turtle is the same as the one in the
+currently <a href="turtle.html##(turtle).select">selected</a> slot.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).compareDown">turtle.compareDown()</a></td>
+		<td class="summary">
+<p>Detects if the block below the Turtle is the same as the one in the
+currently <a href="turtle.html##(turtle).select">selected</a> slot.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).compareTo">turtle.compareTo(slotNumber)</a></td>
+		<td class="summary">
+<p>Detects if the block in the specified slot is the same as the one in the 
+<a href="turtle.html##(turtle).select">selected</a> slot.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).compareUp">turtle.compareUp()</a></td>
+		<td class="summary">
+<p>Detects if the block above the Turtle is the same as the one in the
+currently <a href="turtle.html##(turtle).select">selected</a> slot.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).craft">turtle.craft(quantity)</a></td>
+		<td class="summary">
+<p>Crafts an item if items in the Turtle's inventory matches a valid recipe.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).detect">turtle.detect()</a></td>
+		<td class="summary">
+<p>Detects if there is a block in front of the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).detectDown">turtle.detectDown()</a></td>
+		<td class="summary">
+<p>Detects if there is a block below the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).detectUp">turtle.detectUp()</a></td>
+		<td class="summary">
+<p>Detects if there is a block above the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).dig">turtle.dig()</a></td>
+		<td class="summary">
+<p>Attempts to break/dig the block in front of the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).digDown">turtle.digDown()</a></td>
+		<td class="summary">
+<p>Attempts to break/dig the block below the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).digUp">turtle.digUp()</a></td>
+		<td class="summary">
+<p>Attempts to break/dig the block above the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).down">turtle.down()</a></td>
+		<td class="summary">
+<p>Attempts to move the Turtle downwards.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).drop">turtle.drop(quantity)</a></td>
+		<td class="summary">
+<p>Drops all items in the <a href="turtle.html##(turtle).select">selected</a> slot, or if <code>quantity</code> is specified, drops
+that many items.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).dropDown">turtle.dropDown(quantity)</a></td>
+		<td class="summary">
+<p>Drops all items in the <a href="turtle.html##(turtle).select">selected</a> slot, or if <code>quantity</code> is specified, drops
+that many items.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).dropUp">turtle.dropUp(quantity)</a></td>
+		<td class="summary">
+<p>Drops all items in the <a href="turtle.html##(turtle).select">selected</a> slot, or if <code>quantity</code> is specified, drops
+that many items.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).forward">turtle.forward()</a></td>
+		<td class="summary">
+<p>Attempts to move the Turtle forward.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).getFuelLevel">turtle.getFuelLevel()</a></td>
+		<td class="summary">
+<p>Returns the current fuel level of the turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).getItemCount">turtle.getItemCount(slotNumber)</a></td>
+		<td class="summary">
+<p>Counts how many items are in the given Slot.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).getItemSpace">turtle.getItemSpace(slotNumber)</a></td>
+		<td class="summary">
+<p>Counts how many remaining items you need to fill the stack in the given Slot.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).place">turtle.place(signText)</a></td>
+		<td class="summary">
+<p>Places the <a href="turtle.html##(turtle).select">selected</a> block in front of the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).placeDown">turtle.placeDown()</a></td>
+		<td class="summary">
+<p>Places the <a href="turtle.html##(turtle).select">selected</a> block below the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).placeUp">turtle.placeUp()</a></td>
+		<td class="summary">
+<p>Places the <a href="turtle.html##(turtle).select">selected</a> block above the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).refuel">turtle.refuel(quantity)</a></td>
+		<td class="summary">
+<p>If the current <a href="turtle.html##(turtle).select">selected</a> slot contains a fuel item, it will consume 
+it to give the Turtle the ability to perform actions such as movement.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).select">turtle.select(slotNumber)</a></td>
+		<td class="summary">
+<p>The Turtle selects the given Slot.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).suck">turtle.suck()</a></td>
+		<td class="summary">
+<p>Tries to pick up an item stack of any quantity from the ground or
+an inventory in front of the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).suckDown">turtle.suckDown()</a></td>
+		<td class="summary">
+<p>Tries to pick up an item stack of any quantity from the ground or
+an inventory below the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).suckUp">turtle.suckUp()</a></td>
+		<td class="summary">
+<p>Tries to pick up an item stack of any quantity from the ground or
+an inventory above the Turtle.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).transferTo">turtle.transferTo(slotNumber, quantity)</a></td>
+		<td class="summary">
+<p>Transfers <code>quantity</code> items from the <a href="turtle.html##(turtle).select">selected</a> slot to the specified slot.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).turnLeft">turtle.turnLeft()</a></td>
+		<td class="summary">
+<p>Attempts to turn the Turtle left.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).turnRight">turtle.turnRight()</a></td>
+		<td class="summary">
+<p>Attempts to turn the Turtle right.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(turtle).up">turtle.up()</a></td>
+		<td class="summary">
+<p>Attempts to move the Turtle upwards.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(turtle)" >Type <code>turtle</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(turtle).attack" >
+<strong>turtle.attack()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Attempts to attack in front of the Turtle.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Only available to <em>Tool</em> equipped Turtles.</li>
+        <li>Depending on the tool, it may perform an action other than attacking.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful attack, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).attackDown" >
+<strong>turtle.attackDown()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Attempts to attack below of the Turtle.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Only available to <em>Tool</em> equipped Turtles.</li>
+        <li>Depending on the tool, it may perform an action other than attacking.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful attack, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).attackUp" >
+<strong>turtle.attackUp()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Attempts to attack above of the Turtle.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Only available to <em>Tool</em> equipped Turtles.</li>
+        <li>Depending on the tool, it may perform an action other than attacking.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful attack, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).back" >
+<strong>turtle.back()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Attempts to move the Turtle backwards.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful movement, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).compare" >
+<strong>turtle.compare()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Detects if the block in front of the Turtle is the same as the one in the
+currently <a href="turtle.html##(turtle).select">selected</a> slot.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the blocks match, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).compareDown" >
+<strong>turtle.compareDown()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Detects if the block below the Turtle is the same as the one in the
+currently <a href="turtle.html##(turtle).select">selected</a> slot.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the blocks match, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).compareTo" >
+<strong>turtle.compareTo(slotNumber)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Detects if the block in the specified slot is the same as the one in the 
+<a href="turtle.html##(turtle).select">selected</a> slot.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number slotNumber </em></code>: 
+which inventory slot to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the blocks match, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).compareUp" >
+<strong>turtle.compareUp()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Detects if the block above the Turtle is the same as the one in the
+currently <a href="turtle.html##(turtle).select">selected</a> slot.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the blocks match, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).craft" >
+<strong>turtle.craft(quantity)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Crafts an item if items in the Turtle's inventory matches a valid recipe.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Only available to <em>Crafty</em> Turtles.</li>
+        <li>If <code>quantity</code> > <code>0</code> is specified, it will craft only up to that many items. 
+        Otherwise, it will craft as many of the items as possible.</li>
+        <li>If <code>quantity</code> <code>0</code> is specified, it will test if the current items 
+        constitute a valid recipe. No items will be crafted/consumed. Returns 
+        <code>true</code> if the recipe is valid, otherwise <code>false</code>.</li>
+        <li>The items can be placed anywhere as long as they are oriented properly
+        with respect to one another.</li>
+        <li>Can craft a maximum of one stack of items at a time.</li>
+        <li>Will not craft if there are any items in the Turtle's inventory that
+        are not part of the recipe, including in the slots not used for crafting.</li>
+        <li>The produced items will appear in the <a href="turtle.html##(turtle).select">selected</a> slot, if that slot is
+        free. If not, it will try the next available slot.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number quantity </em></code>: 
+either <code>0</code> to test the recipe or > <code>1</code> to specify the amount of items to craft (limited to one stack per call); defaults to one stack</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful crafting (or valid recipe if <code>quantity</code> is <code>0</code>), otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).detect" >
+<strong>turtle.detect()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Detects if there is a block in front of the Turtle.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Does not detect mobs or liquids or floating items.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if there is a block, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).detectDown" >
+<strong>turtle.detectDown()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Detects if there is a block below the Turtle.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Does not detect mobs or liquids or floating items.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if there is a block, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).detectUp" >
+<strong>turtle.detectUp()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Detects if there is a block above the Turtle.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Does not detect mobs or liquids or floating items.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if there is a block, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).dig" >
+<strong>turtle.dig()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Attempts to break/dig the block in front of the Turtle.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Only available to <em>Tool</em> equipped Turtles.</li>
+        <li>If successful, <a href="##(turtle).suck">turtle.suck</a>() is automatically called, placing the item in
+        Turtle inventory in the <a href="turtle.html##(turtle).select">selected</a> slot if possible, or in the next available
+        slot.</li>
+        <li>Depending on the tool, it may perform an action other than breaking/digging.
+        <ol>
+            <li>With hoe: tills the dirt in front of it.</li>
+        </ol></li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful dig, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).digDown" >
+<strong>turtle.digDown()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Attempts to break/dig the block below the Turtle.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Only available to <em>Tool</em> equipped Turtles.</li>
+        <li>If successful, <a href="##(turtle).suck">turtle.suck</a>() is automatically called, placing the item in
+        Turtle inventory in the <a href="turtle.html##(turtle).select">selected</a> slot if possible, or in the next available
+        slot.</li>
+        <li>Depending on the tool, it may perform an action other than breaking/digging.
+        <ol>
+            <li>With hoe: tills the dirt in front of it.</li>
+        </ol></li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful dig, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).digUp" >
+<strong>turtle.digUp()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Attempts to break/dig the block above the Turtle.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Only available to <em>Tool</em> equipped Turtles.</li>
+        <li>If successful, <a href="##(turtle).suck">turtle.suck</a>() is automatically called, placing the item in
+        Turtle inventory in the <a href="turtle.html##(turtle).select">selected</a> slot if possible, or in the next available
+        slot.</li>
+        <li>Depending on the tool, it may perform an action other than breaking/digging.
+        <ol>
+            <li>With hoe: tills the dirt in front of it.</li>
+        </ol></li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful dig, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).down" >
+<strong>turtle.down()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Attempts to move the Turtle downwards.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful movement, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).drop" >
+<strong>turtle.drop(quantity)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Drops all items in the <a href="turtle.html##(turtle).select">selected</a> slot, or if <code>quantity</code> is specified, drops
+that many items.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>In ComputerCraft >= v1.4: If there is a inventory in front of the 
+        Turtle it will try to place the items in that inventory instead of dropping
+        them to the ground. Returns false if the inventory is full.
+        <ol>
+            <li>The items will be placed in the first available slot, starting at
+            the top left, moving right and then down. </li>
+        </ol></li>
+        <li>Respects sided inventories. </li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number quantity </em></code>: 
+amount of items to drop; defaults to one stack.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="##(bool)">#bool</a>:</em>
+<code>true</code> if an item was dropped; otherwise `false.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).dropDown" >
+<strong>turtle.dropDown(quantity)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Drops all items in the <a href="turtle.html##(turtle).select">selected</a> slot, or if <code>quantity</code> is specified, drops
+that many items.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>In ComputerCraft >= v1.4: If there is a inventory below the 
+        Turtle it will try to place the items in that inventory instead of dropping
+        them to the ground. Returns false if the inventory is full.
+        <ol>
+            <li>The items will be placed in the first available slot, starting at
+            the top left, moving right and then down. </li>
+        </ol></li>
+        <li>Respects sided inventories. i.e. dropDown when above a furnace will 
+        load the top slot for smelting.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number quantity </em></code>: 
+amount of items to drop; defaults to one stack.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="##(bool)">#bool</a>:</em>
+<code>true</code> if an item was dropped; otherwise `false.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).dropUp" >
+<strong>turtle.dropUp(quantity)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Drops all items in the <a href="turtle.html##(turtle).select">selected</a> slot, or if <code>quantity</code> is specified, drops
+that many items.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>In ComputerCraft >= v1.4: If there is a inventory above the 
+        Turtle it will try to place the items in that inventory instead of dropping
+        them to the ground. Returns false if the inventory is full.
+        <ol>
+            <li>The items will be placed in the first available slot, starting at
+            the top left, moving right and then down. </li>
+        </ol></li>
+        <li>Respects sided inventories. i.e. dropUp when below a furnace will 
+        load the items as fuel in the furnace's bottom slot.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number quantity </em></code>: 
+amount of items to drop; defaults to one stack.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="##(bool)">#bool</a>:</em>
+<code>true</code> if an item was dropped; otherwise `false.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).forward" >
+<strong>turtle.forward()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Attempts to move the Turtle forward.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful movement, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).getFuelLevel" >
+<strong>turtle.getFuelLevel()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the current fuel level of the turtle.</p>
+
+	
+<p>This is the number of actions that the Turtle can perform.
+i.e. moving one block consumes 1 fuel. </p>
+
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em>#number:</em>
+amount of fuel remaining.</p>
+
+				</li>
+				<li>
+				
+<p><em>#string:</em>
+<code>"unlimited"</code> if <code>turtleNeedFuel = 0</code>.</p>
+
+
+				</li>
+			</ol>
+			<h3>Usage:</h3>
+		<pre class="example"><code>if turtle.getFuelLevel() &lt; 1 then
+   turtle.refuel()
+end</code></pre>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).getItemCount" >
+<strong>turtle.getItemCount(slotNumber)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Counts how many items are in the given Slot.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number slotNumber </em></code>: 
+which inventory slot to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+the amount of items found in the specified slot.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).getItemSpace" >
+<strong>turtle.getItemSpace(slotNumber)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Counts how many remaining items you need to fill the stack in the given Slot.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number slotNumber </em></code>: 
+which inventory slot to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+the amount of items that can still fit in the specified slot.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).place" >
+<strong>turtle.place(signText)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Places the <a href="turtle.html##(turtle).select">selected</a> block in front of the Turtle.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Add <code>signText</code> to sign if given and a sign is being placed.</li>
+        <li>In ComputerCraft >= v1.5: it tries all possible block orientations before failing.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string signText </em></code>: 
+<code>string</code> to use if a sign is being placed.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful placement, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).placeDown" >
+<strong>turtle.placeDown()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Places the <a href="turtle.html##(turtle).select">selected</a> block below the Turtle.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful placement, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).placeUp" >
+<strong>turtle.placeUp()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Places the <a href="turtle.html##(turtle).select">selected</a> block above the Turtle.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful placement, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).refuel" >
+<strong>turtle.refuel(quantity)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>If the current <a href="turtle.html##(turtle).select">selected</a> slot contains a fuel item, it will consume 
+it to give the Turtle the ability to perform actions such as movement.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Available only in ComputerCraft >= v1.4: it is only needed in <code>needfuel</code>
+        mode. If the current slot doesn't contain a fuel item, it yields false.</li>
+        <li>If <code>quantity</code> > <code>0</code> is specified, it will refuel only up to that many items, 
+        otherwise, it will consume all the items in the slot.</li>
+        <li>If <code>quantity</code> <code>0</code> is specified, it will test if a fuel item is <a href="turtle.html##(turtle).select">selected</a>.
+        Returns <code>true</code> if the item counts as fuel, otherwise <code>false</code>.</li>
+        <li>The formula for calculating the movement gain from a fuel is <code>((fuel * 5) / 100)</code>.
+        <ol>
+            <li>Where fuel is the items burn time in ticks in a regular furnace and <code>/</code> is integer division. </li>
+        </ol></li>
+        <li>Fuel values for different items can be found at <a href="http://computercraft.info/wiki/Turtle.refuel#Fuel_Values">Turtle.refuel</a>.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number quantity </em></code>: 
+either <code>0</code> to test the item or > <code>1</code> to specify the amount of items to consume (limited to one stack per call); defaults to one stack</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="##(bool)">#bool</a>:</em>
+<code>true</code> if the <a href="turtle.html##(turtle).select">selected</a> slot contains a fuel item; otherwise, <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).select" >
+<strong>turtle.select(slotNumber)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>The Turtle selects the given Slot.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>In ComputerCraft &lt;= v1.33: 1 is top left, 9 is bottom right.</li>
+        <li>In ComputerCraft > v1.33 : 1 is top left, 16 is bottom right.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number slotNumber </em></code>: 
+which inventory slot to use for further <code>functions</code>.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if <code>slotNumber</code> is > <code>9</code>, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).suck" >
+<strong>turtle.suck()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Tries to pick up an item stack of any quantity from the ground or
+an inventory in front of the Turtle.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>If an item is in the square directly in front of the turtle, 
+        it picks up one of those items.</li>
+        <li>If a chest is in the square directly in front of the turtle, 
+        it picks up the items from the first non-empty slot, moving from top left
+        to bottom right.
+        <ol>
+            <li>The items are moved into the currently selected slot, if there is room.</li>
+            <li>If the currently selected slot is filled up before all of the items
+            are picked up, the remaining items are put in the next available slot.
+            (wrapping around from slot <code>16</code> to slot <code>1</code> as needed).</li>
+        </ol></li>
+        <li>Respects sided inventories. </li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if an item was moved into the Turtle's inventory; otherwise `false.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).suckDown" >
+<strong>turtle.suckDown()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Tries to pick up an item stack of any quantity from the ground or
+an inventory below the Turtle.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>If an item is in the square directly below the turtle, 
+        it picks up one of those items.</li>
+        <li>If a chest is in the square directly below the turtle, 
+        it picks up the items from the first non-empty slot, moving from top left
+        to bottom right.
+        <ol>
+            <li>The items are moved into the currently selected slot, if there is room.</li>
+            <li>If the currently selected slot is filled up before all of the items
+            are picked up, the remaining items are put in the next available slot.
+            (wrapping around from slot <code>16</code> to slot <code>1</code> as needed).</li>
+        </ol></li>
+        <li>Respects sided inventories. i.e. suckDown when above a furnace will 
+        retrieve items in the top slot for smelting.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if an item was moved into the Turtle's inventory; otherwise `false.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).suckUp" >
+<strong>turtle.suckUp()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Tries to pick up an item stack of any quantity from the ground or
+an inventory above the Turtle.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>If an item is in the square directly above the turtle, 
+        it picks up one of those items.</li>
+        <li>If a chest is in the square directly above the turtle, 
+        it picks up the items from the first non-empty slot, moving from top left
+        to bottom right.
+        <ol>
+            <li>The items are moved into the currently selected slot, if there is room.</li>
+            <li>If the currently selected slot is filled up before all of the items
+            are picked up, the remaining items are put in the next available slot.
+            (wrapping around from slot <code>16</code> to slot <code>1</code> as needed).</li>
+        </ol></li>
+        <li>Respects sided inventories. i.e. suckUp when below a furnace will 
+        retrieve the items as fuel in the furnace's bottom slot.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if an item was moved into the Turtle's inventory; otherwise `false.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).transferTo" >
+<strong>turtle.transferTo(slotNumber, quantity)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Transfers <code>quantity</code> items from the <a href="turtle.html##(turtle).select">selected</a> slot to the specified slot.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>If the <code>quantity</code> argument is omitted, it tries to transfer all the items
+        from the <a href="turtle.html##(turtle).select">selected</a> slot.</li>
+        <li>If the destination slot is unavailable, it does not try the next slot 
+        like <a href="##(turtle).suck">turtle.suck</a>. </li>
+        <li>If there are fewer than <code>quantity</code> items in the <a href="turtle.html##(turtle).select">selected</a> slot or 
+        there is insufficient room for the requested amount of items, it transfers 
+        as many as possible and returns true.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number slotNumber </em></code>: 
+which inventory slot to use for further <code>functions</code>.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number quantity </em></code>: 
+amount of items to move; defaults to one stack.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if any items were moved; otherwise, <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).turnLeft" >
+<strong>turtle.turnLeft()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Attempts to turn the Turtle left.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful turning, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).turnRight" >
+<strong>turtle.turnRight()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Attempts to turn the Turtle right.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful turning, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(turtle).up" >
+<strong>turtle.up()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Attempts to move the Turtle upwards.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> on successful movement, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+
+			<h2><a id="#(bool)" >Type <code>bool</code></a></h2>
+			
+</div>
+
+</div>
+</body>
+</html>

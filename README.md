@@ -1,7 +1,7 @@
 ccLDT
 ===========
 
-This is going to add all the APIs available in Computercraft to LDT. So you can finally use Eclipse's autocompletion and documentation for  ComputerCraft coding. 
+This adds all of the APIs available in Computercraft to LDT. So you can finally use Eclipse's autocompletion and documentation for  ComputerCraft coding. 
 
 How To Use
 ==========

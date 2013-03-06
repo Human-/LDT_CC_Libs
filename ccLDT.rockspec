@@ -1,11 +1,9 @@
 package = "CC"
-version = "1.4.7"
+version = "1.5.1"
 flags = { ee = true }
 description = {
-   summary = "ComputerCraft Execution Environment for LDT",
-   detailed = [[ ComputerCraft 1.4.7 APIs
-We're currently working on getting the built in APIs documented.
-]],
+   summary = "ComputerCraft Execution Environment",
+   detailed = [[ ComputerCraft 1.5.1 APIs ]],
    licence = "See at http://www.minecraftforum.net/topic/892282-",
    homepage= "http://www.computercraft.info/"
 }

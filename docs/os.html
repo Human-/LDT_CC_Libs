@@ -17,79 +17,170 @@
 				<a href="index.html">index</a>
 			</li></ul>
 		<ul>
+					<li><a href="bit.html">bit</a></li>
 					<li><a href="colors.html">colors</a></li>
 					<li><a href="colours.html">colours</a></li>
 					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
 					<li><a href="fs.html">fs</a></li>
 					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
 					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
 					<li><a href="math.html">math</a></li>
 					<li>os</li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
 					<li><a href="string.html">string</a></li>
 					<li><a href="table.html">table</a></li>
 					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
 		</ul>
 	</div>
 	<div id="content">
    <h1>Module <code>os</code></h1>
-    Operating System Facilities.
-   <br/>This library is implemented through table os.
-			<h2><a id="#(os)">Type <code>os</code></a></h2>
-				<table class="function_list">
+   
+<h2>Operating System API</h2>
+<p>The <a href="http://computercraft.info/wiki/OS_%28API%29">os API</a> allows for 
+interfacing with the Lua based Operating System itself. </p>
+
+	<h2><a id="#(os)" >Type <code>os</code></a></h2>
+		<table class="function_list">
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="os.html##(os).clock">os.clock()</a></td>
-		<td class="summary"> Returns an approximation of the amount in seconds of CPU time used by
- the program.</td>
+		<td class="name" nowrap="nowrap"><a href="##(os).clock">os.clock()</a></td>
+		<td class="summary">
+<p>Returns CPU <code>time</code>.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="os.html##(os).date">os.date(format, time)</a></td>
-		<td class="summary"> Returns a string or a table containing date and time, formatted according
- to the given string <code>format</code>.</td>
+		<td class="name" nowrap="nowrap"><a href="##(os).computerID">os.computerID()</a></td>
+		<td class="summary">
+<p>Returns the <code>computerID</code> of this Computer.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="os.html##(os).difftime">os.difftime(t2, t1)</a></td>
-		<td class="summary"> Returns the number of seconds from time <code>t1</code> to time <code>t2</code>.</td>
+		<td class="name" nowrap="nowrap"><a href="##(os).computerLabel">os.computerLabel()</a></td>
+		<td class="summary">
+<p>Returns the <code>string</code> label of this Computer.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="os.html##(os).execute">os.execute(command)</a></td>
-		<td class="summary"> This function is equivalent to the C function <code>system</code>.</td>
+		<td class="name" nowrap="nowrap"><a href="##(os).day">os.day()</a></td>
+		<td class="summary">
+<p>Returns the current Minecraft day.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="os.html##(os).exit">os.exit(code)</a></td>
-		<td class="summary"> Calls the C function <code>exit</code>, with an optional <code>code</code>, to terminate the
- host program.</td>
+		<td class="name" nowrap="nowrap"><a href="##(os).getComputerID">os.getComputerID()</a></td>
+		<td class="summary">
+<p>Returns the <code>computerID</code> of this Computer.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="os.html##(os).getenv">os.getenv(varname)</a></td>
-		<td class="summary"> Returns the value of the process environment variable <code>varname</code>, or
- nil if the variable is not defined.</td>
+		<td class="name" nowrap="nowrap"><a href="##(os).getComputerLabel">os.getComputerLabel()</a></td>
+		<td class="summary">
+<p>Returns the <code>string</code> label of this Computer.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="os.html##(os).remove">os.remove(filename)</a></td>
-		<td class="summary"> Deletes the file or directory with the given name.</td>
+		<td class="name" nowrap="nowrap"><a href="##(os).loadAPI">os.loadAPI(path)</a></td>
+		<td class="summary">
+<p>Loads a Lua script as an API in its own namespace.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="os.html##(os).rename">os.rename(oldname, newname)</a></td>
-		<td class="summary"> Renames file or directory named <code>oldname</code> to <code>newname</code>.</td>
+		<td class="name" nowrap="nowrap"><a href="##(os).pullEvent">os.pullEvent(target)</a></td>
+		<td class="summary">
+<p>Blocks until the Computer receives an event, or if target-event is specified,
+will block until an instance of target-event occurs.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="os.html##(os).setlocale">os.setlocale(locale, category)</a></td>
-		<td class="summary"> Sets the current locale of the program.</td>
+		<td class="name" nowrap="nowrap"><a href="##(os).pullEventRaw">os.pullEventRaw()</a></td>
+		<td class="summary">
+<p>Advanced version of pullEvent().</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="os.html##(os).time">os.time(table)</a></td>
-		<td class="summary"> Returns the current time when called without arguments, or a time
- representing the date and time specified by the given table.</td>
+		<td class="name" nowrap="nowrap"><a href="##(os).queueEvent">os.queueEvent(eventName, ...)</a></td>
+		<td class="summary">
+<p>Adds an event eventName with the specified parameters to the event queue.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="os.html##(os).tmpname">os.tmpname()</a></td>
-		<td class="summary"> Returns a string with a file name that can be used for a temporary
- file.</td>
+		<td class="name" nowrap="nowrap"><a href="##(os).reboot">os.reboot()</a></td>
+		<td class="summary">
+<p>Reboots the computer.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).run">os.run(envVars, path, ...)</a></td>
+		<td class="summary">
+<p>An advanced way of starting programs.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).setAlarm">os.setAlarm(time)</a></td>
+		<td class="summary">
+<p>Adds an alarm which will fire an <code>alarm</code> event at the specified Minecraft
+<code>gametime</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).setComputerLabel">os.setComputerLabel(label)</a></td>
+		<td class="summary">
+<p>Set the <code>string</code> label of this Computer.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).shutdown">os.shutdown()</a></td>
+		<td class="summary">
+<p>Turns off the computer.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).sleep">os.sleep(time)</a></td>
+		<td class="summary">
+<p>Makes the system wait a number of seconds before continuing in the program.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).startTimer">os.startTimer(time)</a></td>
+		<td class="summary">
+<p>Adds a timer which will fire a <code>timer</code> event once after time seconds have passed.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).time">os.time()</a></td>
+		<td class="summary">
+<p>Returns the current Minecraft world <code>gametime</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).unloadAPI">os.unloadAPI(path)</a></td>
+		<td class="summary">
+<p>Unloads a previously loaded API.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).version">os.version()</a></td>
+		<td class="summary">
+<p>Returns the <code>string</code> version of the OS that the Computer is running.</p>
+</td>
 		</tr>
 	</table>
 
-			<h2>Type <code>os</code></h2>
-				<h3>Field(s)</h3>
+	<h2><a id="#(os)" >Type <code>os</code></a></h2>
+		<h3>Field(s)</h3>
 		<dl class="function">
 <dt>
 <a id="#(os).clock" >
@@ -97,316 +188,605 @@
 </a>
 </dt>
 <dd>
-	 Returns an approximation of the amount in seconds of CPU time used by
- the program.
+	
+<p>Returns CPU <code>time</code>.</p>
+
 		<h3>Return value</h3>
-				<p>
-				<em>#number:</em>
-				the amount in seconds of CPU time used by
- the program.
-				</p>
+				
+<p><em><a href="##(time)">#time</a>:</em>
+amount of <code>time</code> the ComputerCraft computer has been running.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
 <dt>
-<a id="#(os).date" >
-<strong>os.date(format, time)</strong>
+<a id="#(os).computerID" >
+<strong>os.computerID()</strong>
 </a>
 </dt>
 <dd>
-	 Returns a string or a table containing date and time, formatted according
- to the given string <code>format</code>.
-	<br/>If the <code>time</code> argument is present, this is the time to be formatted
- (see the <code>os.time</code> function for a description of this value). Otherwise,
- <code>date</code> formats the current time.</p>
+	
+<p>Returns the <code>computerID</code> of this Computer.</p>
 
-<p> If <code>format</code> starts with '<code>!</code>', then the date is formatted in Coordinated
- Universal Time. After this optional character, if <code>format</code> is the string
- "<code>*t</code>", then <code>date</code> returns a table with the following fields:</p>
+	
+<p>Behaves exactly as <a href="##(os).getComputerID">os.getComputerID</a>.</p>
+
+		<h3>Return value</h3>
+				
+<p><em><a href="##(computerID)">#computerID</a>:</em>
+the <code>computerID</code> of the Computer.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).computerLabel" >
+<strong>os.computerLabel()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the <code>string</code> label of this Computer.</p>
+
+	
+<p>Behaves exactly as <a href="##(os).getComputerLabel">os.getComputerLabel</a>.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+the <code>string</code> label of the Computer.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).day" >
+<strong>os.day()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the current Minecraft day.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+The current in-game day.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).getComputerID" >
+<strong>os.getComputerID()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the <code>computerID</code> of this Computer.</p>
+
+	
+<p>Behaves exactly as <a href="##(os).computerID">os.computerID</a>.</p>
+
+		<h3>Return value</h3>
+				
+<p><em><a href="##(computerID)">#computerID</a>:</em>
+the <code>computerID</code> of the Computer.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).getComputerLabel" >
+<strong>os.getComputerLabel()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the <code>string</code> label of this Computer.</p>
+
+	
+<p>Behaves exactly as <a href="##(os).computerLabel">os.computerLabel</a>.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+the <code>string</code> label of the Computer.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).loadAPI" >
+<strong>os.loadAPI(path)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Loads a Lua script as an API in its own namespace.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>It will be available to all programs that run on the terminal.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="fs.html##(path)">fs#path</a> path </em></code>: 
+<code>path</code> to the API file to load.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).pullEvent" >
+<strong>os.pullEvent(target)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Blocks until the Computer receives an event, or if target-event is specified,
+will block until an instance of target-event occurs.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>If a target-event is specified, the computer will not break for any
+        other events (except <code>termination</code>).</li>
+    </ol>
+</blockquote>
+
+<h3>Events:</h3>
 
 <ul>
-    <li><code>year</code> (four digits)</li>
-    <li><code>month</code> (1--12)</li>
-    <li><code>day</code> (1--31)</li>
-    <li><code>hour</code> (0--23)</li>
-    <li><code>min</code> (0--59)</li>
-    <li><code>sec</code> (0--61)</li>
-    <li><code>wday</code> (weekday, Sunday is 1)</li>
-    <li><code>yday</code> (day of the year)</li>
-    <li><code>isdst</code> (daylight saving flag, a boolean).</li>
+    <li><code>char</code> (<code>string</code> <em>letter</em>)  </li>
+    <li><code>key</code> (<a href="keys.html##(keycode)">keys#keycode</a> <em>keycode</em>)  </li>
+    <li><code>timer</code> (<a href="##(timerID)">#timerID</a> <em>timerID</em>)  </li>
+    <li><code>alarm</code> (<a href="##(alarmID)">#alarmID</a> <em>alarmID</em>)  </li>
+    <li><code>redstone</code>  </li>
+    <li><code>terminate</code>  </li>
+    <li><code>disk</code> (<code>string</code> <em>side</em>)  </li>
+    <li><code>disk_eject</code> (<code>string</code> <em>side</em>)  </li>
+    <li><code>peripheral</code> (<code>string</code> <em>side</em>)  </li>
+    <li><code>peripheral_detach</code> (<code>string</code> <em>side</em>)  </li>
+    <li><code>rednet_message</code> (<a href="##(computerID)">#computerID</a> <em>senderID</em>, <code>string</code> <em>message</em>, <code>number</code> <em>distance</em>)  </li>
+    <li><code>http_success</code> (<code>string</code> <em>url</em>, <code>table</code> <em>text</em>)  </li>
+    <li><code>http_failure</code> (<code>string</code> <em>url</em>)  </li>
+    <li><code>mouse_click</code> (<a href="keys.html##(keycode)">keys#keycode</a> <em>mouse button</em>, <code>number</code> <em>x coord</em>, <code>number</code> <em>y coord</em>)  </li>
+    <li><code>mouse_scroll</code> (<code>number</code> direction, <code>number</code> <em>x coord</em>, <code>number</code> <em>y coord</em>)  </li>
+    <li><code>mouse_drag</code> (<a href="keys.html##(keycode)">keys#keycode</a> <em>mouse button</em> , <code>number</code> <em>x coord</em>, <code>number</code> <em>y coord</em>)  </li>
+    <li><code>monitor_touch</code> (<code>string</code> <em>side</em>, <code>number</code> <em>x coord</em>, <code>number</code> <em>y coord</em>)</li>
 </ul>
 
-<p> If <code>format</code> is not "<code>*t</code>", then <code>date</code> returns the date as a string,
- formatted according to the same rules as the C function <code>strftime</code>.
- When called without arguments, <code>date</code> returns a reasonable date and time
- representation that depends on the host system and on the current locale
- (that is, <code>os.date()</code> is equivalent to <code>os.date("%c")</code>).
-		<h3>Parameters</h3>
-		<ul>
-				<li><code><em>
-						#string
-				format  </em></code>: format of date. (optional)
-				</li>
-				<li><code><em>
-						#number
-				time  </em></code>: time to format. (default value is current time)
-				</li>
-		</ul>
-		<h3>Return value</h3>
-				<p>
-				<em>#string:</em>
-				a formatted string representation of <code>time</code>.
-				</p>
-</dd>
-</dl>
-		<dl class="function">
-<dt>
-<a id="#(os).difftime" >
-<strong>os.difftime(t2, t1)</strong>
-</a>
-</dt>
-<dd>
-	 Returns the number of seconds from time <code>t1</code> to time <code>t2</code>.
-	<br/>In POSIX,
- Windows, and some other systems, this value is exactly <code>t2</code><em>-</em><code>t1</code>.
-		<h3>Parameters</h3>
-		<ul>
-				<li><code><em>
-						#number
-				t2  </em></code>: 
-
-
-				</li>
-				<li><code><em>
-						#number
-				t1  </em></code>: 
-
-
-				</li>
-		</ul>
-		<h3>Return value</h3>
-				<p>
-				<em>#number:</em>
-				the number of seconds from time <code>t1</code> to time <code>t2</code>.
-				</p>
-</dd>
-</dl>
-		<dl class="function">
-<dt>
-<a id="#(os).execute" >
-<strong>os.execute(command)</strong>
-</a>
-</dt>
-<dd>
-	 This function is equivalent to the C function <code>system</code>.
-	<br/>It passes
- <code>command</code> to be executed by an operating system shell. It returns a status
- code, which is system-dependent. If <code>command</code> is absent, then it returns
- nonzero if a shell is available and zero otherwise.
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#string
-				command  </em></code>: command to be executed.
+				<li>
+				
+<p><code><em>#string target </em></code>: 
+event Only accept the specified event.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				A status code which is system-dependent.
-				</p>
+				
+<p><em>#string, <a href="##(Untyped)">#Untyped</a>:</em>
+Returns event type and any event parameters.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
 <dt>
-<a id="#(os).exit" >
-<strong>os.exit(code)</strong>
+<a id="#(os).pullEventRaw" >
+<strong>os.pullEventRaw()</strong>
 </a>
 </dt>
 <dd>
-	 Calls the C function <code>exit</code>, with an optional <code>code</code>, to terminate the
- host program.
-	<br/>The default value for <code>code</code> is the success code.
-		<h3>Parameter</h3>
-		<ul>
-				<li><code><em>
-						#number
-				code  </em></code>: an exit code. (default is the success code)
-				</li>
-		</ul>
-</dd>
-</dl>
-		<dl class="function">
-<dt>
-<a id="#(os).getenv" >
-<strong>os.getenv(varname)</strong>
-</a>
-</dt>
-<dd>
-	 Returns the value of the process environment variable <code>varname</code>, or
- nil if the variable is not defined.
-		<h3>Parameter</h3>
-		<ul>
-				<li><code><em>
-						#string
-				varname  </em></code>: an environment variable name.
-				</li>
-		</ul>
+	
+<p>Advanced version of pullEvent().</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Unlike <a href="##(os).pullEvent">os.pullEvent</a>( target-event ), this function will not break for
+        system events, and can be used to handle termination events.</li>
+    </ol>
+</blockquote>
+
 		<h3>Return value</h3>
-				<p>
-				The value of the process environment variable <code>varname</code>, or
- nil if the variable is not defined.
-				</p>
+				
+<p><em>#string, <a href="##(Untyped)">#Untyped</a>:</em>
+Returns event type and any event parameters.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
 <dt>
-<a id="#(os).remove" >
-<strong>os.remove(filename)</strong>
+<a id="#(os).queueEvent" >
+<strong>os.queueEvent(eventName, ...)</strong>
 </a>
 </dt>
 <dd>
-	 Deletes the file or directory with the given name.
-	<br/>Directories must be
- empty to be removed. If this function fails, it returns nil, plus a string
- describing the error.
-		<h3>Parameter</h3>
-		<ul>
-				<li><code><em>
-				filename  </em></code>: the path to the file or directory to delete.
-				</li>
-		</ul>
-		<h3>Return value</h3>
-				<p>
-				<em>#nil, #string:</em>
-				an error message if it failed.
-				</p>
-</dd>
-</dl>
-		<dl class="function">
-<dt>
-<a id="#(os).rename" >
-<strong>os.rename(oldname, newname)</strong>
-</a>
-</dt>
-<dd>
-	 Renames file or directory named <code>oldname</code> to <code>newname</code>.
-	<br/>If this function
- fails, it returns nil, plus a string describing the error.
+	
+<p>Adds an event eventName with the specified parameters to the event queue.</p>
+
+	
+
+<h3>Events:</h3>
+
+<ul>
+    <li><code>char</code> (<code>string</code> <em>letter</em>)  </li>
+    <li><code>key</code> (<a href="keys.html##(keycode)">keys#keycode</a> <em>keycode</em>)  </li>
+    <li><code>timer</code> (<a href="##(timerID)">#timerID</a> <em>timerID</em>)  </li>
+    <li><code>alarm</code> (<a href="##(alarmID)">#alarmID</a> <em>alarmID</em>)  </li>
+    <li><code>redstone</code>  </li>
+    <li><code>terminate</code>  </li>
+    <li><code>disk</code> (<code>string</code> <em>side</em>)  </li>
+    <li><code>disk_eject</code> (<code>string</code> <em>side</em>)  </li>
+    <li><code>peripheral</code> (<code>string</code> <em>side</em>)  </li>
+    <li><code>peripheral_detach</code> (<code>string</code> <em>side</em>)  </li>
+    <li><code>rednet_message</code> (<a href="##(computerID)">#computerID</a> <em>senderID</em>, <code>string</code> <em>message</em>, <code>number</code> <em>distance</em>)  </li>
+    <li><code>http_success</code> (<code>string</code> <em>url</em>, <code>table</code> <em>text</em>)  </li>
+    <li><code>http_failure</code> (<code>string</code> <em>url</em>)  </li>
+    <li><code>mouse_click</code> (<a href="keys.html##(keycode)">keys#keycode</a> <em>mouse button</em>, <code>number</code> <em>x coord</em>, <code>number</code> <em>y coord</em>)  </li>
+    <li><code>mouse_scroll</code> (<code>number</code> direction, <code>number</code> <em>x coord</em>, <code>number</code> <em>y coord</em>)  </li>
+    <li><code>mouse_drag</code> (<a href="keys.html##(keycode)">keys#keycode</a> <em>mouse button</em> , <code>number</code> <em>x coord</em>, <code>number</code> <em>y coord</em>)  </li>
+    <li><code>monitor_touch</code> (<code>string</code> <em>side</em>, <code>number</code> <em>x coord</em>, <code>number</code> <em>y coord</em>)</li>
+</ul>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-				oldname  </em></code>: the path to the file or directory to rename.
+				<li>
+				
+<p><code><em>#string eventName </em></code>: </p>
+
 				</li>
-				<li><code><em>
-				newname  </em></code>: the new path.
+				<li>
+				
+<p><code><em> ... </em></code>: 
+any event parameters</p>
+
+
 				</li>
 		</ul>
-		<h3>Return value</h3>
-				<p>
-				<em>#nil, #string:</em>
-				an error message if it failed.
-				</p>
 </dd>
 </dl>
 		<dl class="function">
 <dt>
-<a id="#(os).setlocale" >
-<strong>os.setlocale(locale, category)</strong>
+<a id="#(os).reboot" >
+<strong>os.reboot()</strong>
 </a>
 </dt>
 <dd>
-	 Sets the current locale of the program.
-	<br/><code>locale</code> is a string specifying
- a locale; <code>category</code> is an optional string describing which category to
- change: <code>"all"</code>, <code>"collate"</code>, <code>"ctype"</code>, <code>"monetary"</code>, <code>"numeric"</code>, or
- <code>"time"</code>; the default category is <code>"all"</code>. The function returns the name
- of the new locale, or nil if the request cannot be honored.</p>
+	
+<p>Reboots the computer.</p>
 
-<p> If <code>locale</code> is the empty string, the current locale is set to an
- implementation-defined native locale. If <code>locale</code> is the string "<code>C</code>",
- the current locale is set to the standard C locale.</p>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).run" >
+<strong>os.run(envVars, path, ...)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>An advanced way of starting programs.</p>
 
-<p> When called with nil as the first argument, this function only returns
- the name of the current locale for the given category.
+	
+<p>A started program will have a given environment <code>table</code> which determines what
+<code>functions</code> it has available, as well as any variables it will be able to
+access by default.</p>
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>You may prefer to use the <a href="shell.html">shell (API)</a> unless you need to do something special.</li>
+    </ol>
+</blockquote>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#string
-				locale  </em></code>: a string specifying a locale.
+				<li>
+				
+<p><code><em>#table envVars </em></code>: 
+environment variables for the program to run under.</p>
+
 				</li>
-				<li><code><em>
-						#string
-				category  </em></code>: <code>"all"</code>, <code>"collate"</code>, <code>"ctype"</code>, <code>"monetary"</code>, <code>"numeric"</code>, or
- <code>"time"</code>; the default category is <code>"all"</code>.
+				<li>
+				
+<p><code><em><a href="fs.html##(path)">fs#path</a> path </em></code>: 
+<code>path</code> to the program to be run.</p>
+
+				</li>
+				<li>
+				
+<p><code><em> ... </em></code>: 
+arguments for the program to be run.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#string:</em>
-				the current locale.
-				</p>
+				
+<p><em>#boolean:</em>
+<code>false</code> on error, otherwise <code>true</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).setAlarm" >
+<strong>os.setAlarm(time)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Adds an alarm which will fire an <code>alarm</code> event at the specified Minecraft
+<code>gametime</code>.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>The <code>alarmID</code> is returned from this function to differentiate
+        multiple alarms.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(gametime)">#gametime</a> time </em></code>: 
+Minecraft world time to fire the event.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="##(alarmID)">#alarmID</a>:</em>
+alarmID</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).setComputerLabel" >
+<strong>os.setComputerLabel(label)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Set the <code>string</code> label of this Computer.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string label </em></code>: 
+the <code>string</code> label to be used by the Computer.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).shutdown" >
+<strong>os.shutdown()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Turns off the computer.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).sleep" >
+<strong>os.sleep(time)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Makes the system wait a number of seconds before continuing in the program.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li><a href="##(os).sleep">os.sleep</a>( timeout ) may also be used as simply <a href="global.html#sleep"><code>sleep( timeout )</code></a>.</li>
+        <li>Fractions of a second are supported, but only down to a game tick, 
+        or 1/20 of a second (0.05s). <code>times</code> are rounded up to the next tick.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(time)">#time</a> time </em></code>: 
+Seconds to pass before resuming.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).startTimer" >
+<strong>os.startTimer(time)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Adds a timer which will fire a <code>timer</code> event once after time seconds have passed.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>The <code>timerID</code> of the timer is returned from this function to differentiate
+        multiple timers.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(time)">#time</a> time </em></code>: 
+Seconds to pass before the event fires.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="##(timerID)">#timerID</a>:</em>
+timerID</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
 <dt>
 <a id="#(os).time" >
-<strong>os.time(table)</strong>
+<strong>os.time()</strong>
 </a>
 </dt>
 <dd>
-	 Returns the current time when called without arguments, or a time
- representing the date and time specified by the given table.
-	<br/>This table
- must have fields <code>year</code>, <code>month</code>, and <code>day</code>, and may have fields <code>hour</code>,
- <code>min</code>, <code>sec</code>, and <code>isdst</code> (for a description of these fields, see the
- <code>os.date</code> function).</p>
+	
+<p>Returns the current Minecraft world <code>gametime</code>.</p>
 
-<p> The returned value is a number, whose meaning depends on your system. In
- POSIX, Windows, and some other systems, this number counts the number
- of seconds since some given start time (the "epoch"). In other systems,
- the meaning is not specified, and the number returned by <code>time</code> can be
- used only as an argument to <code>date</code> and <code>difftime</code>.
-		<h3>Parameter</h3>
-		<ul>
-				<li><code><em>
-						#table
-				table  </em></code>: a table which describes a date.
-				</li>
-		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#number:</em>
-				a number meaning a date.
-				</p>
+				
+<p><em><a href="##(gametime)">#gametime</a>:</em>
+The current <code>gametime</code>.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
 <dt>
-<a id="#(os).tmpname" >
-<strong>os.tmpname()</strong>
+<a id="#(os).unloadAPI" >
+<strong>os.unloadAPI(path)</strong>
 </a>
 </dt>
 <dd>
-	 Returns a string with a file name that can be used for a temporary
- file.
-	<br/>The file must be explicitly opened before its use and explicitly
- removed when no longer needed.</p>
+	
+<p>Unloads a previously loaded API.</p>
 
-<p> On some systems (POSIX), this function also creates a file with that
- name, to avoid security risks. (Someone else might create the file with
- wrong permissions in the time between getting the name and creating the
- file.) You still have to open the file to use it and to remove it (even
- if you do not use it).</p>
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="fs.html##(path)">fs#path</a> path </em></code>: 
+<code>path</code> to the API file to load.</p>
 
-<p> When possible, you may prefer to use <code>io.tmpfile</code>, which automatically
- removes the file when the program ends.
-		<h3>Return value</h3>
-				<p>
-				<em>#string:</em>
-				a string with a file name that can be used for a temporary file.
-				</p>
+
+				</li>
+		</ul>
 </dd>
 </dl>
+		<dl class="function">
+<dt>
+<a id="#(os).version" >
+<strong>os.version()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the <code>string</code> version of the OS that the Computer is running.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Returns <code>"CraftOS " .. osVersion</code> on a Computer.</li>
+        <li>Returns <code>"TurtleOS " .. osVersion</code> on a Turtle.</li>
+        <li>May return other strings if a modded OS is loaded.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+the version <code>string</code>.</p>
+
+
+</dd>
+</dl>
+
+			<h2><a id="#(Untyped)" >Type <code>Untyped</code></a></h2>
+			
+			<h2><a id="#(alarmID)" >Type <code>alarmID</code></a></h2>
+				
+<p>Unique ID of an Alarm.</p>
+
+	
+<p>Implemented as a <a href="##(table)">#table</a>.</p>
+
+
+			<h2><a id="#(computerID)" >Type <code>computerID</code></a></h2>
+				
+<p>Unique ID of a Computer.</p>
+
+	
+<p>Implemented as a <a href="##(number)">#number</a>.</p>
+
+
+			<h2><a id="#(gametime)" >Type <code>gametime</code></a></h2>
+				
+<p>In-game time in seconds.</p>
+
+	
+<p>Implemented as a <a href="##(number)">#number</a>.</p>
+
+
+			<h2><a id="#(time)" >Type <code>time</code></a></h2>
+				
+<p>Time in seconds.</p>
+
+	
+<p>Implemented as a <a href="##(number)">#number</a>.</p>
+
+
+			<h2><a id="#(timerID)" >Type <code>timerID</code></a></h2>
+				
+<p>Unique ID of a Timer.</p>
+
+	
+<p>Implemented as a <a href="##(table)">#table</a>.</p>
+
 
 </div>
 

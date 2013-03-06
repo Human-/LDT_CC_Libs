@@ -17,198 +17,194 @@
 				<a href="index.html">index</a>
 			</li></ul>
 		<ul>
+					<li><a href="bit.html">bit</a></li>
 					<li><a href="colors.html">colors</a></li>
 					<li><a href="colours.html">colours</a></li>
 					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
 					<li>fs</li>
 					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
 					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
 					<li><a href="math.html">math</a></li>
 					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
 					<li><a href="string.html">string</a></li>
 					<li><a href="table.html">table</a></li>
 					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
 		</ul>
 	</div>
 	<div id="content">
    <h1>Module <code>fs</code></h1>
-    The FileSystem API allows you to mess around with the, you guessed it, file system.
-   <br/>All of these functions except for fs.combine refer solely to absolute paths.
- This means that the current working directory, as set by the cd command or the shell.setDir function, is ignored. Each path name consists of a list of nonempty path components separated by forward slashes, and those path components are taken one by one with the first being contained in the root directory of the computer.
- If you need to deal with paths provided by the user that may be absolute or may be relative to the current working directory, use shell.resolve.
- Unlike most real-world operating systems, ComputerCraft's absolute path name system does not need to be started with a forward slash ( / ). Making the directory "a/b/c" is the same as making "/a/b/c". Leaving the slashes is just a matter of preference to the coder.
+   
+<h2>FileSystem API</h2>
+<p>The <a href="http://computercraft.info/wiki/Fs_%28API%29">fs API</a> allows access to 
+the ComputerCraft FileSystem.</p>
+
+   
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>All of these functions except for fs.combine refer solely to absolute paths.
+        This means that the current working directory, as set by the cd command or
+        the shell.setDir function, is ignored. Each path name consists of a list of
+        nonempty path components separated by forward slashes, and those path
+        components are taken one by one with the first being contained in the
+        root directory of the computer.</li>
+        <li>If you need to deal with paths provided by the user that may be absolute or
+        may be relative to the current working directory, use shell.resolve.</li>
+        <li>Unlike most real-world operating systems, ComputerCraft's absolute path name
+        system does not need to be started with a forward slash ( / ). Making the 
+        directory "a/b/c" is the same as making "/a/b/c". Leaving the slashes is just
+        a matter of preference to the coder.</li>
+    </ol>
+</blockquote>
+
+	<h2><a id="#(fs)" >Type <code>fs</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(fs).combine">fs.combine(basePath, localPath)</a></td>
+		<td class="summary">
+<p>Combines two paths.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(fs).copy">fs.copy(fromPath, toPath)</a></td>
+		<td class="summary">
+<p>Copy a file or directory from one location to another.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(fs).delete">fs.delete(path)</a></td>
+		<td class="summary">
+<p>Deletes a file or directory.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(fs).exists">fs.exists(path)</a></td>
+		<td class="summary">
+<p>Checks if a <code>path</code> refers to an existing file or directory.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(fs).getDrive">fs.getDrive(path)</a></td>
+		<td class="summary">
+<p>Gets the type of storage medium holding a file or directory, or <code>nil</code> if the
+<code>path</code> does not exist.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(fs).getFreeSpace">fs.getFreeSpace(path)</a></td>
+		<td class="summary">
+<p>Gets the amount of space available on the <code>path</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(fs).getName">fs.getName(path)</a></td>
+		<td class="summary">
+<p>Returns the last <code>path</code> component (forward-slash-separated) component of a <code>path</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(fs).getSize">fs.getSize(path)</a></td>
+		<td class="summary">
+<p>Gets the size of a file.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(fs).isDir">fs.isDir(path)</a></td>
+		<td class="summary">
+<p>Checks if a <code>path</code> refers to an existing directory.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(fs).isReadOnly">fs.isReadOnly(path)</a></td>
+		<td class="summary">
+<p>Checks if a <code>path</code> is read-only (i.e.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(fs).list">fs.list(path)</a></td>
+		<td class="summary">
+<p>Lists the directories and files in the given directory.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(fs).makeDir">fs.makeDir(path)</a></td>
+		<td class="summary">
+<p>Creates a directory.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(fs).move">fs.move(fromPath, toPath)</a></td>
+		<td class="summary">
+<p>Moves a file or directory to a new location.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(fs).open">fs.open(path, mode)</a></td>
+		<td class="summary">
+<p>This <code>function</code> opens a file, in the mode specified in the <code>string</code> <code>mode</code>.</p>
+</td>
+		</tr>
+	</table>
+
 			<h2><a id="#(file)">Type <code>file</code></a></h2>
 				<table class="function_list">
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(file).close">file.close()</a></td>
-		<td class="summary"> Closes the file handle, after which it can no longer be used.</td>
+		<td class="name" nowrap="nowrap"><a href="##(file).close">file.close()</a></td>
+		<td class="summary">
+<p>Closes the <code>file</code> handle, after which it can no longer be used.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(file).read">file.read()</a></td>
-		<td class="summary"> Reads the remaining text or a single byte from the file.</td>
+		<td class="name" nowrap="nowrap"><a href="##(file).read">file.read()</a></td>
+		<td class="summary">
+<p>Reads the remaining text or a single byte from the <code>file</code>.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(file).readLine">file.readLine()</a></td>
-		<td class="summary"> Reads the next line from the file.</td>
+		<td class="name" nowrap="nowrap"><a href="##(file).readAll">file.readAll()</a></td>
+		<td class="summary">
+<p>Reads the all the text in the <code>file</code>.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(file).write">file.write(data)</a></td>
-		<td class="summary"> Writes a single byte or a string of characters exactly as they appear in the string data to the file.</td>
+		<td class="name" nowrap="nowrap"><a href="##(file).readLine">file.readLine()</a></td>
+		<td class="summary">
+<p>Reads the next line from the <code>file</code>.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(file).writeLine">file.writeLine(data)</a></td>
-		<td class="summary"> Writes a string of characters to the file, then appends an end-of-line character
- Note: only available in mode "w" or "a"
- </td>
+		<td class="name" nowrap="nowrap"><a href="##(file).write">file.write(data)</a></td>
+		<td class="summary">
+<p>Writes a single byte or a <code>string</code> of characters exactly as they appear in the 
+<code>string</code> data to the <code>file</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(file).writeLine">file.writeLine(data)</a></td>
+		<td class="summary">
+<p>Writes a <code>string</code> of characters to the <code>file</code>, then appends an end-of-line character.</p>
+</td>
 		</tr>
 	</table>
 
-			<h2><a id="#(fs)">Type <code>fs</code></a></h2>
-				<table class="function_list">
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(fs).combine">fs.combine(basePath, localPath)</a></td>
-		<td class="summary"> Combines two paths.</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(fs).copy">fs.copy(fromPath, toPath)</a></td>
-		<td class="summary"> Copy a file or directory from one location to another.</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(fs).delete">fs.delete(path)</a></td>
-		<td class="summary"> Deletes a file or directory.</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(fs).exists">fs.exists(path)</a></td>
-		<td class="summary"> Checks if a path refers to an existing file or directory.</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(fs).getDrive">fs.getDrive(path)</a></td>
-		<td class="summary"> Gets the type of storage medium holding a file or directory, or nil if the path does not exist.</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(fs).getName">fs.getName(path)</a></td>
-		<td class="summary"> Returns the last path component (forward-slash-separated) component of a path (the path doesn't need to exist).</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(fs).getSize">fs.getSize(path)</a></td>
-		<td class="summary"> Gets the size of a file.</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(fs).isDir">fs.isDir(path)</a></td>
-		<td class="summary"> Checks if a path refers to an existing directory.</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(fs).isReadOnly">fs.isReadOnly(path)</a></td>
-		<td class="summary"> Checks if a path is read-only (i.e.</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(fs).list">fs.list(path)</a></td>
-		<td class="summary"> Lists the directories and files in the given directory.</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(fs).makeDir">fs.makeDir(path)</a></td>
-		<td class="summary"> Creates a directory.</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(fs).move">fs.move(fromPath, toPath)</a></td>
-		<td class="summary"> Moves a file or directory to a new location.</td>
-		</tr>
-		<tr>
-		<td class="name" nowrap="nowrap"><a href="fs.html##(fs).open">fs.open(path, mode)</a></td>
-		<td class="summary"> This function opens a file, in the mode specified in the string <code>mode</code>.</td>
-		</tr>
-	</table>
-
-			<h2>Type <code>file</code></h2>
-				<h3>Field(s)</h3>
-		<dl class="function">
-<dt>
-<a id="#(file).close" >
-<strong>file.close()</strong>
-</a>
-</dt>
-<dd>
-	 Closes the file handle, after which it can no longer be used.
-</dd>
-</dl>
-		<dl class="function">
-<dt>
-<a id="#(file).read" >
-<strong>file.read()</strong>
-</a>
-</dt>
-<dd>
-	 Reads the remaining text or a single byte from the file.
-	<br/>Note only available in mode "r" or "rb"
-		<h3>Return values</h3>
-			<ol>
-				<li>
-					<em>#string:</em>
-				the entire rest of the file, with the end-of-line character on the very last line (if present) stripped (if mode is "r").
-				</li>
-				<li>
-					<em>#number:</em>
-				the byte read from the file, or nil if there are no more bytes. (if mode is "rb")
-				</li>
-			</ol>
-</dd>
-</dl>
-		<dl class="function">
-<dt>
-<a id="#(file).readLine" >
-<strong>file.readLine()</strong>
-</a>
-</dt>
-<dd>
-	 Reads the next line from the file.
-	<br/>Note: only available in mode "r"
-		<h3>Return value</h3>
-				<p>
-				<em>#string:</em>
-				the next line read from the file, with the end-of-line character stripped; or #nil if there are no more lines in the file.
-				</p>
-</dd>
-</dl>
-		<dl class="function">
-<dt>
-<a id="#(file).write" >
-<strong>file.write(data)</strong>
-</a>
-</dt>
-<dd>
-	 Writes a single byte or a string of characters exactly as they appear in the string data to the file.
-	<br/>Note: only available in mode "w", "a", "wb" or "ab"
-		<h3>Parameter</h3>
-		<ul>
-				<li><code><em>
-						#string
-				data  </em></code>: string that is written to the file (if mode is "r") or <code>data</code> : byte that is written to the file (if mode is "rb").
-				</li>
-		</ul>
-</dd>
-</dl>
-		<dl class="function">
-<dt>
-<a id="#(file).writeLine" >
-<strong>file.writeLine(data)</strong>
-</a>
-</dt>
-<dd>
-	 Writes a string of characters to the file, then appends an end-of-line character
- Note: only available in mode "w" or "a"
- 
-		<h3>Parameter</h3>
-		<ul>
-				<li><code><em>
-						#string
-				data  </em></code>: string that is written to the file.
-				</li>
-		</ul>
-</dd>
-</dl>
-
-			<h2>Type <code>fs</code></h2>
-				<h3>Field(s)</h3>
+	<h2><a id="#(fs)" >Type <code>fs</code></a></h2>
+		<h3>Field(s)</h3>
 		<dl class="function">
 <dt>
 <a id="#(fs).combine" >
@@ -216,24 +212,35 @@
 </a>
 </dt>
 <dd>
-	 Combines two paths.
-	<br/>The new path consists of all the components of localPath inside all the components of basePath. Neither path needs to exist, this function only manipulates strings and does not touch the filesystem.
+	
+<p>Combines two paths.</p>
+
+	
+<p>The new path consists of all the components of <code>localPath</code>
+inside all the components of <code>basePath</code>. Neither <code>path</code> needs to exist, this
+function only manipulates <code>strings</code> and does not touch the filesystem.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#string
-				basePath  </em></code>: base path.
+				<li>
+				
+<p><code><em>#string basePath </em></code>: 
+base path.</p>
+
 				</li>
-				<li><code><em>
-						#string
-				localPath  </em></code>: path that will be appended to the base path.
+				<li>
+				
+<p><code><em>#string localPath </em></code>: 
+path that will be appended to the base path.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#string:</em>
-				the combined path.
-				</p>
+				
+<p><em>#string:</em>
+the combined path.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -243,17 +250,29 @@
 </a>
 </dt>
 <dd>
-	 Copy a file or directory from one location to another.
-	<br/>The parent of the new location must be a directory, toPath must include the target filename and cannot be only a directory to move the file into, and toPath itself must not already exist.
+	
+<p>Copy a file or directory from one location to another.</p>
+
+	
+<p>The parent of the new 
+location must be a directory, <code>toPath</code> must include the target filename and 
+cannot be only a directory to move the file into, and <code>toPath</code> itself must not 
+already exist.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#string
-				fromPath  </em></code>: location of the file or directory.
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> fromPath </em></code>: 
+location of the file or directory.</p>
+
 				</li>
-				<li><code><em>
-						#string
-				toPath  </em></code>: path the file or directory should be copied to.
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> toPath </em></code>: 
+<code>path</code> the file or directory should be copied to.</p>
+
+
 				</li>
 		</ul>
 </dd>
@@ -265,13 +284,21 @@
 </a>
 </dt>
 <dd>
-	 Deletes a file or directory.
-	<br/>A nonexistent target is ignored, a directory will be deleted along with all its contents.
+	
+<p>Deletes a file or directory.</p>
+
+	
+<p>A nonexistent target is ignored, a directory 
+will be deleted along with all its contents.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#string
-				path  </em></code>: path of the directory that should be deleted.
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> path </em></code>: 
+<code>path</code> of the directory that should be deleted.</p>
+
+
 				</li>
 		</ul>
 </dd>
@@ -283,19 +310,24 @@
 </a>
 </dt>
 <dd>
-	 Checks if a path refers to an existing file or directory.
+	
+<p>Checks if a <code>path</code> refers to an existing file or directory.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#string
-				path  </em></code>: The path of the file or directory that should be checked.
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> path </em></code>: 
+The <code>path</code> of the file or directory that should be checked.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#boolean:</em>
-				True if the file exists, or false if not.
-				</p>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the file exists, or <code>false</code> if not.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -305,19 +337,52 @@
 </a>
 </dt>
 <dd>
-	 Gets the type of storage medium holding a file or directory, or nil if the path does not exist.
+	
+<p>Gets the type of storage medium holding a file or directory, or <code>nil</code> if the
+<code>path</code> does not exist.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#string
-				path  </em></code>: The path of the file or directory that should be checked.
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> path </em></code>: 
+The <code>path</code> of the file or directory that should be checked.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#string:</em>
-				The type of storage medium holding the path, as of ComputerCraft 1.3 either "rom" or "hdd".
-				</p>
+				
+<p><em>#string:</em>
+The type of storage medium holding the <code>path</code>, as of ComputerCraft 1.3 either <code>"rom"</code> or <code>"hdd"</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(fs).getFreeSpace" >
+<strong>fs.getFreeSpace(path)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Gets the amount of space available on the <code>path</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> path </em></code>: 
+The directory <code>path</code> that should be checked.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+The amount of space available on the path in bytes.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -327,19 +392,27 @@
 </a>
 </dt>
 <dd>
-	 Returns the last path component (forward-slash-separated) component of a path (the path doesn't need to exist).
+	
+<p>Returns the last <code>path</code> component (forward-slash-separated) component of a <code>path</code>.</p>
+
+	
+<p>(the path doesn't need to exist).</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#string
-				path  </em></code>: The path that should be parsed.
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> path </em></code>: 
+The <code>path</code> that should be parsed.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#string:</em>
-				The last path component of the path, or the string "root" if the path refers to the root directory.
-				</p>
+				
+<p><em><a href="##(path)">#path</a>:</em>
+The last <code>path</code> component of the <code>path</code>, or the <code>string</code> <code>"root"</code> if the path refers to the root directory.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -349,19 +422,24 @@
 </a>
 </dt>
 <dd>
-	 Gets the size of a file.
+	
+<p>Gets the size of a file.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#string
-				path  </em></code>: The path of the file that should be checked.
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> path </em></code>: 
+The <code>path</code> of the file that should be checked.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#number:</em>
-				The size of the file in bytes.
-				</p>
+				
+<p><em>#number:</em>
+The size of the file in bytes.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -371,19 +449,24 @@
 </a>
 </dt>
 <dd>
-	 Checks if a path refers to an existing directory.
+	
+<p>Checks if a <code>path</code> refers to an existing directory.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#string
-				path  </em></code>: The path of the file or directory that should be checked.
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> path </em></code>: 
+The <code>path</code> of the file or directory that should be checked.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#boolean:</em>
-				True if it is a directory, or false if not.
-				</p>
+				
+<p><em>#boolean:</em>
+<code>true</code> if it is a directory, or <code>false</code> if not.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -393,20 +476,27 @@
 </a>
 </dt>
 <dd>
-	 Checks if a path is read-only (i.e.
-	<br/>cannot be modified).
+	
+<p>Checks if a <code>path</code> is read-only (i.e.</p>
+
+	
+<p>cannot be modified).</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#string
-				path  </em></code>: The path of the file or directory that should be checked.
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> path </em></code>: 
+The <code>path</code> of the file or directory that should be checked.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#boolean:</em>
-				False if path can be written to, or true if not.
-				</p>
+				
+<p><em>#boolean:</em>
+<code>false</code> if <code>path</code> can be written to, or <code>true</code> if not.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -416,19 +506,24 @@
 </a>
 </dt>
 <dd>
-	 Lists the directories and files in the given directory.
+	
+<p>Lists the directories and files in the given directory.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#string
-				path  </em></code>: Path of the directory that should be listed.
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> path </em></code>: 
+<code>path</code> of the directory that should be listed.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#table:</em>
-				the default input file handle.
-				</p>
+				
+<p><em>#table:</em>
+<code>table</code> of files and folders in <code>path</code>, which must be a directory.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -438,13 +533,22 @@
 </a>
 </dt>
 <dd>
-	 Creates a directory.
-	<br/>It fails if the location already exists as a file, it silently does nothing if the location or a parent already exists as a directory and it recursively creates directories if a parent is also missing.
+	
+<p>Creates a directory.</p>
+
+	
+<p>It fails if the location already exists as a file, it silently does nothing 
+if the location or a parent already exists as a directory and it recursively 
+creates directories if a parent is also missing.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#string
-				path  </em></code>: The path of the directory that should be created.
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> path </em></code>: 
+The <code>path</code> of the directory that should be created.</p>
+
+
 				</li>
 		</ul>
 </dd>
@@ -456,17 +560,29 @@
 </a>
 </dt>
 <dd>
-	 Moves a file or directory to a new location.
-	<br/>The parent of the new location must be a directory, toPath must include the target filename and cannot be only a directory to move the file into, and toPath itself must not already exist.
+	
+<p>Moves a file or directory to a new location.</p>
+
+	
+<p>The parent of the new location 
+must be a directory, <code>toPath</code> must include the target filename and cannot be 
+only a directory to move the file into, and <code>toPath</code> itself must not already 
+exist.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#string
-				fromPath  </em></code>: The location of the file or directory.
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> fromPath </em></code>: 
+The location of the file or directory.</p>
+
 				</li>
-				<li><code><em>
-						#string
-				toPath  </em></code>: The path the file or directory should be moved to.
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> toPath </em></code>: 
+The <code>path</code> the file or directory should be moved to.</p>
+
+
 				</li>
 		</ul>
 </dd>
@@ -478,36 +594,241 @@
 </a>
 </dt>
 <dd>
-	 This function opens a file, in the mode specified in the string <code>mode</code>.
-	<br/>It
- returns a new file handle, or, in case of errors, nil plus an error message.
- The <code>mode</code> string can be any of the following:</p>
+	
+<p>This <code>function</code> opens a file, in the mode specified in the <code>string</code> <code>mode</code>.</p>
+
+	
+<p>It
+returns a new <code>file</code> handle, or, in case of errors, <code>nil</code> plus an error <code>string</code>.
+The <code>mode</code> <code>string</code> can be any of the following:</p>
 
 <ul>
-    <li><em>"r"</em>: read mode (the default);</li>
-    <li><em>"w"</em>: write mode;</li>
-    <li><em>"a"</em>: append mode;</li>
+    <li><code>"r"</code>: read mode (the default);</li>
+    <li><code>"w"</code>: write mode;</li>
+    <li><code>"a"</code>: append mode;</li>
 </ul>
 
-<p> The <code>mode</code> string can also have a "b" at the end, which will open the file in binary mode.
+<p>The <code>mode</code> <code>string</code> can also have a <code>"b"</code> at the end, which will open the file in
+binary mode. </p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#string
-				path  </em></code>: path to the file.
+				<li>
+				
+<p><code><em><a href="##(path)">#path</a> path </em></code>: 
+<code>path</code> to the file.</p>
+
 				</li>
-				<li><code><em>
-						#string
-				mode  </em></code>: used to specify the open mode.
+				<li>
+				
+<p><code><em>#string mode </em></code>: 
+used to specify the open mode.</p>
+
 				</li>
 		</ul>
-		<h3>Return value</h3>
-				<p>
-				<em><a href="##(file)">#file</a>:</em>
-				a file handle.
-				</p>
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em><a href="##(file)">#file</a>:</em>
+a <code>file</code> handle.</p>
+
+				</li>
+				<li>
+				
+<p><em>#nil:</em>
+<code>nil</code> if the mode was read-only and the file did not exist.</p>
+
+
+				</li>
+			</ol>
 </dd>
 </dl>
+
+			<h2><a id="#(file)" >Type <code>file</code></a></h2>
+				<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(file).close" >
+<strong>file.close()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Closes the <code>file</code> handle, after which it can no longer be used.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(file).read" >
+<strong>file.read()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Reads the remaining text or a single byte from the <code>file</code>.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Only available in mode <code>"rb"</code></li>
+    </ol>
+</blockquote>
+
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em>#number:</em>
+the byte read from the <code>file</code>.</p>
+
+				</li>
+				<li>
+				
+<p><em>#nil:</em>
+<code>nil</code> if there are no more bytes in the <code>file</code>.</p>
+
+
+				</li>
+			</ol>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(file).readAll" >
+<strong>file.readAll()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Reads the all the text in the <code>file</code>.</p>
+
+	
+<p>Note: only available in mode <code>"r"</code></p>
+
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em>#string:</em>
+the entire rest of the <code>file</code>, with the end-of-line character on the very last line (if present) stripped.</p>
+
+				</li>
+				<li>
+				
+<p><em>#nil:</em>
+<code>nil</code> if there are no more lines in the <code>file</code>.</p>
+
+
+				</li>
+			</ol>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(file).readLine" >
+<strong>file.readLine()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Reads the next line from the <code>file</code>.</p>
+
+	
+<p>Note: only available in mode <code>"r"</code></p>
+
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em>#string:</em>
+the next line read from the <code>file</code>, with the end-of-line character stripped.</p>
+
+				</li>
+				<li>
+				
+<p><em>#nil:</em>
+<code>nil</code> if there are no more lines in the <code>file</code>.</p>
+
+
+				</li>
+			</ol>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(file).write" >
+<strong>file.write(data)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Writes a single byte or a <code>string</code> of characters exactly as they appear in the 
+<code>string</code> data to the <code>file</code>.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Only available in mode <code>"w"</code>, <code>"a"</code>, <code>"wb"</code> or <code>"ab"</code></li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string data </em></code>: 
+<code>string</code> that is written to the <code>file</code> (if <code>mode</code> is <code>"w"</code> or <code>"a"</code>) or <code>number</code> : byte that is written to the file (if <code>mode</code> is <code>"wb"</code> or <code>"ab"</code>).</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(file).writeLine" >
+<strong>file.writeLine(data)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Writes a <code>string</code> of characters to the <code>file</code>, then appends an end-of-line character.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Only available in mode <code>"w"</code> or <code>"a"</code></li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string data </em></code>: 
+<code>string</code> that is written to the <code>file</code>.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+
+			<h2><a id="#(path)" >Type <code>path</code></a></h2>
+				
+<p>Absolute filesystem path to a directory or file.</p>
+
+	
+<p>Implemented as a <a href="##(string)">#string</a>.</p>
+
 
 </div>
 
