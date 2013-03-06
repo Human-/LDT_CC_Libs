@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li>bit</li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>bit</code></h1>
+   
+<h2>Bit API</h2>
+<p>The <a href="http://computercraft.info/wiki/Bit_%28API%29">bit API</a> is for manipulating
+numbers using bitwise binary operations.</p>
+
+	<h2><a id="#(bit)" >Type <code>bit</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(bit).band">bit.band(m, n)</a></td>
+		<td class="summary">
+<p>Computes the bitwise AND of two numbers</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(bit).blogic_rshift">bit.blogic_rshift(n, bits)</a></td>
+		<td class="summary">
+<p>Shifts a <code>number</code> right by a specified <code>number</code> of bits (zero fill >>>)</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(bit).blshift">bit.blshift(n, bits)</a></td>
+		<td class="summary">
+<p>Shifts a <code>number</code> left by a specified <code>number</code> of bits</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(bit).bnot">bit.bnot(n)</a></td>
+		<td class="summary">
+<p>Computes the bitwise NOT of a number, taken in the domain and range of
+32-bit unsigned integers</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(bit).bor">bit.bor(m, n)</a></td>
+		<td class="summary">
+<p>Computes the bitwise inclusive OR of two numbers</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(bit).brshift">bit.brshift(n, bits)</a></td>
+		<td class="summary">
+<p>Shifts a <code>number</code> right by a specified <code>number</code> of bits</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(bit).bxor">bit.bxor(m, n)</a></td>
+		<td class="summary">
+<p>Computes the bitwise exclusive OR of two numbers</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(bit)" >Type <code>bit</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(bit).band" >
+<strong>bit.band(m, n)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Computes the bitwise AND of two numbers</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number m </em></code>: 
+the <code>number</code> to AND'ed</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number n </em></code>: 
+the <code>number</code> to AND'ed</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+the value of <code>m AND n</code></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(bit).blogic_rshift" >
+<strong>bit.blogic_rshift(n, bits)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Shifts a <code>number</code> right by a specified <code>number</code> of bits (zero fill >>>)</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number n </em></code>: 
+the <code>number</code> to be manipulated</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number bits </em></code>: 
+the <code>number</code> of bits to shift <code>n</code></p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+the value of <code>n</code> shifted right by bits bits, which is equivalent to <code>n÷2^bits</code></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(bit).blshift" >
+<strong>bit.blshift(n, bits)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Shifts a <code>number</code> left by a specified <code>number</code> of bits</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number n </em></code>: 
+the <code>number</code> to be manipulated</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number bits </em></code>: 
+the <code>number</code> of bits to shift <code>n</code></p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+the value of <code>n</code> shifted left by bits bits, which is equivalent to <code>n×2^bits</code></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(bit).bnot" >
+<strong>bit.bnot(n)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Computes the bitwise NOT of a number, taken in the domain and range of
+32-bit unsigned integers</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number n </em></code>: 
+the <code>number</code> to AND'ed</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+the value of <code>NOT n</code></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(bit).bor" >
+<strong>bit.bor(m, n)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Computes the bitwise inclusive OR of two numbers</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number m </em></code>: 
+the <code>number</code> to OR'ed</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number n </em></code>: 
+the <code>number</code> to OR'ed</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+the value of <code>m OR n</code></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(bit).brshift" >
+<strong>bit.brshift(n, bits)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Shifts a <code>number</code> right by a specified <code>number</code> of bits</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number n </em></code>: 
+the <code>number</code> to be manipulated</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number bits </em></code>: 
+the <code>number</code> of bits to shift <code>n</code></p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+the value of <code>n</code> shifted right by bits bits, which is equivalent to <code>n÷2^bits</code></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(bit).bxor" >
+<strong>bit.bxor(m, n)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Computes the bitwise exclusive OR of two numbers</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number m </em></code>: 
+the <code>number</code> to XOR'ed</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number n </em></code>: 
+the <code>number</code> to XOR'ed</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+the value of <code>m XOR n</code></p>
+
+
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

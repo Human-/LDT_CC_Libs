@@ -1,0 +1,2300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="bit.html">bit</a></li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
+					<li><a href="io.html">io</a></li>
+					<li>keys</li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>keys</code></h1>
+   
+<h2>Keys API</h2>
+<p>The <a href="http://www.minecraftwiki.net/wiki/Key_codes">keys API</a> contains 
+constants for all the key codes that can be returned by the "key" event:</p>
+
+<h3>Example usage:</h3>
+<pre><code>local sEvent, nKey = os.pullEvent()
+if sEvent == "key" and nKey == keys.enter then
+   Do something
+end
+</code></pre>
+
+	<h2><a id="#(keys)" >Type <code>keys</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).a">keys.a</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).apostrophe">keys.apostrophe</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).at">keys.at</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).ax">keys.ax</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).b">keys.b</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).backslash">keys.backslash</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).backspace">keys.backspace</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).c">keys.c</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).capsLock">keys.capsLock</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).cimcumflex">keys.cimcumflex</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).colon">keys.colon</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).comma">keys.comma</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).convert">keys.convert</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).d">keys.d</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).delete">keys.delete</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).down">keys.down</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).e">keys.e</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).eight">keys.eight</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).end">keys.end</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).enter">keys.enter</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).equals">keys.equals</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f">keys.f</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f1">keys.f1</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f10">keys.f10</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f11">keys.f11</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f12">keys.f12</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f13">keys.f13</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f14">keys.f14</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f15">keys.f15</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f2">keys.f2</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f3">keys.f3</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f4">keys.f4</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f5">keys.f5</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f6">keys.f6</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f7">keys.f7</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f8">keys.f8</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).f9">keys.f9</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).five">keys.five</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).four">keys.four</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).g">keys.g</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).getName">keys.getName(keycode)</a></td>
+		<td class="summary">
+<p>Returns the constant name for the key code provided.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).grave">keys.grave</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).h">keys.h</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).home">keys.home</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).i">keys.i</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).insert">keys.insert</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).j">keys.j</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).k">keys.k</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).kana">keys.kana</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).kanji">keys.kanji</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).l">keys.l</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).left">keys.left</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).leftAlt">keys.leftAlt</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).leftBracket">keys.leftBracket</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).leftCtrl">keys.leftCtrl</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).leftShift">keys.leftShift</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).m">keys.m</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).minus">keys.minus</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).multiply">keys.multiply</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).n">keys.n</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).nine">keys.nine</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).noconvert">keys.noconvert</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numLock">keys.numLock</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPad0">keys.numPad0</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPad1">keys.numPad1</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPad2">keys.numPad2</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPad3">keys.numPad3</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPad4">keys.numPad4</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPad5">keys.numPad5</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPad6">keys.numPad6</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPad7">keys.numPad7</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPad8">keys.numPad8</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPad9">keys.numPad9</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPadAdd">keys.numPadAdd</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPadComma">keys.numPadComma</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPadDecimal">keys.numPadDecimal</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPadDivide">keys.numPadDivide</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPadEnter">keys.numPadEnter</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPadEquals">keys.numPadEquals</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).numPadSubtract">keys.numPadSubtract</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).o">keys.o</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).one">keys.one</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).p">keys.p</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).pageDown">keys.pageDown</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).pageUp">keys.pageUp</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).pause">keys.pause</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).period">keys.period</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).q">keys.q</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).r">keys.r</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).right">keys.right</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).rightAlt">keys.rightAlt</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).rightBracket">keys.rightBracket</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).rightCtrl">keys.rightCtrl</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).rightShift">keys.rightShift</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).s">keys.s</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).scollLock">keys.scollLock</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).semiColon">keys.semiColon</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).seven">keys.seven</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).six">keys.six</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).slash">keys.slash</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).space">keys.space</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).stop">keys.stop</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).t">keys.t</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).tab">keys.tab</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).three">keys.three</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).two">keys.two</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).u">keys.u</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).underscore">keys.underscore</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).up">keys.up</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).v">keys.v</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).w">keys.w</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).x">keys.x</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).y">keys.y</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).yen">keys.yen</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).z">keys.z</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(keys).zero">keys.zero</a></td>
+		<td class="summary">
+<p>Constant to key code mapping.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(keys)" >Type <code>keys</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).a" >
+<strong>keys.a</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).apostrophe" >
+<strong>keys.apostrophe</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).at" >
+<strong>keys.at</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).ax" >
+<strong>keys.ax</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).b" >
+<strong>keys.b</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).backslash" >
+<strong>keys.backslash</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).backspace" >
+<strong>keys.backspace</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).c" >
+<strong>keys.c</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).capsLock" >
+<strong>keys.capsLock</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).cimcumflex" >
+<strong>keys.cimcumflex</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).colon" >
+<strong>keys.colon</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).comma" >
+<strong>keys.comma</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).convert" >
+<strong>keys.convert</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).d" >
+<strong>keys.d</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).delete" >
+<strong>keys.delete</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).down" >
+<strong>keys.down</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).e" >
+<strong>keys.e</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).eight" >
+<strong>keys.eight</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).end" >
+<strong>keys.end</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).enter" >
+<strong>keys.enter</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).equals" >
+<strong>keys.equals</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f" >
+<strong>keys.f</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f1" >
+<strong>keys.f1</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f10" >
+<strong>keys.f10</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f11" >
+<strong>keys.f11</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f12" >
+<strong>keys.f12</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f13" >
+<strong>keys.f13</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f14" >
+<strong>keys.f14</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f15" >
+<strong>keys.f15</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f2" >
+<strong>keys.f2</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f3" >
+<strong>keys.f3</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f4" >
+<strong>keys.f4</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f5" >
+<strong>keys.f5</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f6" >
+<strong>keys.f6</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f7" >
+<strong>keys.f7</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f8" >
+<strong>keys.f8</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).f9" >
+<strong>keys.f9</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).five" >
+<strong>keys.five</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).four" >
+<strong>keys.four</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).g" >
+<strong>keys.g</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(keys).getName" >
+<strong>keys.getName(keycode)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the constant name for the key code provided.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(keycode)">#keycode</a> keycode </em></code>: 
+the key code to translate.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+the name of the keycode</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).grave" >
+<strong>keys.grave</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).h" >
+<strong>keys.h</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).home" >
+<strong>keys.home</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).i" >
+<strong>keys.i</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).insert" >
+<strong>keys.insert</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).j" >
+<strong>keys.j</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).k" >
+<strong>keys.k</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).kana" >
+<strong>keys.kana</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).kanji" >
+<strong>keys.kanji</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).l" >
+<strong>keys.l</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).left" >
+<strong>keys.left</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).leftAlt" >
+<strong>keys.leftAlt</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).leftBracket" >
+<strong>keys.leftBracket</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).leftCtrl" >
+<strong>keys.leftCtrl</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).leftShift" >
+<strong>keys.leftShift</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).m" >
+<strong>keys.m</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).minus" >
+<strong>keys.minus</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).multiply" >
+<strong>keys.multiply</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).n" >
+<strong>keys.n</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).nine" >
+<strong>keys.nine</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).noconvert" >
+<strong>keys.noconvert</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numLock" >
+<strong>keys.numLock</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPad0" >
+<strong>keys.numPad0</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPad1" >
+<strong>keys.numPad1</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPad2" >
+<strong>keys.numPad2</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPad3" >
+<strong>keys.numPad3</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPad4" >
+<strong>keys.numPad4</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPad5" >
+<strong>keys.numPad5</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPad6" >
+<strong>keys.numPad6</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPad7" >
+<strong>keys.numPad7</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPad8" >
+<strong>keys.numPad8</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPad9" >
+<strong>keys.numPad9</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPadAdd" >
+<strong>keys.numPadAdd</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPadComma" >
+<strong>keys.numPadComma</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPadDecimal" >
+<strong>keys.numPadDecimal</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPadDivide" >
+<strong>keys.numPadDivide</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPadEnter" >
+<strong>keys.numPadEnter</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPadEquals" >
+<strong>keys.numPadEquals</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).numPadSubtract" >
+<strong>keys.numPadSubtract</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).o" >
+<strong>keys.o</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).one" >
+<strong>keys.one</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).p" >
+<strong>keys.p</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).pageDown" >
+<strong>keys.pageDown</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).pageUp" >
+<strong>keys.pageUp</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).pause" >
+<strong>keys.pause</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).period" >
+<strong>keys.period</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).q" >
+<strong>keys.q</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).r" >
+<strong>keys.r</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).right" >
+<strong>keys.right</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).rightAlt" >
+<strong>keys.rightAlt</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).rightBracket" >
+<strong>keys.rightBracket</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).rightCtrl" >
+<strong>keys.rightCtrl</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).rightShift" >
+<strong>keys.rightShift</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).s" >
+<strong>keys.s</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).scollLock" >
+<strong>keys.scollLock</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).semiColon" >
+<strong>keys.semiColon</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).seven" >
+<strong>keys.seven</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).six" >
+<strong>keys.six</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).slash" >
+<strong>keys.slash</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).space" >
+<strong>keys.space</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).stop" >
+<strong>keys.stop</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).t" >
+<strong>keys.t</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).tab" >
+<strong>keys.tab</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).three" >
+<strong>keys.three</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).two" >
+<strong>keys.two</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).u" >
+<strong>keys.u</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).underscore" >
+<strong>keys.underscore</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).up" >
+<strong>keys.up</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).v" >
+<strong>keys.v</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).w" >
+<strong>keys.w</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).x" >
+<strong>keys.x</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).y" >
+<strong>keys.y</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).yen" >
+<strong>keys.yen</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).z" >
+<strong>keys.z</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="##(keycode)">#keycode</a></em>
+<a id="#(keys).zero" >
+<strong>keys.zero</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Constant to key code mapping.</p>
+
+</dd>
+</dl>
+
+			<h2><a id="#(keycode)" >Type <code>keycode</code></a></h2>
+				
+<p>Numeric value used by LWJGL to identify various keys.</p>
+
+	
+<p>Implemented as a <a href="##(number)">#number</a>.</p>
+
+
+</div>
+
+</div>
+</body>
+</html>

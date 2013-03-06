@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="bit.html">bit</a></li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li>help</li>
+					<li><a href="http.html">http</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>help</code></h1>
+   
+<h2>Help API</h2>
+<p>The <a href="http://computercraft.info/wiki/Help_%28API%29">help API</a> allows limited 
+access to the help files.</p>
+
+	<h2><a id="#(help)" >Type <code>help</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(help).lookup">help.lookup(topic)</a></td>
+		<td class="summary">
+<p>Looks up the <code>path</code> for a help file using the <a href="##(help).path">help.path</a> directory.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(help).path">help.path()</a></td>
+		<td class="summary">
+<p>Returns the current <code>path</code> for the help API.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(help).setPath">help.setPath(apiPath)</a></td>
+		<td class="summary">
+<p>Sets the <code>path</code> of the API to apiPath.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(help).topics">help.topics()</a></td>
+		<td class="summary">
+<p>Returns a <code>table</code> of valid help topics.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(help)" >Type <code>help</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(help).lookup" >
+<strong>help.lookup(topic)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Looks up the <code>path</code> for a help file using the <a href="##(help).path">help.path</a> directory.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string topic </em></code>: 
+<code>string</code> topic to look up for help.</p>
+
+				</li>
+		</ul>
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em><a href="fs.html##(path)">fs#path</a>:</em>
+<code>path</code> of help file for topic.</p>
+
+				</li>
+				<li>
+				
+<p><em>#nil:</em>
+<code>nil</code> if help file for topic is not found.</p>
+
+
+				</li>
+			</ol>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(help).path" >
+<strong>help.path()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the current <code>path</code> for the help API.</p>
+
+		<h3>Return value</h3>
+				
+<p><em><a href="fs.html##(path)">fs#path</a>:</em>
+<code>path</code> of help API.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(help).setPath" >
+<strong>help.setPath(apiPath)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the <code>path</code> of the API to apiPath.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="fs.html##(path)">fs#path</a> apiPath </em></code>: 
+<code>path</code> to set the API to.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(help).topics" >
+<strong>help.topics()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns a <code>table</code> of valid help topics.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#table:</em>
+all valid topics.</p>
+
+
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

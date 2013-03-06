@@ -1,81 +1,91 @@
 ------------------------------------------------------------------------------- 
--- The Terminal API provides functions for writing text to the terminal and monitors, and drawing ASCII graphics.
--- Color/Colour setting functions are only available on advanced computers and monitors.
+-- ##Terminal API
+-- The [term API](http://computercraft.info/wiki/Term_%28API%29) provides
+-- functions for writing text to the terminal and monitors, and drawing ASCII
+-- graphics.
+-- ###Notes:  
+-- >
+-- > 1. [Color](colors.html)/[Colour](colours.html) setting functions are only available on advanced computers
+-- and monitors.
 -- @module term
 
 -------------------------------------------------------------------------------
--- Writes text to the screen.
+-- Writes a `string` to the screen.
 -- @function [parent=#term] write
--- @param #string text The text to write
--- @return #string Text written on the screen
+-- @param #string text The `string` to be written.
+-- @return #string `string` written on the screen.
  
 -------------------------------------------------------------------------------
--- Clears the entire screen
+-- Clears the entire screen.
 -- @function [parent=#term] clear
  
 -------------------------------------------------------------------------------
--- Clears the line the cursor is on
+-- Clears the line the cursor is on.
 -- @function [parent=#term] clearLine
 
 -------------------------------------------------------------------------------
--- Returns two arguments containing the x and the y position of the cursor.
+-- Returns two arguments containing the `x` and the `y` position of the cursor.
 -- @function [parent=#term] getCursorPos
--- @return #number The x coordinate of the Cursor
--- @return #number The y coordinate of the Cursor
+-- @return #number, #number The `x`,`y` coordinates of the cursor.
 
 -------------------------------------------------------------------------------
--- Disables the blinking or turns it on.
--- @function [parent=#term] getCursorBlink
--- @param #boolean bool True if the cursor shall be enabled
+-- Sets the location of the cursor on screen.
+-- @function [parent=#term] setCursorPos
+-- @param #number x the new `x` coordinate of the cursor.
+-- @param #number y the new `y` coordinate of the cursor.
 
 -------------------------------------------------------------------------------
--- Returns if the computer supports color. (Used to determine whether or not an Advanced Computer is being used).
+-- Sets whether the cursor is blinking or not.
+-- @function [parent=#term] setCursorBlink
+-- @param #boolean state `true` to enable cursor blinking, `false` to disable.
+
+-------------------------------------------------------------------------------
+-- Returns if the computer supports color.
+-- ###Notes:  
+-- >
+-- > 1. Used to determine whether or not an Advanced Computer is being used.
 -- @function [parent=#term] isColor
--- @return #boolean True if the Computer is Advanced
+-- @return #boolean `true` if the Computer is Advanced.
 
 -------------------------------------------------------------------------------
--- Returns if the computer supports colour. (Used to determine whether or not an Advanced Computer is being used).
+-- Returns if the computer supports colour.
+-- ###Notes:  
+-- >
+-- > 1. Used to determine whether or not an Advanced Computer is being used.
 -- @function [parent=#term] isColour
--- @return #boolean True if the Computer is Advanced
+-- @return #boolean `true` if the Computer is Advanced.
 
 -------------------------------------------------------------------------------
--- Returns two arguments containing the x and the y values stating the size of the screen. (Good for if you're making something to be compatible with both Turtles and Computers).
+-- Returns the `width` and `height` of the terminal window.
+-- ###Notes:  
+-- >
+-- > 1. Good for if you're making something to be compatible with both Turtles
+-- and Computers.
 -- @function [parent=#term] getSize
--- @return #number Width of the terminal
--- @return #number Height of the terminal
+-- @return #number, #number `width` and `height` of the terminal.
 
 -------------------------------------------------------------------------------
--- Scrolls the terminal n lines.
+-- Scrolls the terminal `n` lines.
 -- @function [parent=#term] scroll
--- @param #number n Lines to scoll
+-- @param #number n Lines to scroll.
 
 -------------------------------------------------------------------------------
--- Redirects terminal output to a monitor or other redirect target. (Use peripheral.wrap to acquire a monitor "object").
+-- Redirects terminal output to a monitor or other redirect target.
+-- ###Notes:  
+-- >
+-- > 1. Use [`peripheral.wrap`](peripheral.html##\(peripheral\).wrap) to acquire a monitor "object".
 -- @function [parent=#term] redirect
--- @param global#device target The wrapped peripheral (ie. monitor)
+-- @param #table target The wrapped peripheral (ie. `monitor`).
 
 -------------------------------------------------------------------------------
 -- Restores terminal output to the previous target.
 -- @function [parent=#term] restore
 
 -------------------------------------------------------------------------------
--- Sets the text-color of the terminal. Available only to Advanced Computers and Advanced Monitors.
--- @function [parent=#term] setTextColor
--- @param #number color The color to use
-
--------------------------------------------------------------------------------
--- Sets the text-colour of the terminal. Available only to Advanced Computers and Advanced Monitors.
--- @function [parent=#term] setTextColour
--- @param #number colour The colour to use
-
--------------------------------------------------------------------------------
--- Sets the background-color of the terminal. Available only to Advanced Computers and Advanced Monitors.
--- @function [parent=#term] setBackgroundColor
--- @param #number color the color to use
-
--------------------------------------------------------------------------------
--- Sets the background-colour of the terminal. Available only to Advanced Computers and Advanced Monitors.
--- @function [parent=#term] setBackgroundColour
--- @param #number colour the colour to use
+-- Internal.
+-- ###Notes:  
+-- >
+-- > 1. Copy of the original terminal environment for use with term.restore()
+-- @field  [parent=#term] #table native
 
 return nil

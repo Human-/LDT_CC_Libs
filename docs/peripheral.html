@@ -1,0 +1,2014 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="bit.html">bit</a></li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li>peripheral</li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>peripheral</code></h1>
+   
+<h2>Peripheral API</h2>
+<p>The <a href="http://computercraft.info/wiki/Peripheral_%28API%29">peripheral API</a> is 
+for interacting with external <code>peripherals</code>, such as the Disk Drive, the 
+Advanced Monitor and Monitor.</p>
+
+   
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Computers and Turtles are also considered <code>peripherals</code> and you can interface
+        two adjacent Computers, although in a more limited fashion compared to <code>rednet</code>.</li>
+    </ol>
+</blockquote>
+
+	<h2><a id="#(peripheral)" >Type <code>peripheral</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(peripheral).call">peripheral.call(side, methodName, ...)</a></td>
+		<td class="summary">
+<p>Calls a method on the <code>peripheral</code> attached to <code>side</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(peripheral).getMethods">peripheral.getMethods(side)</a></td>
+		<td class="summary">
+<p>Returns a <code>table</code> with all available methods for the <code>peripheral</code> on <code>side</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(peripheral).getType">peripheral.getType(side)</a></td>
+		<td class="summary">
+<p>Tells you what is attached to a <code>side</code> of a <code>computer</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(peripheral).isPresent">peripheral.isPresent(side)</a></td>
+		<td class="summary">
+<p>Tells you whether a <code>peripheral</code> is present on a <code>side</code> of the <code>computer</code> or the <code>turtle</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(peripheral).wrap">peripheral.wrap(side)</a></td>
+		<td class="summary">
+<p>Returns a handle to a <code>peripheral</code> that can then be used to call methods,
+as if using <a href="##(peripheral).call">peripheral.call</a>(<code>side</code>, <code>method</code>)</p>
+</td>
+		</tr>
+	</table>
+
+			<h2><a id="#(advcomputer)">Type <code>advcomputer</code></a></h2>
+				<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advcomputer).getID">advcomputer.getID()</a></td>
+		<td class="summary">
+<p>Gets the <code>computerID</code> of the Advanced Computer. </p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advcomputer).reboot">advcomputer.reboot()</a></td>
+		<td class="summary">
+<p>Reboots the Advanced Computer. </p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advcomputer).shutdown">advcomputer.shutdown()</a></td>
+		<td class="summary">
+<p>Shuts off the Advanced Computer. </p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advcomputer).turnOn">advcomputer.turnOn()</a></td>
+		<td class="summary">
+<p>Turns on the Advanced Computer. </p>
+</td>
+		</tr>
+	</table>
+
+			<h2><a id="#(advmonitor)">Type <code>advmonitor</code></a></h2>
+				<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).clear">advmonitor.clear()</a></td>
+		<td class="summary">
+<p>Clears the entire Advanced Monitor.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).clearLine">advmonitor.clearLine()</a></td>
+		<td class="summary">
+<p>Clears the line the cursor is on.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).getCursorPos">advmonitor.getCursorPos()</a></td>
+		<td class="summary">
+<p>Returns two arguments containing the <code>x</code> and the <code>y</code> coordinates of the cursor.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).getSize">advmonitor.getSize()</a></td>
+		<td class="summary">
+<p>Returns the <code>width</code> and <code>height</code> of the Advanced Monitor.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).isColor">advmonitor.isColor()</a></td>
+		<td class="summary">
+<p>Returns if the Advanced Monitor supports color.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).isColour">advmonitor.isColour()</a></td>
+		<td class="summary">
+<p>Returns if the Advanced Monitor supports colour.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).redirect">advmonitor.redirect(target)</a></td>
+		<td class="summary">
+<p>Redirects output to another target.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).restore">advmonitor.restore()</a></td>
+		<td class="summary">
+<p>Restores output to the previous target.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).scroll">advmonitor.scroll(n)</a></td>
+		<td class="summary">
+<p>Scrolls the Advanced Monitor <code>n</code> lines.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).setBackgroundColor">advmonitor.setBackgroundColor(color)</a></td>
+		<td class="summary">
+<p>Sets the background <a href="colors.html"><code>color</code></a> of the subsequent <code>strings</code> displayed on the Advanced Monitor.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).setBackgroundColour">advmonitor.setBackgroundColour(colour)</a></td>
+		<td class="summary">
+<p>Sets the background <a href="colours.html"><code>colour</code></a> of the subsequent <code>strings</code> displayed on the Advanced Monitor.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).setCursorBlink">advmonitor.setCursorBlink(state)</a></td>
+		<td class="summary">
+<p>Sets whether the cursor is blinking or not.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).setCursorPos">advmonitor.setCursorPos(x, y)</a></td>
+		<td class="summary">
+<p>Sets the location of the cursor on Advanced Monitor.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).setTextColor">advmonitor.setTextColor(color)</a></td>
+		<td class="summary">
+<p>Sets the foreground <a href="colors.html"><code>color</code></a> of subsequent <code>strings</code> displayed on the Advanced Monitor.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).setTextColour">advmonitor.setTextColour(colour)</a></td>
+		<td class="summary">
+<p>Sets the foreground <a href="colours.html"><code>colour</code></a> of the subsequent <code>strings</code> displayed on the Advanced Monitor.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).setTextScale">advmonitor.setTextScale(size)</a></td>
+		<td class="summary">
+<p>Sets the size of all <code>strings</code> on the Advanced Monitor.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(advmonitor).write">advmonitor.write(text)</a></td>
+		<td class="summary">
+<p>Writes a <code>string</code> to the Advanced Monitor.</p>
+</td>
+		</tr>
+	</table>
+
+			<h2><a id="#(command)">Type <code>command</code></a></h2>
+				<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(command).getCommand">command.getCommand()</a></td>
+		<td class="summary">
+<p>Retrieves the <a href="http://www.minecraftwiki.net/wiki/Command_block">command</a> <code>string</code> that the <code>command</code> peripheral is currently using.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(command).runCommand">command.runCommand()</a></td>
+		<td class="summary">
+<p>Runs the <a href="http://www.minecraftwiki.net/wiki/Command_block">command</a> currently set on the <code>command</code> peripheral.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(command).setCommand">command.setCommand()</a></td>
+		<td class="summary">
+<p>Sets the <a href="http://www.minecraftwiki.net/wiki/Command_block">command</a> <code>string</code> that the <code>command</code> peripheral is currently using.</p>
+</td>
+		</tr>
+	</table>
+
+			<h2><a id="#(computer)">Type <code>computer</code></a></h2>
+				<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(computer).getID">computer.getID()</a></td>
+		<td class="summary">
+<p>Gets the <code>computerID</code> of the Computer.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(computer).reboot">computer.reboot()</a></td>
+		<td class="summary">
+<p>Reboots the Computer. </p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(computer).shutdown">computer.shutdown()</a></td>
+		<td class="summary">
+<p>Shuts off the Computer. </p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(computer).turnOn">computer.turnOn()</a></td>
+		<td class="summary">
+<p>Turns on the Computer. </p>
+</td>
+		</tr>
+	</table>
+
+			<h2><a id="#(modem)">Type <code>modem</code></a></h2>
+				<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(modem).CHANNEL_BROADCAST">modem.CHANNEL_BROADCAST</a></td>
+		<td class="summary">
+<p>Used by Wireless Modems to restrict the receiving modems.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(modem).broadcast">modem.broadcast(message)</a></td>
+		<td class="summary">
+<p>Sends the <code>string</code> to ALL connected and open Computers in range.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(modem).close">modem.close(side)</a></td>
+		<td class="summary">
+<p>Tells the Computer that the <code>side</code> can no longer be used for networking.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(modem).isOpen">modem.isOpen(side)</a></td>
+		<td class="summary">
+<p>Returns <code>true</code> if the Wireless Modem on <code>side</code> is open or <code>nil</code> if not.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(modem).open">modem.open(side)</a></td>
+		<td class="summary">
+<p>Tells the Computer that the <code>side</code> can be used for networking.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(modem).receive">modem.receive(timeoutSeconds)</a></td>
+		<td class="summary">
+<p>Waits until it either receives a <code>rednet</code> message or the timeout has passed.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(modem).send">modem.send(receiverID, message, WaitUntilPortOpen)</a></td>
+		<td class="summary">
+<p>Sends a <code>string</code> to a specific Computer or Turtle using the opened sides.</p>
+</td>
+		</tr>
+	</table>
+
+			<h2><a id="#(monitor)">Type <code>monitor</code></a></h2>
+				<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(monitor).clear">monitor.clear()</a></td>
+		<td class="summary">
+<p>Clears the entire Monitor.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(monitor).clearLine">monitor.clearLine()</a></td>
+		<td class="summary">
+<p>Clears the line the cursor is on.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(monitor).getCursorPos">monitor.getCursorPos()</a></td>
+		<td class="summary">
+<p>Returns two arguments containing the <code>x</code> and the <code>y</code> coordinates of the cursor.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(monitor).getSize">monitor.getSize()</a></td>
+		<td class="summary">
+<p>Returns the <code>width</code> and <code>height</code> of the Monitor.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(monitor).isColor">monitor.isColor()</a></td>
+		<td class="summary">
+<p>Returns if the Monitor supports color.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(monitor).isColour">monitor.isColour()</a></td>
+		<td class="summary">
+<p>Returns if the Monitor supports colour.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(monitor).redirect">monitor.redirect(target)</a></td>
+		<td class="summary">
+<p>Redirects output to another target.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(monitor).restore">monitor.restore()</a></td>
+		<td class="summary">
+<p>Restores output to the previous target.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(monitor).scroll">monitor.scroll(n)</a></td>
+		<td class="summary">
+<p>Scrolls the Monitor <code>n</code> lines.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(monitor).setCursorBlink">monitor.setCursorBlink(state)</a></td>
+		<td class="summary">
+<p>Sets whether the cursor is blinking or not.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(monitor).setCursorPos">monitor.setCursorPos(x, y)</a></td>
+		<td class="summary">
+<p>Sets the location of the cursor on Monitor.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(monitor).setTextScale">monitor.setTextScale(size)</a></td>
+		<td class="summary">
+<p>Sets the size of all <code>strings</code> on the Monitor.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(monitor).write">monitor.write(text)</a></td>
+		<td class="summary">
+<p>Writes a <code>string</code> to the Monitor.</p>
+</td>
+		</tr>
+	</table>
+
+			<h2><a id="#(printer)">Type <code>printer</code></a></h2>
+				<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(printer).endPage">printer.endPage()</a></td>
+		<td class="summary">
+<p>Terminates and prints the page loaded.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(printer).getCursorPos">printer.getCursorPos()</a></td>
+		<td class="summary">
+<p>Returns the coordinates of the cursor on the paper, works the same way as <a href="term.html##(term).getCursorPos"><code>term.getCursorPos</code></a></p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(printer).getInkLevel">printer.getInkLevel()</a></td>
+		<td class="summary">
+<p>Returns the amount of ink in the Printer.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(printer).getPageSize">printer.getPageSize()</a></td>
+		<td class="summary">
+<p>Returns the size of the page.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(printer).getPaperLevel">printer.getPaperLevel()</a></td>
+		<td class="summary">
+<p>Returns the total amount of paper in the Printer.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(printer).newPage">printer.newPage()</a></td>
+		<td class="summary">
+<p>Starts a new page.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(printer).setCursorPos">printer.setCursorPos(x, y)</a></td>
+		<td class="summary">
+<p>Sets the cursor position on the page.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(printer).setPageTitle">printer.setPageTitle(title)</a></td>
+		<td class="summary">
+<p>Sets the title of the page being printed.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(printer).write">printer.write(text)</a></td>
+		<td class="summary">
+<p>Writes text onto the loaded paper, at the cursor's current position.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(peripheral)" >Type <code>peripheral</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(peripheral).call" >
+<strong>peripheral.call(side, methodName, ...)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Calls a method on the <code>peripheral</code> attached to <code>side</code>.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(side)">#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#string methodName </em></code>: 
+the method to be called on the <code>peripheral</code> located on side.</p>
+
+				</li>
+				<li>
+				
+<p><code><em> ... </em></code>: 
+arguments to be supplied to methodName.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+
+<p>... : Return values match those of called method.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(peripheral).getMethods" >
+<strong>peripheral.getMethods(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns a <code>table</code> with all available methods for the <code>peripheral</code> on <code>side</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(side)">#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#table:</em>
+Returns a <code>table</code> containing all methods for <code>peripheral</code> on side.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(peripheral).getType" >
+<strong>peripheral.getType(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Tells you what is attached to a <code>side</code> of a <code>computer</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(side)">#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em>#string:</em>
+Returns the type or <code>peripheral</code> present on side (<code>"modem"</code>, <code>"computer"</code>, <code>"turtle"</code>, <code>"drive"</code>, <code>"monitor"</code>, <code>"printer"</code>, <code>"command"</code>).</p>
+
+				</li>
+				<li>
+				
+<p><em>#nil:</em>
+Returns <code>nil</code> if side is empty.</p>
+
+
+				</li>
+			</ol>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(peripheral).isPresent" >
+<strong>peripheral.isPresent(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Tells you whether a <code>peripheral</code> is present on a <code>side</code> of the <code>computer</code> or the <code>turtle</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(side)">#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+Returns <code>true</code> if a <code>peripheral</code> is present on side.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(peripheral).wrap" >
+<strong>peripheral.wrap(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns a handle to a <code>peripheral</code> that can then be used to call methods,
+as if using <a href="##(peripheral).call">peripheral.call</a>(<code>side</code>, <code>method</code>)</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(side)">#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em><a href="##(computer)">#computer</a>:</em>
+Returns a handle to the <code>computer</code> <code>peripheral</code> located on <code>side</code>.</p>
+
+				</li>
+				<li>
+				
+<p><em><a href="##(advcomputer)">#advcomputer</a>:</em>
+Returns a handle to the <code>advcomputer</code> <code>peripheral</code> located on <code>side</code>.</p>
+
+				</li>
+				<li>
+				
+<p><em><a href="##(monitor)">#monitor</a>:</em>
+Returns a handle to the <code>monitor</code> <code>peripheral</code> located on <code>side</code>.</p>
+
+				</li>
+				<li>
+				
+<p><em><a href="##(advmonitor)">#advmonitor</a>:</em>
+Returns a handle to the <code>advmonitor</code> <code>peripheral</code> located on <code>side</code>.</p>
+
+				</li>
+				<li>
+				
+<p><em><a href="##(printer)">#printer</a>:</em>
+Returns a handle to the <code>printer</code> <code>peripheral</code> located on <code>side</code>.</p>
+
+				</li>
+				<li>
+				
+<p><em><a href="##(modem)">#modem</a>:</em>
+Returns a handle to the <code>modem</code> <code>peripheral</code> located on <code>side</code>.</p>
+
+				</li>
+				<li>
+				
+<p><em><a href="##(command)">#command</a>:</em>
+Returns a handle to the <code>command</code> <code>peripheral</code> located on <code>side</code>.</p>
+
+
+				</li>
+			</ol>
+</dd>
+</dl>
+
+			<h2><a id="#(advcomputer)" >Type <code>advcomputer</code></a></h2>
+				
+<p>Advanced Computer <code>peripheral</code>.</p>
+
+	
+<p>Implemented as a <a href="##(table)">#table</a>.</p>
+
+	<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(advcomputer).getID" >
+<strong>advcomputer.getID()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Gets the <code>computerID</code> of the Advanced Computer. </p>
+
+		<h3>Return value</h3>
+				
+<p><em><a href="os.html##(computerID)">os#computerID</a>:</em>
+the <code>computerID</code> of the Computer.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advcomputer).reboot" >
+<strong>advcomputer.reboot()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Reboots the Advanced Computer. </p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advcomputer).shutdown" >
+<strong>advcomputer.shutdown()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Shuts off the Advanced Computer. </p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advcomputer).turnOn" >
+<strong>advcomputer.turnOn()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Turns on the Advanced Computer. </p>
+
+</dd>
+</dl>
+
+			<h2><a id="#(advmonitor)" >Type <code>advmonitor</code></a></h2>
+				
+<p>Advanced Monitor <code>peripheral</code>.</p>
+
+	
+<p>Implemented as a <a href="##(table)">#table</a>.</p>
+
+	<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).clear" >
+<strong>advmonitor.clear()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Clears the entire Advanced Monitor.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).clearLine" >
+<strong>advmonitor.clearLine()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Clears the line the cursor is on.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).getCursorPos" >
+<strong>advmonitor.getCursorPos()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns two arguments containing the <code>x</code> and the <code>y</code> coordinates of the cursor.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#number, #number:</em>
+The <code>x</code>,<code>y</code> coordinates of the cursor.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).getSize" >
+<strong>advmonitor.getSize()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the <code>width</code> and <code>height</code> of the Advanced Monitor.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Good for if you're making something to be compatible with both Turtles
+        and Computers.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#number, #number:</em>
+<code>width</code> and <code>height</code> of the Advanced Monitor.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).isColor" >
+<strong>advmonitor.isColor()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns if the Advanced Monitor supports color.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Used to determine whether or not an Advanced Monitor is being used.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the Monitor is Advanced.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).isColour" >
+<strong>advmonitor.isColour()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns if the Advanced Monitor supports colour.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Used to determine whether or not an Advanced Monitor is being used.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the Monitor is Advanced.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).redirect" >
+<strong>advmonitor.redirect(target)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Redirects output to another target.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Use peripheral.wrap to acquire a <code>monitor</code>.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#table target </em></code>: 
+The wrapped <code>peripheral</code> (ie. <code>monitor</code>).</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).restore" >
+<strong>advmonitor.restore()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Restores output to the previous target.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).scroll" >
+<strong>advmonitor.scroll(n)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Scrolls the Advanced Monitor <code>n</code> lines.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number n </em></code>: 
+Lines to scroll.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).setBackgroundColor" >
+<strong>advmonitor.setBackgroundColor(color)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the background <a href="colors.html"><code>color</code></a> of the subsequent <code>strings</code> displayed on the Advanced Monitor.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Available only to Advanced Monitors!</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="colors.html##(color)">colors#color</a> color </em></code>: 
+The <a href="colors.html"><code>color</code></a> to use.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).setBackgroundColour" >
+<strong>advmonitor.setBackgroundColour(colour)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the background <a href="colours.html"><code>colour</code></a> of the subsequent <code>strings</code> displayed on the Advanced Monitor.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Available only to Advanced Monitors!</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="colours.html##(colour)">colours#colour</a> colour </em></code>: 
+The <a href="colours.html"><code>colour</code></a> to use.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).setCursorBlink" >
+<strong>advmonitor.setCursorBlink(state)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets whether the cursor is blinking or not.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#boolean state </em></code>: 
+<code>true</code> to enable cursor blinking, <code>false</code> to disable.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).setCursorPos" >
+<strong>advmonitor.setCursorPos(x, y)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the location of the cursor on Advanced Monitor.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: 
+the new <code>x</code> coordinate of the cursor.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number y </em></code>: 
+the new <code>y</code> coordinate of the cursor.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).setTextColor" >
+<strong>advmonitor.setTextColor(color)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the foreground <a href="colors.html"><code>color</code></a> of subsequent <code>strings</code> displayed on the Advanced Monitor.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Available only to Advanced Monitors!</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="colors.html##(color)">colors#color</a> color </em></code>: 
+The <a href="colors.html"><code>color</code></a> to use.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).setTextColour" >
+<strong>advmonitor.setTextColour(colour)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the foreground <a href="colours.html"><code>colour</code></a> of the subsequent <code>strings</code> displayed on the Advanced Monitor.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Available only to Advanced Monitors!</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="colours.html##(colour)">colours#colour</a> colour </em></code>: 
+The <a href="colours.html"><code>colour</code></a> to use.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).setTextScale" >
+<strong>advmonitor.setTextScale(size)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the size of all <code>strings</code> on the Advanced Monitor.</p>
+
+	
+<h3>Notes:</h3>
+
+<ol>
+    <li>Scale can be any multiple of 0.5, starting at 0.5 and ending at 5.</li>
+</ol>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number size </em></code>: 
+scale to use.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(advmonitor).write" >
+<strong>advmonitor.write(text)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Writes a <code>string</code> to the Advanced Monitor.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string text </em></code>: 
+The <code>string</code> to be written.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+<code>string</code> written on the Advanced Monitor.</p>
+
+
+</dd>
+</dl>
+
+			<h2><a id="#(command)" >Type <code>command</code></a></h2>
+				
+<p>Command Block <code>peripheral</code>.</p>
+
+	
+<p>Implemented as a <a href="##(table)">#table</a>.</p>
+
+	<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(command).getCommand" >
+<strong>command.getCommand()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Retrieves the <a href="http://www.minecraftwiki.net/wiki/Command_block">command</a> <code>string</code> that the <code>command</code> peripheral is currently using.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+<a href="http://www.minecraftwiki.net/wiki/Command_block">command</a> <code>string</code> used in the <code>command</code> peripheral.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(command).runCommand" >
+<strong>command.runCommand()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Runs the <a href="http://www.minecraftwiki.net/wiki/Command_block">command</a> currently set on the <code>command</code> peripheral.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(command).setCommand" >
+<strong>command.setCommand()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the <a href="http://www.minecraftwiki.net/wiki/Command_block">command</a> <code>string</code> that the <code>command</code> peripheral is currently using.</p>
+
+</dd>
+</dl>
+
+			<h2><a id="#(computer)" >Type <code>computer</code></a></h2>
+				
+<p>Computer <code>peripheral</code>.</p>
+
+	
+<p>Implemented as a <a href="##(table)">#table</a>.</p>
+
+	<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(computer).getID" >
+<strong>computer.getID()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Gets the <code>computerID</code> of the Computer.</p>
+
+		<h3>Return value</h3>
+				
+<p><em><a href="os.html##(computerID)">os#computerID</a>:</em>
+the <code>computerID</code> of the Computer.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(computer).reboot" >
+<strong>computer.reboot()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Reboots the Computer. </p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(computer).shutdown" >
+<strong>computer.shutdown()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Shuts off the Computer. </p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(computer).turnOn" >
+<strong>computer.turnOn()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Turns on the Computer. </p>
+
+</dd>
+</dl>
+
+			<h2><a id="#(modem)" >Type <code>modem</code></a></h2>
+				
+<p>Modem <code>peripheral</code>.</p>
+
+	
+<p>Implemented as a <a href="##(table)">#table</a>.</p>
+
+	<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+		<em>#number</em>
+<a id="#(modem).CHANNEL_BROADCAST" >
+<strong>modem.CHANNEL_BROADCAST</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Used by Wireless Modems to restrict the receiving modems.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(modem).broadcast" >
+<strong>modem.broadcast(message)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sends the <code>string</code> to ALL connected and open Computers in range.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string message </em></code>: 
+<code>string</code> to be sent.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if a message has been sent, <code>false</code> if not. <code>true</code> does not guarantee that the any computer was reachable!</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(modem).close" >
+<strong>modem.close(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Tells the Computer that the <code>side</code> can no longer be used for networking.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(side)">#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(modem).isOpen" >
+<strong>modem.isOpen(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns <code>true</code> if the Wireless Modem on <code>side</code> is open or <code>nil</code> if not.</p>
+
+	
+<p>Returns <code>1</code> always.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(side)">#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the Wireless Modem is open, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(modem).open" >
+<strong>modem.open(side)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Tells the Computer that the <code>side</code> can be used for networking.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(side)">#side</a> side </em></code>: 
+the <code>side</code> of the computer to consider.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(modem).receive" >
+<strong>modem.receive(timeoutSeconds)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Waits until it either receives a <code>rednet</code> message or the timeout has passed.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Leave args empty to wait for a message forever.</li>
+        <li>senderID and message are set to <code>nil</code> if a timeout occurs.</li>
+        <li>To get the <code>computerID</code> from a computer see <a href="os.html##(computerID)">os#computerID</a> or the id program.</li>
+        <li>You must be calling this <code>function</code> at the moment a message is sent, or
+        you will miss it. If you need to watch for messages while doing something
+        else at the same time, see <a href="parallel.html##(waitForAny)">parallel#waitForAny</a>.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="os.html##(time)">os#time</a> timeoutSeconds </em></code>: 
+Seconds to wait for a message. If timeoutSeconds is <code>nil</code>, waits forever.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="os.html##(computerID)">os#computerID</a>, #string, #number:</em>
+senderID, message, distance-to-sender (or <code>nil</code> if using redpower bundled cable instead of a modem)</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(modem).send" >
+<strong>modem.send(receiverID, message, WaitUntilPortOpen)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sends a <code>string</code> to a specific Computer or Turtle using the opened sides.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>To get the <code>computerID</code> from a Computer see <a href="os.html##(computerID)">os#computerID</a> or the id program.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="os.html##(computerID)">os#computerID</a> receiverID </em></code>: 
+<code>computerID</code> of the Computer or Turtle to be communicated with.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#string message </em></code>: 
+<code>string</code> to be sent to the Computer or Turtle matched by receiverID.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#boolean WaitUntilPortOpen </em></code>: 
+Setting WaitUntilPortOpen to <code>true</code> can help when the server is not receiving a response from the responding client.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if a <code>string</code> has been sent, <code>false</code> if not. <code>true</code> does not guarantee that the destination was reachable!</p>
+
+
+</dd>
+</dl>
+
+			<h2><a id="#(monitor)" >Type <code>monitor</code></a></h2>
+				
+<p>Monitor <code>peripheral</code>.</p>
+
+	
+<p>Implemented as a <a href="##(table)">#table</a>.</p>
+
+	<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(monitor).clear" >
+<strong>monitor.clear()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Clears the entire Monitor.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(monitor).clearLine" >
+<strong>monitor.clearLine()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Clears the line the cursor is on.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(monitor).getCursorPos" >
+<strong>monitor.getCursorPos()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns two arguments containing the <code>x</code> and the <code>y</code> coordinates of the cursor.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#number, #number:</em>
+The <code>x</code>,<code>y</code> coordinates of the cursor.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(monitor).getSize" >
+<strong>monitor.getSize()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the <code>width</code> and <code>height</code> of the Monitor.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Good for if you're making something to be compatible with both Turtles
+        and Computers.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#number, #number:</em>
+<code>width</code> and <code>height</code> of the Monitor.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(monitor).isColor" >
+<strong>monitor.isColor()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns if the Monitor supports color.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Used to determine whether or not an Advanced Monitor is being used.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the Monitor is Advanced.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(monitor).isColour" >
+<strong>monitor.isColour()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns if the Monitor supports colour.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Used to determine whether or not an Advanced Monitor is being used.</li>
+    </ol>
+</blockquote>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if the Monitor is Advanced.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(monitor).redirect" >
+<strong>monitor.redirect(target)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Redirects output to another target.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Use peripheral.wrap to acquire a <code>monitor</code>.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#table target </em></code>: 
+The wrapped <code>peripheral</code> (ie. <code>monitor</code>).</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(monitor).restore" >
+<strong>monitor.restore()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Restores output to the previous target.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(monitor).scroll" >
+<strong>monitor.scroll(n)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Scrolls the Monitor <code>n</code> lines.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number n </em></code>: 
+Lines to scroll.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(monitor).setCursorBlink" >
+<strong>monitor.setCursorBlink(state)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets whether the cursor is blinking or not.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#boolean state </em></code>: 
+<code>true</code> to enable cursor blinking, <code>false</code> to disable.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(monitor).setCursorPos" >
+<strong>monitor.setCursorPos(x, y)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the location of the cursor on Monitor.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: 
+the new <code>x</code> coordinate of the cursor.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number y </em></code>: 
+the new <code>y</code> coordinate of the cursor.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(monitor).setTextScale" >
+<strong>monitor.setTextScale(size)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the size of all <code>strings</code> on the Monitor.</p>
+
+	
+<h3>Notes:</h3>
+
+<ol>
+    <li>Scale can be any multiple of 0.5, starting at 0.5 and ending at 5.</li>
+</ol>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number size </em></code>: 
+scale to use.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(monitor).write" >
+<strong>monitor.write(text)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Writes a <code>string</code> to the Monitor.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string text </em></code>: 
+The <code>string</code> to be written.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+<code>string</code> written on the Monitor.</p>
+
+
+</dd>
+</dl>
+
+			<h2><a id="#(printer)" >Type <code>printer</code></a></h2>
+				
+<p>Printer <code>peripheral</code>.</p>
+
+	
+<p>Implemented as a <a href="##(table)">#table</a>.</p>
+
+	<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(printer).endPage" >
+<strong>printer.endPage()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Terminates and prints the page loaded.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if page termination was successful, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(printer).getCursorPos" >
+<strong>printer.getCursorPos()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the coordinates of the cursor on the paper, works the same way as <a href="term.html##(term).getCursorPos"><code>term.getCursorPos</code></a></p>
+
+		<h3>Return value</h3>
+				
+<p><em>#number, #number:</em>
+The <code>x</code> and <code>y</code> coordinates of the Printer cursor.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(printer).getInkLevel" >
+<strong>printer.getInkLevel()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the amount of ink in the Printer.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+Amount of ink in Printer.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(printer).getPageSize" >
+<strong>printer.getPageSize()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the size of the page.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#number, #number:</em>
+<code>width</code> and <code>height</code> of the page in the Printer</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(printer).getPaperLevel" >
+<strong>printer.getPaperLevel()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the total amount of paper in the Printer.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+amount of paper available.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(printer).newPage" >
+<strong>printer.newPage()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Starts a new page.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#boolean:</em>
+<code>true</code> if page creation was successful, otherwise <code>false</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(printer).setCursorPos" >
+<strong>printer.setCursorPos(x, y)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the cursor position on the page.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: 
+the new <code>x</code> coordinate of the cursor.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number y </em></code>: 
+the new <code>y</code> coordinate of the cursor.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(printer).setPageTitle" >
+<strong>printer.setPageTitle(title)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the title of the page being printed.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string title </em></code>: 
+<code>string</code> to use as the title.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(printer).write" >
+<strong>printer.write(text)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Writes text onto the loaded paper, at the cursor's current position.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>This does not produce a new line, and anything else printed or written 
+        after this will be on the same line.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string text </em></code>: 
+<code>string</code> to be printed.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+empty (bug?)</p>
+
+
+</dd>
+</dl>
+
+			<h2><a id="#(side)" >Type <code>side</code></a></h2>
+				
+<p>The side of the computer to consider.</p>
+
+	
+<p>Implemented as a <a href="##(string)">#string</a>. May be one of the following values:</p>
+
+<ul>
+    <li><code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, <code>front</code> and <code>back</code></li>
+</ul>
+
+
+</div>
+
+</div>
+</body>
+</html>

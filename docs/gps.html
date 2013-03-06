@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="bit.html">bit</a></li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li>gps</li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>gps</code></h1>
+   
+<h2>GPS API</h2>
+<p>The <a href="http://computercraft.info/wiki/Gps_%28API%29">gps API</a> provides a method
+for turtles and computers to retrieve their own locations.</p>
+
+   
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>It broadcasts a PING message over rednet and wait for responses.</li>
+        <li>In order for this system to work, there must be at least 4 computers
+        used as gps hosts which will respond and allow trilateration. Three of these 
+        hosts should be in a plane, and the fourth should be either above or below 
+        the other three.</li>
+        <li>You can set up hosts using the gps program.</li>
+    </ol>
+</blockquote>
+
+	<h2><a id="#(gps)" >Type <code>gps</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(gps).CHANNEL_GPS">gps.CHANNEL_GPS</a></td>
+		<td class="summary">
+<p>Used by Wireless Modems to restrict the receiving modems.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(gps).locate">gps.locate(timeout, debug)</a></td>
+		<td class="summary">
+<p>Tries to retrieve the Computers or Turtles own location.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(gps)" >Type <code>gps</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+		<em>#number</em>
+<a id="#(gps).CHANNEL_GPS" >
+<strong>gps.CHANNEL_GPS</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Used by Wireless Modems to restrict the receiving modems.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(gps).locate" >
+<strong>gps.locate(timeout, debug)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Tries to retrieve the Computers or Turtles own location.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="os.html##(time)">os#time</a> timeout </em></code>: 
+the amount of <code>time</code>, in seconds, to wait for a rednet response.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#boolean debug </em></code>: 
+if <code>true</code>, outputs debug messages.</p>
+
+				</li>
+		</ul>
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em>#table:</em>
+the location (x, y, z) of the modem attached to the Computer or Turtle</p>
+
+				</li>
+				<li>
+				
+<p><em>#nil:</em>
+<code>nil</code> if the location could not be determined</p>
+
+
+				</li>
+			</ol>
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

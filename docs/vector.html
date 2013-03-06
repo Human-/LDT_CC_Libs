@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="bit.html">bit</a></li>
+					<li><a href="colors.html">colors</a></li>
+					<li><a href="colours.html">colours</a></li>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
+					<li><a href="fs.html">fs</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li>vector</li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>vector</code></h1>
+   
+<h2>Vector API</h2>
+<p>The <a href="http://computercraft.info/wiki/Vector_%28API%29">vector API</a> provides 
+methods to create and manipulate vectors.</p>
+
+	<h2><a id="#(vector)" >Type <code>vector</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(vector).new">vector.new(x, y, z)</a></td>
+		<td class="summary">
+<p>Creates a <code>vector</code>.</p>
+</td>
+		</tr>
+	</table>
+
+			<h2><a id="#(vect)">Type <code>vect</code></a></h2>
+				<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(vect).add">vect:add(vect)</a></td>
+		<td class="summary">
+<p>Adds the two <code>vectors</code> and returns the resulting <code>vector</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(vect).cross">vect:cross(vect)</a></td>
+		<td class="summary">
+<p>Returns the <code>vector</code> from the cross product of the two <code>vectors</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(vect).dot">vect:dot(vect)</a></td>
+		<td class="summary">
+<p>Returns the dot product of two <code>vectors</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(vect).length">vect:length()</a></td>
+		<td class="summary">
+<p>Returns the <code>vector's</code> length.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(vect).mul">vect:mul(multiplier)</a></td>
+		<td class="summary">
+<p>Multiplies a <code>vector</code> with a scalar and returns the resulting <code>vector</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(vect).normalize">vect:normalize()</a></td>
+		<td class="summary">
+<p>Returns a normalized representation of the <code>vector</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(vect).round">vect:round()</a></td>
+		<td class="summary">
+<p>Rounds the <code>vector</code> coordinates to the nearest integers and returns the result as a new <code>vector</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(vect).sub">vect:sub(vect)</a></td>
+		<td class="summary">
+<p>Subtracts a <code>vector</code> from the initial <code>vector</code> and returns the resulting <code>vector</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(vect).tostring">vect:tostring()</a></td>
+		<td class="summary">
+<p>Returns a <code>string</code> representation of the <code>vector</code> in the form of <code>"x,y,z"</code>.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(vector)" >Type <code>vector</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(vector).new" >
+<strong>vector.new(x, y, z)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Creates a <code>vector</code>.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: 
+<code>x</code> value for <code>vector</code>.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number y </em></code>: 
+<code>y</code> value for <code>vector</code>.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number z </em></code>: 
+<code>z</code> value for <code>vector</code>.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="##(vect)">#vect</a>:</em>
+a <code>vector</code> table.</p>
+
+
+</dd>
+</dl>
+
+			<h2><a id="#(vect)" >Type <code>vect</code></a></h2>
+				<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(vect).add" >
+<strong>vect:add(vect)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Adds the two <code>vectors</code> and returns the resulting <code>vector</code>.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Can also be used by writing <code>vectorA + vectorB</code>.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(vect)">#vect</a> vect </em></code>: 
+another <code>vector</code>.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="##(vect)">#vect</a>:</em>
+the resulting <code>vector</code> table.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(vect).cross" >
+<strong>vect:cross(vect)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the <code>vector</code> from the cross product of the two <code>vectors</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(vect)">#vect</a> vect </em></code>: 
+another <code>vector</code>.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="##(vect)">#vect</a>:</em>
+the resulting <code>vector</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(vect).dot" >
+<strong>vect:dot(vect)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the dot product of two <code>vectors</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(vect)">#vect</a> vect </em></code>: 
+another <code>vector</code>.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="##(vect)">#vect</a>:</em>
+the resulting <code>vector</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(vect).length" >
+<strong>vect:length()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the <code>vector's</code> length.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+length of the <code>vector</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(vect).mul" >
+<strong>vect:mul(multiplier)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Multiplies a <code>vector</code> with a scalar and returns the resulting <code>vector</code>.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Can also be used by writing vectorA * n.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number multiplier </em></code>: 
+the scalar.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="##(vect)">#vect</a>:</em>
+the resulting <code>vector</code> table.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(vect).normalize" >
+<strong>vect:normalize()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns a normalized representation of the <code>vector</code>.</p>
+
+		<h3>Return value</h3>
+				
+<p><em><a href="##(vect)">#vect</a>:</em>
+the resulting <code>vector</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(vect).round" >
+<strong>vect:round()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Rounds the <code>vector</code> coordinates to the nearest integers and returns the result as a new <code>vector</code>.</p>
+
+		<h3>Return value</h3>
+				
+<p><em><a href="##(vect)">#vect</a>:</em>
+the resulting <code>vector</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(vect).sub" >
+<strong>vect:sub(vect)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Subtracts a <code>vector</code> from the initial <code>vector</code> and returns the resulting <code>vector</code>.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>Can also be used by writing <code>vectorA - vectorB</code>.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(vect)">#vect</a> vect </em></code>: 
+another <code>vector</code>.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em><a href="##(vect)">#vect</a>:</em>
+the resulting <code>vector</code> table.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(vect).tostring" >
+<strong>vect:tostring()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns a <code>string</code> representation of the <code>vector</code> in the form of <code>"x,y,z"</code>.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+<code>string</code> representation of the <code>vector</code> in the form of <code>"x,y,z"</code>.</p>
+
+
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

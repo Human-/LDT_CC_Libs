@@ -17,181 +17,395 @@
 				<a href="index.html">index</a>
 			</li></ul>
 		<ul>
+					<li><a href="bit.html">bit</a></li>
 					<li><a href="colors.html">colors</a></li>
 					<li><a href="colours.html">colours</a></li>
 					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="disk.html">disk</a></li>
 					<li><a href="fs.html">fs</a></li>
 					<li>global</li>
+					<li><a href="gps.html">gps</a></li>
+					<li><a href="help.html">help</a></li>
+					<li><a href="http.html">http</a></li>
 					<li><a href="io.html">io</a></li>
+					<li><a href="keys.html">keys</a></li>
 					<li><a href="math.html">math</a></li>
 					<li><a href="os.html">os</a></li>
+					<li><a href="paintutils.html">paintutils</a></li>
+					<li><a href="parallel.html">parallel</a></li>
+					<li><a href="peripheral.html">peripheral</a></li>
+					<li><a href="rednet.html">rednet</a></li>
+					<li><a href="redstone.html">redstone</a></li>
+					<li><a href="rs.html">rs</a></li>
+					<li><a href="shell.html">shell</a></li>
 					<li><a href="string.html">string</a></li>
 					<li><a href="table.html">table</a></li>
 					<li><a href="term.html">term</a></li>
+					<li><a href="textutils.html">textutils</a></li>
+					<li><a href="turtle.html">turtle</a></li>
+					<li><a href="vector.html">vector</a></li>
 		</ul>
 	</div>
 	<div id="content">
    <h1>Module <code>global</code></h1>
-    Lua global variables.
-   <br/>The basic library provides some core functions to Lua.
- All the preloaded module of Lua are declared here.
+   
+<h2>Global API</h2>
+<p>The <a href="http://computercraft.info/wiki/Category:Lua_Core_Functions">global API</a> is all of the Lua global variables.</p>
+
+   
+<p>The basic library provides some core functions to Lua.
+All the preloaded module of Lua are declared here.</p>
+
 	<h2>Global(s)</h2>
 	<table class="function_list">
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#_G">_G</a></a></td>
-		<td class="summary"> A global variable (not a function) that holds the global environment
- (that is, <code>_G._G = _G</code>).</td>
+		<td class="name" nowrap="nowrap"><a href="#_G">_G</a></td>
+		<td class="summary">
+<p>A global variable (not a function) that holds the global environment
+(that is, <code>_G._G = _G</code>).</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#_VERSION">_VERSION</a></a></td>
-		<td class="summary"> A global variable (not a function) that holds a string containing the
- current interpreter version.</td>
+		<td class="name" nowrap="nowrap"><a href="#_VERSION">_VERSION</a></td>
+		<td class="summary">
+<p>A global variable (not a <code>function</code>) that holds a <code>string</code> containing the
+current interpreter version.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#assert">assert(v, message)</a></a></td>
-		<td class="summary"> Issues an error when the value of its argument <code>v</code> is false (i.e.,
- <strong>nil</strong> or <strong>false</strong>); otherwise, returns all its arguments.</td>
+		<td class="name" nowrap="nowrap"><a href="#__inext">__inext(key)</a></td>
+		<td class="summary">
+<p>Internal.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#colors">colors</a></a></td>
-		<td class="summary"> This library provides functions for RedPower Bundled Cable Color manipulation.</td>
+		<td class="name" nowrap="nowrap"><a href="#assert">assert(v, message)</a></td>
+		<td class="summary">
+<p>Issues an error when the value of its argument <code>v</code> is <code>false</code> (i.e.,
+<strong><code>nil</code></strong> or <strong><code>false</code></strong>); otherwise, returns all its arguments.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#colours">colours</a></a></td>
-		<td class="summary"> This library provides functions for RedPower Bundled Cable Colour manipulation.</td>
+		<td class="name" nowrap="nowrap"><a href="#bit">bit</a></td>
+		<td class="summary">
+<p>This library provides extra functions for bit manipulation.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#coroutine">coroutine</a></a></td>
-		<td class="summary"> This library provides generic functions for coroutine manipulation.</td>
+		<td class="name" nowrap="nowrap"><a href="#colors">colors</a></td>
+		<td class="summary">
+<p>This library provides functions for RedPower Bundled Cable Color manipulation.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#dofile">dofile(filename)</a></a></td>
-		<td class="summary"> Opens the named file and executes its contents as a Lua chunk.</td>
+		<td class="name" nowrap="nowrap"><a href="#colours">colours</a></td>
+		<td class="summary">
+<p>This library provides functions for RedPower Bundled Cable Colour manipulation.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#error">error(message, level)</a></a></td>
-		<td class="summary"> Terminates the last protected function called and returns <code>message</code>
- as the error message.</td>
+		<td class="name" nowrap="nowrap"><a href="#coroutine">coroutine</a></td>
+		<td class="summary">
+<p>This library provides generic functions for coroutine manipulation.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#fs">fs</a></a></td>
-		<td class="summary"> This library provides extra functions for file system manipulation.</td>
+		<td class="name" nowrap="nowrap"><a href="#disk">disk</a></td>
+		<td class="summary">
+<p>This library provides extra functions for disk manipulation.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#getfenv">getfenv(f)</a></a></td>
-		<td class="summary"> Returns the current environment in use by the function.</td>
+		<td class="name" nowrap="nowrap"><a href="#dofile">dofile(filename)</a></td>
+		<td class="summary">
+<p>Opens the named file and executes its contents as a Lua chunk.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#getmetatable">getmetatable(object)</a></a></td>
-		<td class="summary"> If <code>object</code> does not have a metatable, returns nil.</td>
+		<td class="name" nowrap="nowrap"><a href="#error">error(message, level)</a></td>
+		<td class="summary">
+<p>Terminates the last protected <code>function</code> called and returns <code>message</code>
+as the error <code>string</code>.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#io">io</a></a></td>
-		<td class="summary"> The I/O library provides function for file manipulation.</td>
+		<td class="name" nowrap="nowrap"><a href="#fs">fs</a></td>
+		<td class="summary">
+<p>This library provides extra functions for file system manipulation.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#ipairs">ipairs(t)</a></a></td>
-		<td class="summary"> Use to iterate over a table by index.</td>
+		<td class="name" nowrap="nowrap"><a href="#getfenv">getfenv(f)</a></td>
+		<td class="summary">
+<p>Returns the current environment in use by the <code>function</code>.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#load">load(func, chunkname)</a></a></td>
-		<td class="summary"> Loads a chunk using function <code>func</code> to get its pieces.</td>
+		<td class="name" nowrap="nowrap"><a href="#getmetatable">getmetatable(object)</a></td>
+		<td class="summary">
+<p>If <code>object</code> does not have a <code>metatable</code>, returns <code>nil</code>.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#loadfile">loadfile(filename)</a></a></td>
-		<td class="summary"> Similar to <code>load</code>, but gets the chunk from file <code>filename</code> or from the
- standard input, if no file name is given.</td>
+		<td class="name" nowrap="nowrap"><a href="#gps">gps</a></td>
+		<td class="summary">
+<p>This library provides extra functions for locational awareness.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#loadstring">loadstring(string, chunkname)</a></a></td>
-		<td class="summary"> Similar to <code>load</code>, but gets the chunk from the given string.</td>
+		<td class="name" nowrap="nowrap"><a href="#help">help</a></td>
+		<td class="summary">
+<p>This library provides extra functions for help manipulation.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#math">math</a></a></td>
-		<td class="summary"> This library is an interface to the standard C math library.</td>
+		<td class="name" nowrap="nowrap"><a href="#http">http</a></td>
+		<td class="summary">
+<p>This library provides extra functions for http manipulation.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#next">next(table, index)</a></a></td>
-		<td class="summary"> Allows a program to traverse all fields of a table.</td>
+		<td class="name" nowrap="nowrap"><a href="#io">io</a></td>
+		<td class="summary">
+<p>The I/O library provides function for file manipulation.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#os">os</a></a></td>
-		<td class="summary"> Operating System Facilities.</td>
+		<td class="name" nowrap="nowrap"><a href="#ipairs">ipairs(t)</a></td>
+		<td class="summary">
+<p>Use to iterate over a <code>table</code> by index.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#pairs">pairs(t)</a></a></td>
-		<td class="summary"> Use to iterate over a table.</td>
+		<td class="name" nowrap="nowrap"><a href="#keys">keys</a></td>
+		<td class="summary">
+<p>This library provides extra functions for key code lookups.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#pcall">pcall(f, ...)</a></a></td>
-		<td class="summary"> Calls function <code>f</code> with the given arguments in <em>protected mode</em>.</td>
+		<td class="name" nowrap="nowrap"><a href="#loadfile">loadfile(filename)</a></td>
+		<td class="summary">
+<p>Similar to <code>load</code>, but gets the chunk from file <code>filename</code> or from the
+standard input, if no file name is given.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#print">print(...)</a></a></td>
-		<td class="summary"> Receives any number of arguments, and prints their values to <code>stdout</code>,
- using the <code>tostring</code> function to convert them to strings.</td>
+		<td class="name" nowrap="nowrap"><a href="#loadstring">loadstring(string, chunkname)</a></td>
+		<td class="summary">
+<p>Similar to <code>load</code>, but gets the chunk from the given <code>string</code>.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#rawequal">rawequal(v1, v2)</a></a></td>
-		<td class="summary"> Checks whether <code>v1</code> is equal to <code>v2</code>, without invoking any
- metamethod.</td>
+		<td class="name" nowrap="nowrap"><a href="#math">math</a></td>
+		<td class="summary">
+<p>This library is an interface to the standard C math library.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#rawget">rawget(table, index)</a></a></td>
-		<td class="summary"> Gets the real value of <code>table[index]</code>, without invoking any
- metamethod.</td>
+		<td class="name" nowrap="nowrap"><a href="#next">next(table, index)</a></td>
+		<td class="summary">
+<p>Allows a program to traverse all fields of a <code>table</code>.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#rawset">rawset(table, index, value)</a></a></td>
-		<td class="summary"> Sets the real value of <code>table[index]</code> to <code>value</code>, without invoking any
- metamethod.</td>
+		<td class="name" nowrap="nowrap"><a href="#os">os</a></td>
+		<td class="summary">
+<p>Operating System Facilities.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#require">require(modname)</a></a></td>
-		<td class="summary"> Loads the given module.</td>
+		<td class="name" nowrap="nowrap"><a href="#paintutils">paintutils</a></td>
+		<td class="summary">
+<p>This library provides extra functions for image manipulation.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#select">select(index, ...)</a></a></td>
-		<td class="summary"> If <code>index</code> is a number, returns all arguments after argument number
- <code>index</code>.</td>
+		<td class="name" nowrap="nowrap"><a href="#pairs">pairs(t)</a></td>
+		<td class="summary">
+<p>Use to iterate over a <code>table</code>.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#setfenv">setfenv(f, table)</a></a></td>
-		<td class="summary"> Sets the environment to be used by the given function.</td>
+		<td class="name" nowrap="nowrap"><a href="#parallel">parallel</a></td>
+		<td class="summary">
+<p>This library provides extra functions for parallel tasks.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#setmetatable">setmetatable(table, metatable)</a></a></td>
-		<td class="summary"> Sets the metatable for the given table.</td>
+		<td class="name" nowrap="nowrap"><a href="#pcall">pcall(f, ...)</a></td>
+		<td class="summary">
+<p>Calls <code>function</code> <code>f</code> with the given arguments in <em>protected mode</em>.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#string">string</a></a></td>
-		<td class="summary"> This library provides generic functions for string manipulation.</td>
+		<td class="name" nowrap="nowrap"><a href="#peripheral">peripheral</a></td>
+		<td class="summary">
+<p>This library provides extra functions for peripheral manipulation.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#table">table</a></a></td>
-		<td class="summary"> This library provides generic functions for table manipulation.</td>
+		<td class="name" nowrap="nowrap"><a href="#print">print(...)</a></td>
+		<td class="summary">
+<p>Receives any number of arguments, and prints their values to <code>stdout</code>,
+using the <code>tostring</code> <code>function</code> to convert them to <code>strings</code>.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#term">term</a></a></td>
-		<td class="summary"> This library provides functions to interact with the terminal.</td>
+		<td class="name" nowrap="nowrap"><a href="#printError">printError(...)</a></td>
+		<td class="summary">
+<p>Receives any number of arguments, and prints their values to <code>stderr</code>,
+using the <code>tostring</code> function to convert them to <code>strings</code>.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#tonumber">tonumber(e, base)</a></a></td>
-		<td class="summary"> Tries to convert its argument to a number.</td>
+		<td class="name" nowrap="nowrap"><a href="#rawequal">rawequal(v1, v2)</a></td>
+		<td class="summary">
+<p>Checks whether <code>v1</code> is equal to <code>v2</code>, without invoking any
+metamethod.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#tostring">tostring(e)</a></a></td>
-		<td class="summary"> Receives an argument of any type and converts it to a string in a
- reasonable format.</td>
+		<td class="name" nowrap="nowrap"><a href="#rawget">rawget(table, index)</a></td>
+		<td class="summary">
+<p>Gets the real value of <code>table[index]</code>, without invoking any
+metamethod.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#unpack">unpack(list, i, j)</a></a></td>
-		<td class="summary"> Returns the elements from the given table.</td>
+		<td class="name" nowrap="nowrap"><a href="#rawset">rawset(table, index, value)</a></td>
+		<td class="summary">
+<p>Sets the real value of <code>table[index]</code> to <code>value</code>, without invoking any
+metamethod.</p>
+</td>
 		</tr>
 		<tr>
-		<td class="name" nowrap="nowrap"><a href="global.html#xpcall">xpcall(f, err)</a></a></td>
-		<td class="summary"> This function is similar to <code>pcall</code>, except that you can set a new
- error handler.</td>
+		<td class="name" nowrap="nowrap"><a href="#read">read()</a></td>
+		<td class="summary">
+<p>Reads input from the user. </p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#rednet">rednet</a></td>
+		<td class="summary">
+<p>This library provides extra functions for rednet manipulation.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#redstone">redstone</a></td>
+		<td class="summary">
+<p>This library provides extra functions for redstone manipulation.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#rs">rs</a></td>
+		<td class="summary">
+<p>This library provides extra functions for redstone manipulation.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#select">select(index, ...)</a></td>
+		<td class="summary">
+<p>If <code>index</code> is a number, returns all arguments after argument number
+<code>index</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#setfenv">setfenv(f, table)</a></td>
+		<td class="summary">
+<p>Sets the environment to be used by the given <code>function</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#setmetatable">setmetatable(table, metatable)</a></td>
+		<td class="summary">
+<p>Sets the <code>metatable</code> for the given <code>table</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#shell">shell</a></td>
+		<td class="summary">
+<p>This library provides extra functions for shell manipulation.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#sleep">sleep(time)</a></td>
+		<td class="summary">
+<p>Makes the system wait a number of seconds before continuing in the program.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#string">string</a></td>
+		<td class="summary">
+<p>This library provides generic functions for string manipulation.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#table">table</a></td>
+		<td class="summary">
+<p>This library provides generic functions for table manipulation.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#term">term</a></td>
+		<td class="summary">
+<p>This library provides functions to interact with the terminal.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#textutils">textutils</a></td>
+		<td class="summary">
+<p>This library provides extra functions for text manipulation.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#tonumber">tonumber(e, base)</a></td>
+		<td class="summary">
+<p>Tries to convert its argument to a <code>number</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#tostring">tostring(e)</a></td>
+		<td class="summary">
+<p>Receives an argument of any type and converts it to a <code>string</code> in a
+reasonable format.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#turtle">turtle</a></td>
+		<td class="summary">
+<p>This library provides extra functions for turtle manipulation.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#type_">type_(v)</a></td>
+		<td class="summary">
+<p>Returns the type of its only argument, coded as a <code>string</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#unpack">unpack(list, i, j)</a></td>
+		<td class="summary">
+<p>Returns the elements from the given <code>table</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#vector">vector</a></td>
+		<td class="summary">
+<p>This library provides extra functions for vector manipulation.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#write">write(text)</a></td>
+		<td class="summary">
+<p>Writes a <code>string</code> to the terminal.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="#xpcall">xpcall(f, err)</a></td>
+		<td class="summary">
+<p>This <code>function</code> is similar to <code>pcall</code>, except that you can set a new
+error handler.</p>
+</td>
 		</tr>
 	</table>
 	<h2>Global(s)</h2>
@@ -203,11 +417,15 @@
 </a>
 </dt>
 <dd>
-	 A global variable (not a function) that holds the global environment
- (that is, <code>_G._G = _G</code>).
-	<br/>Lua itself does not use this variable; changing
- its value does not affect any environment, nor vice-versa. (Use <code>setfenv</code>
- to change environments.)
+	
+<p>A global variable (not a function) that holds the global environment
+(that is, <code>_G._G = _G</code>).</p>
+
+	
+<p>Lua itself does not use this variable; changing
+its value does not affect any environment, nor vice-versa. (Use <code>setfenv</code>
+to change environments.)</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -218,10 +436,55 @@
 </a>
 </dt>
 <dd>
-	 A global variable (not a function) that holds a string containing the
- current interpreter version.
-	<br/>The current contents of this variable is
- "<code>Lua 5.1</code>".
+	
+<p>A global variable (not a <code>function</code>) that holds a <code>string</code> containing the
+current interpreter version.</p>
+
+	
+<p>The current contents of this variable is
+"<code>Lua 5.1</code>".</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="__inext" >
+<strong>__inext(key)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Internal.</p>
+
+	
+<p>Tries to lookup <code>key</code> in a <code>table</code> and return <code>key</code>, value if found.
+Otherwise, <code>nil</code>,<code>nil</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(Untyped)">#Untyped</a> key </em></code>: 
+<code>key</code> to use on <code>table</code>.</p>
+
+				</li>
+		</ul>
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em><a href="##(Untyped)">#Untyped</a>, <a href="##(Untyped)">#Untyped</a>:</em>
+key, value if found in <code>table</code>.</p>
+
+				</li>
+				<li>
+				
+<p><em>#nil, #nil:</em>
+<code>nil</code>, <code>nil</code> if <code>key</code> is not in <code>table</code>.</p>
+
+
+				</li>
+			</ol>
 </dd>
 </dl>
 		<dl class="function">
@@ -231,24 +494,51 @@
 </a>
 </dt>
 <dd>
-	 Issues an error when the value of its argument <code>v</code> is false (i.e.,
- <strong>nil</strong> or <strong>false</strong>); otherwise, returns all its arguments.
-	<br/><code>message</code> is an error
- message; when absent, it defaults to <em>"assertion failed!"</em>.
+	
+<p>Issues an error when the value of its argument <code>v</code> is <code>false</code> (i.e.,
+<strong><code>nil</code></strong> or <strong><code>false</code></strong>); otherwise, returns all its arguments.</p>
+
+	
+<p><code>message</code> is an error
+<code>string</code>; when absent, it defaults to <em><code>"assertion failed!"</code></em>.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-				v  </em></code>: if this argument is false an error is issued.
+				<li>
+				
+<p><code><em> v </em></code>: 
+if this argument is <code>false</code> an error is issued.</p>
+
 				</li>
-				<li><code><em>
-						#string
-				message  </em></code>: an error message. defaults value is <em>"assertion failed"</em>.
+				<li>
+				
+<p><code><em>#string message </em></code>: 
+an error <code>string</code>. defaults value is <em><code>"assertion failed"</code></em>.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				All its arguments.
-				</p>
+				
+
+<p>... : All its arguments.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="bit.html##(bit)">bit#bit</a></em>
+<a id="bit" >
+<strong>bit</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for bit manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="bit.html">bit</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -259,8 +549,12 @@
 </a>
 </dt>
 <dd>
-	 This library provides functions for RedPower Bundled Cable Color manipulation.
-	<br/>This is a global variable which holds the preloaded <a href="colors.html">colors</a> module.
+	
+<p>This library provides functions for RedPower Bundled Cable Color manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="colors.html">colors</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -271,8 +565,12 @@
 </a>
 </dt>
 <dd>
-	 This library provides functions for RedPower Bundled Cable Colour manipulation.
-	<br/>This is a global variable which holds the preloaded <a href="colours.html">colours</a> module.
+	
+<p>This library provides functions for RedPower Bundled Cable Colour manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="colours.html">colours</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -283,8 +581,28 @@
 </a>
 </dt>
 <dd>
-	 This library provides generic functions for coroutine manipulation.
-	<br/>This is a global variable which holds the preloaded <a href="coroutine.html">coroutine</a> module.
+	
+<p>This library provides generic functions for coroutine manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="coroutine.html">coroutine</a> module.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="disk.html##(disk)">disk#disk</a></em>
+<a id="disk" >
+<strong>disk</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for disk manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="disk.html">disk</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -294,17 +612,24 @@
 </a>
 </dt>
 <dd>
-	 Opens the named file and executes its contents as a Lua chunk.
-	<br/>When
- called without arguments,
- <code>dofile</code> executes the contents of the standard input (<code>stdin</code>). Returns
- all values returned by the chunk. In case of errors, <code>dofile</code> propagates
- the error to its caller (that is, <code>dofile</code> does not run in protected mode).
+	
+<p>Opens the named file and executes its contents as a Lua chunk.</p>
+
+	
+<p>When
+called without arguments, <code>dofile</code> executes the contents of the standard 
+input (<code>stdin</code>). Returns all values returned by the chunk.
+In case of errors, <code>dofile</code> propagates the error to its caller 
+(that is, <code>dofile</code> does not run in protected mode).</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#string
-				filename  </em></code>: the path to the file. (optional)
+				<li>
+				
+<p><code><em><a href="fs.html##(path)">fs#path</a> filename </em></code>: 
+the <code>path</code> to the file. (optional)</p>
+
+
 				</li>
 		</ul>
 </dd>
@@ -316,27 +641,36 @@
 </a>
 </dt>
 <dd>
-	 Terminates the last protected function called and returns <code>message</code>
- as the error message.
-	<br/>Function <code>error</code> never returns.</p>
+	
+<p>Terminates the last protected <code>function</code> called and returns <code>message</code>
+as the error <code>string</code>.</p>
 
-<p> Usually, <code>error</code> adds some information about the error position at the
- beginning of the message. The <code>level</code> argument specifies how to get the
- error position. <br/>
- With level 1 (the default), the error position is where the
- <code>error</code> function was called. <br/>
- Level 2 points the error to where the function
- that called <code>error</code> was called; and so on. <br/>
- Passing a level 0 avoids the addition of error position information to the message.
+	
+<p>Function <code>error</code> never returns.</p>
+
+<p>Usually, <code>error</code> adds some information about the error position at the
+beginning of the <code>string</code>. The <code>level</code> argument specifies how to get the
+error position. <br/>
+With level 1 (the default), the error position is where the
+<code>error</code> function was called. <br/>
+Level 2 points the error to where the function
+that called <code>error</code> was called; and so on. <br/>
+Passing a level 0 avoids the addition of error position information to the <code>string</code>.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#string
-				message  </em></code>: an error message.
+				<li>
+				
+<p><code><em>#string message </em></code>: 
+an error <code>string</code>.</p>
+
 				</li>
-				<li><code><em>
-						#number
-				level  </em></code>: specifies how to get the error position, default value is <code>1</code>.
+				<li>
+				
+<p><code><em>#number level </em></code>: 
+specifies how to get the error position, default value is <code>1</code>.</p>
+
+
 				</li>
 		</ul>
 </dd>
@@ -349,8 +683,12 @@
 </a>
 </dt>
 <dd>
-	 This library provides extra functions for file system manipulation.
-	<br/>This is a global variable which holds the preloaded <a href="fs.html">fs</a> module.
+	
+<p>This library provides extra functions for file system manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="fs.html">fs</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -360,14 +698,20 @@
 </a>
 </dt>
 <dd>
-	 Returns the current environment in use by the function.
+	
+<p>Returns the current environment in use by the <code>function</code>.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-				f  </em></code>: can be a Lua function or a number that specifies the function at that
- stack level: Level 1 is the function calling <code>getfenv</code>. If the given
- function is not a Lua function, or if <code>f</code> is <code>0</code>, <code>getfenv</code> returns the
- global environment. The default for <code>f</code> is <code>1</code>.
+				<li>
+				
+<p><code><em> f </em></code>: 
+can be a Lua <code>function</code> or a number that specifies the function at that
+stack level: Level 1 is the <code>function</code> calling <code>getfenv</code>. If the given
+<code>function</code> is not a Lua <code>function</code>, or if <code>f</code> is <code>0</code>, <code>getfenv</code> returns the
+global environment. The default for <code>f</code> is <code>1</code>.</p>
+
+
 				</li>
 		</ul>
 </dd>
@@ -379,23 +723,76 @@
 </a>
 </dt>
 <dd>
-	 If <code>object</code> does not have a metatable, returns nil.
-	<br/>Otherwise, if the
- object's metatable has a <code>"__metatable"</code> field, returns the associated
- value. Otherwise, returns the metatable of the given object.
+	
+<p>If <code>object</code> does not have a <code>metatable</code>, returns <code>nil</code>.</p>
+
+	
+<p>Otherwise, if the
+object's <code>metatable has a</code>"__metatable"` field, returns the associated
+value. Otherwise, returns the <code>metatable</code> of the given object.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-				object  </em></code>: 
-
+				<li>
+				
+<p><code><em> object </em></code>: </p>
 
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#table:</em>
-				the metatable of object.
-				</p>
+				
+<p><em>#table:</em>
+the <code>metatable</code> of object.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="gps.html##(gps)">gps#gps</a></em>
+<a id="gps" >
+<strong>gps</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for locational awareness.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="gps.html">gps</a> module.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="help.html##(help)">help#help</a></em>
+<a id="help" >
+<strong>help</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for help manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="help.html">help</a> module.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="http.html##(http)">http#http</a></em>
+<a id="http" >
+<strong>http</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for http manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="http.html">http</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -406,8 +803,12 @@
 </a>
 </dt>
 <dd>
-	 The I/O library provides function for file manipulation.
-	<br/>This is a global variable which holds the preloaded <a href="io.html">io</a> module.
+	
+<p>The I/O library provides function for file manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="io.html">io</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -417,51 +818,44 @@
 </a>
 </dt>
 <dd>
-	 Use to iterate over a table by index.
-	<br/>Returns three values: an iterator function, the table <code>t</code>, and 0,
- so that the construction :</p>
+	
+<p>Use to iterate over a <code>table</code> by index.</p>
 
-<pre><code> for i,v in ipairs(t) do *body* end
+	
+<p>Returns three values: an iterator <code>function</code>, the <code>table</code> <code>t</code>, and <code>0</code>,
+so that the construction :</p>
+
+<pre><code>for i,v in ipairs(t) do *body* end
 </code></pre>
-<p> will iterate over the pairs (<code>1,t[1]</code>), (<code>2,t[2]</code>), ..., up to the
- first integer key absent from the table.
+<p>will iterate over the pairs (<code>1,t[1]</code>), (<code>2,t[2]</code>), ..., up to the
+first integer key absent from the <code>table</code>.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#table
-				t  </em></code>: a table by index.
+				<li>
+				
+<p><code><em>#table t </em></code>: 
+a <code>table</code> by index.</p>
+
+
 				</li>
 		</ul>
 </dd>
 </dl>
 		<dl class="function">
 <dt>
-<a id="load" >
-<strong>load(func, chunkname)</strong>
+		<em><a href="keys.html##(keys)">keys#keys</a></em>
+<a id="keys" >
+<strong>keys</strong>
 </a>
 </dt>
 <dd>
-	 Loads a chunk using function <code>func</code> to get its pieces.
-	<br/>Each call to
- <code>func</code> must return a string that concatenates with previous results. A
- return of an empty string, <strong>nil,</strong> or no value signals the end of the chunk.</p>
+	
+<p>This library provides extra functions for key code lookups.</p>
 
-<p> If there are no errors, returns the compiled chunk as a function; otherwise,
- returns nil plus the error message. The environment of the returned function
- is the global environment.</p>
+	
+<p>This is a global variable which holds the preloaded <a href="keys.html">keys</a> module.</p>
 
-<p> <code>chunkname</code> is used as the chunk name for error messages and debug
- information. When absent, it defaults to "<code>=(load)</code>".
-		<h3>Parameters</h3>
-		<ul>
-				<li><code><em>
-				func  </em></code>: function which loads the chunk.
-				</li>
-				<li><code><em>
-						#string
-				chunkname  </em></code>: chunk name used for error messages and debug information, default value is "<code>=(load)</code>".
-				</li>
-		</ul>
 </dd>
 </dl>
 		<dl class="function">
@@ -471,13 +865,18 @@
 </a>
 </dt>
 <dd>
-	 Similar to <code>load</code>, but gets the chunk from file <code>filename</code> or from the
- standard input, if no file name is given.
+	
+<p>Similar to <code>load</code>, but gets the chunk from file <code>filename</code> or from the
+standard input, if no file name is given.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#string
-				filename  </em></code>: the path to the file. (optional)
+				<li>
+				
+<p><code><em><a href="fs.html##(path)">fs#path</a> filename </em></code>: 
+the path to the file. (optional)</p>
+
+
 				</li>
 		</ul>
 </dd>
@@ -489,21 +888,30 @@
 </a>
 </dt>
 <dd>
-	 Similar to <code>load</code>, but gets the chunk from the given string.
-	<br/>To load and run a given string, use the idiom  </p>
+	
+<p>Similar to <code>load</code>, but gets the chunk from the given <code>string</code>.</p>
 
-<pre><code> assert(loadstring(s))()
+	
+<p>To load and run a given <code>string</code>, use the idiom  </p>
+
+<pre><code>assert(loadstring(s))()
 </code></pre>
-<p> When absent, <code>chunkname</code> defaults to the given string.
+<p>When absent, <code>chunkname</code> defaults to the given <code>string</code>.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#string
-				string  </em></code>: lua code to load.
+				<li>
+				
+<p><code><em>#string string </em></code>: 
+lua code to load.</p>
+
 				</li>
-				<li><code><em>
-						#string
-				chunkname  </em></code>: chunk name used for error messages and debug information, default value is the given string.
+				<li>
+				
+<p><code><em>#string chunkname </em></code>: 
+chunk name used for error <code>strings</code> and debug information, default value is the given <code>string</code>.</p>
+
+
 				</li>
 		</ul>
 </dd>
@@ -516,8 +924,12 @@
 </a>
 </dt>
 <dd>
-	 This library is an interface to the standard C math library.
-	<br/>This is a global variable which holds the preloaded <a href="math.html">math</a> module.
+	
+<p>This library is an interface to the standard C math library.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="math.html">math</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -527,33 +939,42 @@
 </a>
 </dt>
 <dd>
-	 Allows a program to traverse all fields of a table.
-	<br/>Its first argument is
- a table and its second argument is an index in this table. <code>next</code> returns
- the next index of the table and its associated value.</p>
+	
+<p>Allows a program to traverse all fields of a <code>table</code>.</p>
 
-<p> When called with nil
- as its second argument, <code>next</code> returns an initial index and its associated
- value. When called with the last index, or with nil in an empty table, <code>next</code>
- returns nil.</p>
+	
+<p>Its first argument is
+a <code>table</code> and its second argument is an index in this <code>table</code>. <code>next</code> returns
+the next index of the <code>table</code> and its associated value.</p>
 
-<p> If the second argument is absent, then it is interpreted as
- nil. In particular, you can use <code>next(t)</code> to check whether a table is empty.
- The order in which the indices are enumerated is not specified, <em>even for
- numeric indices</em>. (To traverse a table in numeric order, use a numerical
- for or the <code>ipairs</code> function.)</p>
+<p>When called with <code>nil</code> as its second argument, <code>next</code> returns an initial
+index and its associated value. When called with the last index, or
+with <code>nil</code> in an empty table, <code>next</code> returns <code>nil</code>.</p>
 
-<p> The behavior of <code>next</code> is <em>undefined</em> if, during the traversal, you assign
- any value to a non-existent field in the table. You may however modify
- existing fields. In particular, you may clear existing fields.
+<p>If the second argument is absent, then it is interpreted as <code>nil</code>. 
+In particular, you can use <code>next(t)</code> to check whether a <code>table</code> is empty.
+The order in which the indices are enumerated is not specified, <em>even for
+numeric indices</em>. (To traverse a <code>table</code> in numeric order, use a numerical
+for or the <code>ipairs</code> <code>function</code>.)</p>
+
+<p>The behavior of <code>next</code> is <em>undefined</em> if, during the traversal, you assign
+any value to a non-existent field in the <code>table</code>. You may however modify
+existing fields. In particular, you may clear existing fields.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#table
-				table  </em></code>: table to traverse.
+				<li>
+				
+<p><code><em>#table table </em></code>: 
+<code>table</code> to traverse.</p>
+
 				</li>
-				<li><code><em>
-				index  </em></code>: initial index.
+				<li>
+				
+<p><code><em> index </em></code>: 
+initial index.</p>
+
+
 				</li>
 		</ul>
 </dd>
@@ -566,8 +987,28 @@
 </a>
 </dt>
 <dd>
-	 Operating System Facilities.
-	<br/>This is a global variable which holds the preloaded <a href="os.html">os</a> module.
+	
+<p>Operating System Facilities.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="os.html">os</a> module.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="paintutils.html##(paintutils)">paintutils#paintutils</a></em>
+<a id="paintutils" >
+<strong>paintutils</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for image manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="paintutils.html">paintutils</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -577,23 +1018,46 @@
 </a>
 </dt>
 <dd>
-	 Use to iterate over a table.
-	<br/>Returns three values: the <code>next</code> function, the table <code>t</code>, and nil,
- so that the construction :</p>
+	
+<p>Use to iterate over a <code>table</code>.</p>
 
-<pre><code> for k,v in pairs(t) do *body* end
+	
+<p>Returns three values: the <code>next</code> function, the <code>table</code> <code>t</code>, and <code>nil</code>,
+so that the construction :</p>
+
+<pre><code>for k,v in pairs(t) do *body* end
 </code></pre>
-<p> will iterate over all key-value pairs of table <code>t</code>.</p>
+<p>will iterate over all key-value pairs of <code>table</code> <code>t</code>.</p>
 
-<p> See function <code>next</code> for the caveats of modifying the table during its
- traversal.
+<p>See function <a href="global.html#next"><code>next</code></a> for the caveats of modifying the <code>table</code> during its
+traversal.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-						#table
-				t  </em></code>: table to traverse.
+				<li>
+				
+<p><code><em>#table t </em></code>: 
+<code>table</code> to traverse.</p>
+
+
 				</li>
 		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="parallel.html##(parallel)">parallel#parallel</a></em>
+<a id="parallel" >
+<strong>parallel</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for parallel tasks.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="parallel.html">parallel</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -603,33 +1067,64 @@
 </a>
 </dt>
 <dd>
-	 Calls function <code>f</code> with the given arguments in <em>protected mode</em>.
-	<br/>This
- means that any error inside <code>f</code> is not propagated; instead, <code>pcall</code> catches
- the error and returns a status code. Its first result is the status code (a
- boolean), which is true if the call succeeds without errors. In such case,
- <code>pcall</code> also returns all results from the call, after this first result. In
- case of any error, <code>pcall</code> returns false plus the error message.
+	
+<p>Calls <code>function</code> <code>f</code> with the given arguments in <em>protected mode</em>.</p>
+
+	
+<p>This
+means that any error inside <code>f</code> is not propagated; instead, <code>pcall</code> catches
+the error and returns a status code. Its first result is the status code (a
+<code>boolean</code>), which is <code>true</code> if the call succeeds without errors. In such case,
+<code>pcall</code> also returns all results from the call, after this first result. In
+case of any error, <code>pcall</code> returns <code>false</code> plus the error <code>string</code>.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-				f  </em></code>: function to be call in <em>protected mode</em>.
+				<li>
+				
+<p><code><em><a href="##(func)">#func</a> f </em></code>: 
+function to be call in <em>protected mode</em>.</p>
+
 				</li>
-				<li><code><em>
-				...  </em></code>: function arguments.
+				<li>
+				
+<p><code><em> ... </em></code>: 
+function arguments.</p>
+
 				</li>
 		</ul>
 		<h3>Return values</h3>
 			<ol>
 				<li>
-					<em>#boolean:</em>
-				true plus the result of <code>f</code> function if its call succeeds without errors.
+				
+<p><em>#boolean:</em>
+<code>true</code> plus the result of <code>f</code> <code>function</code> if its call succeeds without errors.</p>
+
 				</li>
 				<li>
-					<em>#boolean, #string:</em>
-				 false plus the error message in case of any error.
+				
+<p><em>#boolean, #string:</em>
+<code>false</code> plus the error <code>string</code> in case of any error.</p>
+
+
 				</li>
 			</ol>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="peripheral.html##(peripheral)">peripheral#peripheral</a></em>
+<a id="peripheral" >
+<strong>peripheral</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for peripheral manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="peripheral.html">peripheral</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -639,15 +1134,46 @@
 </a>
 </dt>
 <dd>
-	 Receives any number of arguments, and prints their values to <code>stdout</code>,
- using the <code>tostring</code> function to convert them to strings.
-	<br/><code>print</code> is not
- intended for formatted output, but only as a quick way to show a value,
- typically for debugging. For formatted output, use <code>string.format</code>.
+	
+<p>Receives any number of arguments, and prints their values to <code>stdout</code>,
+using the <code>tostring</code> <code>function</code> to convert them to <code>strings</code>.</p>
+
+	
+<p><code>print</code> is not
+intended for formatted output, but only as a quick way to show a value,
+typically for debugging. For formatted output, use <a href="string.html##(string).format">string#string.format</a>.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-				...  </em></code>: values to print to <code>stdout</code>.
+				<li>
+				
+<p><code><em> ... </em></code>: 
+values to print to <code>stdout</code>.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="printError" >
+<strong>printError(...)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Receives any number of arguments, and prints their values to <code>stderr</code>,
+using the <code>tostring</code> function to convert them to <code>strings</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em> ... </em></code>: 
+values to print to <code>stderr</code>.</p>
+
+
 				</li>
 		</ul>
 </dd>
@@ -659,27 +1185,32 @@
 </a>
 </dt>
 <dd>
-	 Checks whether <code>v1</code> is equal to <code>v2</code>, without invoking any
- metamethod.
-	<br/>Returns a boolean.
+	
+<p>Checks whether <code>v1</code> is equal to <code>v2</code>, without invoking any
+metamethod.</p>
+
+	
+<p>Returns a <code>boolean</code>.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-				v1  </em></code>: 
-
+				<li>
+				
+<p><code><em><a href="##(Untyped)">#Untyped</a> v1 </em></code>: </p>
 
 				</li>
-				<li><code><em>
-				v2  </em></code>: 
-
+				<li>
+				
+<p><code><em><a href="##(Untyped)">#Untyped</a> v2 </em></code>: </p>
 
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#boolean:</em>
-				true if <code>v1</code> is equal to <code>v2</code>.
-				</p>
+				
+<p><em>#boolean:</em>
+<code>true</code> if <code>v1</code> is equal to <code>v2</code>. </p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -689,26 +1220,34 @@
 </a>
 </dt>
 <dd>
-	 Gets the real value of <code>table[index]</code>, without invoking any
- metamethod.
-	<br/><code>table</code> must be a table; <code>index</code> may be any value.
+	
+<p>Gets the real value of <code>table[index]</code>, without invoking any
+metamethod.</p>
+
+	
+<p><code>table</code> must be a <code>table</code>; <code>index</code> may be any value.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#table
-				table  </em></code>: 
-
+				<li>
+				
+<p><code><em>#table table </em></code>: </p>
 
 				</li>
-				<li><code><em>
-				index  </em></code>: may be any value.
+				<li>
+				
+<p><code><em><a href="##(Untyped)">#Untyped</a> index </em></code>: 
+may be any value.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				The real value of <code>table[index]</code>, without invoking any
- metamethod.
-				</p>
+				
+<p><em><a href="##(Untyped)">#Untyped</a>:</em>
+The real value of <code>table[index]</code>, without invoking any
+metamethod.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -718,70 +1257,102 @@
 </a>
 </dt>
 <dd>
-	 Sets the real value of <code>table[index]</code> to <code>value</code>, without invoking any
- metamethod.
-	<br/><code>table</code> must be a table, <code>index</code> any value different from nil,
- and <code>value</code> any Lua value. <br/>
- This function returns <code>table</code>.
+	
+<p>Sets the real value of <code>table[index]</code> to <code>value</code>, without invoking any
+metamethod.</p>
+
+	
+<p><code>table</code> must be a table, <code>index</code> any value different from <code>nil</code>,
+and <code>value</code> any Lua value. <br/>
+This function returns <code>table</code>.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#table
-				table  </em></code>: 
-
+				<li>
+				
+<p><code><em>#table table </em></code>: </p>
 
 				</li>
-				<li><code><em>
-				index  </em></code>: any value different from nil.
+				<li>
+				
+<p><code><em> index </em></code>: 
+any value different from <code>nil</code>.</p>
+
 				</li>
-				<li><code><em>
-				value  </em></code>: any Lua value.
+				<li>
+				
+<p><code><em> value </em></code>: 
+any Lua value.</p>
+
+
 				</li>
 		</ul>
 </dd>
 </dl>
 		<dl class="function">
 <dt>
-<a id="require" >
-<strong>require(modname)</strong>
+<a id="read" >
+<strong>read()</strong>
 </a>
 </dt>
 <dd>
-	 Loads the given module.
-	<br/>The function starts by looking into the
- <code>package.loaded</code> table to determine whether <code>modname</code> is already
- loaded. If it is, then <code>require</code> returns the value stored at
- <code>package.loaded[modname]</code>. Otherwise, it tries to find a <em>loader</em> for
- the module.</p>
+	
+<p>Reads input from the user. </p>
 
-<p> To find a loader, <code>require</code> is guided by the <code>package.loaders</code> array. By
- changing this array, we can change how <code>require</code> looks for a module. The
- following explanation is based on the default configuration for
- <code>package.loaders</code>.</p>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+entire input in a <code>string</code>.</p>
 
-<p> First <code>require</code> queries <code>package.preload[modname]</code>. If it has a value,
- this value (which should be a function) is the loader. Otherwise <code>require</code>
- searches for a Lua loader using the path stored in <code>package.path</code>. If
- that also fails, it searches for a C loader using the path stored in
- <code>package.cpath</code>. If that also fails, it tries an <em>all-in-one</em> loader (see
- <code>package.loaders</code>).</p>
 
-<p> Once a loader is found, <code>require</code> calls the loader with a single argument,
- <code>modname</code>. If the loader returns any value, <code>require</code> assigns the returned
- value to <code>package.loaded[modname]</code>. If the loader returns no value and
- has not assigned any value to <code>package.loaded[modname]</code>, then <code>require</code>
- assigns true to this entry. In any case, <code>require</code> returns the final value
- of <code>package.loaded[modname]</code>.</p>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="rednet.html##(rednet)">rednet#rednet</a></em>
+<a id="rednet" >
+<strong>rednet</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for rednet manipulation.</p>
 
-<p> If there is any error loading or running the module, or if it cannot find
- any loader for the module, then <code>require</code> signals an error.
-		<h3>Parameter</h3>
-		<ul>
-				<li><code><em>
-						#string
-				modname  </em></code>: name of module to load.
-				</li>
-		</ul>
+	
+<p>This is a global variable which holds the preloaded <a href="rednet.html">rednet</a> module.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="redstone.html##(redstone)">redstone#redstone</a></em>
+<a id="redstone" >
+<strong>redstone</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for redstone manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="redstone.html">redstone</a> module.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="rs.html##(rs)">rs#rs</a></em>
+<a id="rs" >
+<strong>rs</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for redstone manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="rs.html">rs</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -791,18 +1362,25 @@
 </a>
 </dt>
 <dd>
-	 If <code>index</code> is a number, returns all arguments after argument number
- <code>index</code>.
-	<br/>Otherwise, <code>index</code> must be the string <code>"#"</code>, and <code>select</code> returns
- the total number of extra arguments it received.
+	
+<p>If <code>index</code> is a number, returns all arguments after argument number
+<code>index</code>.</p>
+
+	
+<p>Otherwise, <code>index</code> must be the <code>string</code> <code>"#"</code>, and <code>select</code> returns
+the total number of extra arguments it received.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-				index  </em></code>: a number or the string <code>"#"</code>
-				</li>
-				<li><code><em>
-				...  </em></code>: 
+				<li>
+				
+<p><code><em><a href="##(Untyped)">#Untyped</a> index </em></code>: 
+a <code>number</code> or the <code>string</code> <code>"#"</code></p>
 
+				</li>
+				<li>
+				
+<p><code><em> ... </em></code>: </p>
 
 				</li>
 		</ul>
@@ -815,26 +1393,37 @@
 </a>
 </dt>
 <dd>
-	 Sets the environment to be used by the given function.
-	<br/><code>f</code> can be a Lua
- function or a number that specifies the function at that stack level: Level
- 1 is the function calling <code>setfenv</code>. <code>setfenv</code> returns the given function. <br/>
- As a special case, when <code>f</code> is 0 <code>setfenv</code> changes the environment of the
- running thread. In this case, <code>setfenv</code> returns no values.
+	
+<p>Sets the environment to be used by the given <code>function</code>.</p>
+
+	
+<p><code>f</code> can be a Lua
+<code>function</code> or a number that specifies the <code>function</code> at that stack level: Level
+1 is the <code>function</code> calling <code>setfenv</code>. <code>setfenv</code> returns the given <code>function</code>. <br/>
+As a special case, when <code>f</code> is 0 <code>setfenv</code> changes the environment of the
+running <code>thread</code>. In this case, <code>setfenv</code> returns no values.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-				f  </em></code>: a Lua function or a number that specifies the stack level.
+				<li>
+				
+<p><code><em> f </em></code>: 
+a Lua <code>function</code> or a number that specifies the stack level.</p>
+
 				</li>
-				<li><code><em>
-						#table
-				table  </em></code>: used as environment for <code>f</code>.
+				<li>
+				
+<p><code><em>#table table </em></code>: 
+used as environment for <code>f</code>.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				The given function.
-				</p>
+				
+<p><em><a href="##(func)">#func</a>:</em>
+The given <code>function</code>.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -844,31 +1433,84 @@
 </a>
 </dt>
 <dd>
-	 Sets the metatable for the given table.
-	<br/>(You cannot change the metatable
- of other types from Lua, only from C.) If <code>metatable</code> is nil, removes the
- metatable of the given table. If the original metatable has a <code>"__metatable"</code>
- field, raises an error. <br/>
- This function returns <code>table</code>.
+	
+<p>Sets the <code>metatable</code> for the given <code>table</code>.</p>
+
+	
+<p>(You cannot change the <code>metatable</code>
+of other types from Lua, only from C.) If <code>metatable</code> is <code>nil</code>, removes the
+<code>metatable</code> of the given <code>table</code>. If the original <code>metatable</code> has a <code>"__metatable"</code>
+field, raises an error. <br/>
+This function returns <code>table</code>.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#table
-				table  </em></code>: 
-
+				<li>
+				
+<p><code><em>#table table </em></code>: </p>
 
 				</li>
-				<li><code><em>
-						#table
-				metatable  </em></code>: 
-
+				<li>
+				
+<p><code><em>#table metatable </em></code>: </p>
 
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				The first argument <code>table</code>.
-				</p>
+				
+<p><em>#table:</em>
+The first argument <code>table</code>. </p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="shell.html##(shell)">shell#shell</a></em>
+<a id="shell" >
+<strong>shell</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for shell manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="shell.html">shell</a> module.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="sleep" >
+<strong>sleep(time)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Makes the system wait a number of seconds before continuing in the program.</p>
+
+	
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>sleep( timeout ) may also be used as <a href="os.html##(os).sleep"><code>os.sleep( timeout )</code></a>.</li>
+        <li>Fractions of a second are supported, but only down to a game tick, 
+        or 1/20 of a second (0.05s). Times are rounded up to the next tick.</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="os.html##(time)">os#time</a> time </em></code>: 
+Seconds to pass before resuming.</p>
+
+
+				</li>
+		</ul>
 </dd>
 </dl>
 		<dl class="function">
@@ -879,8 +1521,12 @@
 </a>
 </dt>
 <dd>
-	 This library provides generic functions for string manipulation.
-	<br/>This is a global variable which holds the preloaded <a href="string.html">string</a> module.
+	
+<p>This library provides generic functions for string manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="string.html">string</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -891,8 +1537,12 @@
 </a>
 </dt>
 <dd>
-	 This library provides generic functions for table manipulation.
-	<br/>This is a global variable which holds the preloaded <a href="table.html">table</a> module.
+	
+<p>This library provides generic functions for table manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="table.html">table</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -903,8 +1553,28 @@
 </a>
 </dt>
 <dd>
-	 This library provides functions to interact with the terminal.
-	<br/>This is a global variable which holds the preloaded <a href="term.html">term</a> module.
+	
+<p>This library provides functions to interact with the terminal.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="term.html">term</a> module.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="textutils.html##(textutils)">textutils#textutils</a></em>
+<a id="textutils" >
+<strong>textutils</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for text manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="textutils.html">textutils</a> module.</p>
+
 </dd>
 </dl>
 		<dl class="function">
@@ -914,32 +1584,52 @@
 </a>
 </dt>
 <dd>
-	 Tries to convert its argument to a number.
-	<br/>If the argument is already
- a number or a string convertible to a number, then <code>tonumber</code> returns this
- number; otherwise, it returns <strong>nil.</strong></p>
+	
+<p>Tries to convert its argument to a <code>number</code>.</p>
 
-<p> An optional argument specifies the base to interpret the numeral. The base
- may be any integer between 2 and 36, inclusive. In bases above 10, the
- letter '<code>A</code>' (in either upper or lower case) represents 10, '<code>B</code>' represents
- 11, and so forth, with '<code>Z</code>' representing 35. In base 10 (the default),
- the number can have a decimal part, as well as an optional exponent part.
- In other bases, only unsigned integers are accepted.
+	
+<p>If the argument is already
+a <code>number</code> or a <code>string</code> convertible to a <code>number</code>, then <code>tonumber</code> returns this
+<code>number</code>; otherwise, it returns <strong><code>nil</code></strong>.</p>
+
+<p>An optional argument specifies the base to interpret the numeral. The base
+may be any integer between <code>2</code> and <code>36</code>, inclusive. In bases above <code>10</code>, the
+letter '<code>A</code>' (in either upper or lower case) represents <code>10</code>, '<code>B</code>' represents
+11, and so forth, with '<code>Z</code>' representing 35. In base <code>10</code> (the default),
+the <code>number</code> can have a decimal part, as well as an optional exponent part.
+In other bases, only unsigned integers are accepted.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-				e  </em></code>: a number or string to convert to a number.
+				<li>
+				
+<p><code><em><a href="##(Untyped)">#Untyped</a> e </em></code>: 
+a <code>number</code> or <code>string</code> to convert to a <code>number</code>.</p>
+
 				</li>
-				<li><code><em>
-						#number
-				base  </em></code>: the base to interpret the numeral, any integer between 2 and 36.(default is 10).
+				<li>
+				
+<p><code><em>#number base </em></code>: 
+the base to interpret the numeral, any integer between <code>2</code> and <code>36</code>.(default is <code>10</code>).</p>
+
 				</li>
 		</ul>
-		<h3>Return value</h3>
-				<p>
-				<em>#number:</em>
-				a number if conversion succeeds else <strong>nil</strong>.
-				</p>
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em>#number:</em>
+a <code>number</code> if conversion succeeds.</p>
+
+				</li>
+				<li>
+				
+<p><em>#nil:</em>
+<code>nil</code> if the conversion fails.</p>
+
+
+				</li>
+			</ol>
 </dd>
 </dl>
 		<dl class="function">
@@ -949,25 +1639,91 @@
 </a>
 </dt>
 <dd>
-	 Receives an argument of any type and converts it to a string in a
- reasonable format.
-	<br/>For complete control of how numbers are converted, use
- <code>string.format</code>.</p>
+	
+<p>Receives an argument of any type and converts it to a <code>string</code> in a
+reasonable format.</p>
 
-<p> If the metatable of <code>e</code> has a <code>"__tostring"</code> field, then <code>tostring</code> calls
- the corresponding value with <code>e</code> as argument, and uses the result of the
- call as its result.
+	
+<p>For complete control of how numbers are converted, use
+<a href="string.html##(string).format">string#string.format</a>.</p>
+
+<p>If the <code>metatable</code> of <code>e</code> has a <code>"__tostring"</code> field, then <code>tostring</code> calls
+the corresponding value with <code>e</code> as argument, and uses the result of the
+call as its result.</p>
+
 		<h3>Parameter</h3>
 		<ul>
-				<li><code><em>
-				e  </em></code>: an argument of any type.
+				<li>
+				
+<p><code><em><a href="##(Untyped)">#Untyped</a> e </em></code>: 
+an argument of any type.</p>
+
 				</li>
 		</ul>
 		<h3>Return value</h3>
-				<p>
-				<em>#string:</em>
-				a string in a reasonable format.
-				</p>
+				
+<p><em>#string:</em>
+a <code>string</code> in a reasonable format.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="turtle.html##(turtle)">turtle#turtle</a></em>
+<a id="turtle" >
+<strong>turtle</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for turtle manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="turtle.html">turtle</a> module.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="type_" >
+<strong>type_(v)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the type of its only argument, coded as a <code>string</code>.</p>
+
+	
+<p>The possible
+results of this function are "<code>nil</code>" (a <code>string</code>, not the value <code>nil</code>),
+"<code>number</code>", "<code>string</code>", "<code>boolean</code>", "<code>table</code>", "<code>function</code>", "<code>thread</code>",
+and "<code>userdata</code>".</p>
+<h3>Notes:</h3>
+<blockquote>
+    
+    <ol>
+        <li>The function is actually named <code>type</code>, not <code>type_</code>. <code>type_</code> is used
+        due to a limitation of the LDT documentation language. Remove the trailing
+        underscore for the function to work!</li>
+    </ol>
+</blockquote>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em><a href="##(Untyped)">#Untyped</a> v </em></code>: 
+any value.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+the type of <code>v</code>.</p>
+
+
 </dd>
 </dl>
 		<dl class="function">
@@ -977,25 +1733,76 @@
 </a>
 </dt>
 <dd>
-	 Returns the elements from the given table.
-	<br/>This function is equivalent to</p>
+	
+<p>Returns the elements from the given <code>table</code>.</p>
 
-<pre><code> return list[i], list[i+1], ..., list[j]
+	
+<p>This function is equivalent to</p>
+
+<pre><code>return list[i], list[i+1], ..., list[j]
 </code></pre>
-<p> except that the above code can be written only for a fixed number of
- elements. By default, <code>i</code> is 1 and <code>j</code> is the length of the list, as
- defined by the length operator.
+<p>except that the above code can be written only for a fixed number of
+elements. By default, <code>i</code> is 1 and <code>j</code> is the length of the <code>list</code>, as
+defined by the length operator.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-						#table
-				list  </em></code>: a table by index
+				<li>
+				
+<p><code><em>#table list </em></code>: 
+a <code>table</code> by index</p>
+
 				</li>
-				<li><code><em>
-				i  </em></code>: index of first value.
+				<li>
+				
+<p><code><em>#number i </em></code>: 
+index of first value.</p>
+
 				</li>
-				<li><code><em>
-				j  </em></code>: index of last value.
+				<li>
+				
+<p><code><em>#number j </em></code>: 
+index of last value.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em><a href="vector.html##(vector)">vector#vector</a></em>
+<a id="vector" >
+<strong>vector</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This library provides extra functions for vector manipulation.</p>
+
+	
+<p>This is a global variable which holds the preloaded <a href="vector.html">vector</a> module.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="write" >
+<strong>write(text)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Writes a <code>string</code> to the terminal.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string text </em></code>: 
+<code>string</code> to be written to the terminal.</p>
+
+
 				</li>
 		</ul>
 </dd>
@@ -1007,37 +1814,57 @@
 </a>
 </dt>
 <dd>
-	 This function is similar to <code>pcall</code>, except that you can set a new
- error handler.
-	<br/><code>xpcall</code> calls function <code>f</code> in protected mode, using <code>err</code> as the error
- handler. Any error inside <code>f</code> is not propagated; instead, <code>xpcall</code> catches
- the error, calls the <code>err</code> function with the original error object, and
- returns a status code. Its first result is the status code (a boolean),
- which is true if the call succeeds without errors. In this case, <code>xpcall</code>
- also returns all results from the call, after this first result. In case
- of any error, <code>xpcall</code> returns false plus the result from <code>err</code>.
+	
+<p>This <code>function</code> is similar to <code>pcall</code>, except that you can set a new
+error handler.</p>
+
+	
+
+<p><code>xpcall</code> calls <code>function</code> <code>f</code> in protected mode, using <code>err</code> as the error
+handler. Any error inside <code>f</code> is not propagated; instead, <code>xpcall</code> catches
+the error, calls the <code>err</code> <code>function</code> with the original error object, and
+returns a status code. Its first result is the status code (a <code>boolean</code>),
+which is <code>true</code> if the call succeeds without errors. In this case, <code>xpcall</code>
+also returns all results from the call, after this first result. In case
+of any error, <code>xpcall</code> returns <code>false</code> plus the result from <code>err</code>.</p>
+
 		<h3>Parameters</h3>
 		<ul>
-				<li><code><em>
-				f  </em></code>: function to be call in <em>protected mode</em>.
+				<li>
+				
+<p><code><em><a href="##(func)">#func</a> f </em></code>: 
+<code>function</code> to be call in <em>protected mode</em>.</p>
+
 				</li>
-				<li><code><em>
-				err  </em></code>: function used as error handler.
+				<li>
+				
+<p><code><em><a href="##(func)">#func</a> err </em></code>: 
+<code>function</code> used as error handler.</p>
+
 				</li>
 		</ul>
 		<h3>Return values</h3>
 			<ol>
 				<li>
-					<em>#boolean:</em>
-				true plus the result of <code>f</code> function if its call succeeds without errors.
+				
+<p><em>#boolean:</em>
+<code>true</code> plus the result of <code>f</code> <code>function</code> if its call succeeds without errors.</p>
+
 				</li>
 				<li>
-					<em>#boolean, #string:</em>
-				 false plus the result of <code>err</code> function.
+				
+<p><em>#boolean, #string:</em>
+<code>false</code> plus the result of <code>err</code> <code>function</code>.</p>
+
+
 				</li>
 			</ol>
 </dd>
 </dl>
+			<h2><a id="#(Untyped)" >Type <code>Untyped</code></a></h2>
+			
+			<h2><a id="#(func)" >Type <code>func</code></a></h2>
+			
 </div>
 
 </div>
